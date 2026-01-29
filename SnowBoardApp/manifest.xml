@@ -5,7 +5,9 @@
         Use "Monkey C: Edit Application" from the Visual Studio Code command palette
         to update the application attributes.
     -->
-    <iq:application id="e5c212fc-3185-4480-9d7e-3d7e16c4c702" type="watch-app" name="@Strings.AppName" entry="SnowBoardAppApp" launcherIcon="@Drawables.LauncherIcon" minApiLevel="5.2.0">
+    <iq:application id="e5c212fc-3185-4480-9d7e-3d7e16c4c702" type="watch-app"
+        name="@Strings.AppName" entry="SnowBoardAppApp" launcherIcon="@Drawables.LauncherIcon"
+        minApiLevel="5.2.0">
         <!--
             Use the following from the Visual Studio Code comand palette to edit
             the build targets:
@@ -14,26 +16,27 @@
             "Monkey C: Edit Products" - Lets you add or remove any product
         -->
         <iq:products>
-            <iq:product id="fr165m"/>
+            <iq:product id="fr165m" />
         </iq:products>
         <!--
             Use "Monkey C: Edit Permissions" from the Visual Studio Code command
             palette to update permissions.
         -->
         <iq:permissions>
-            <iq:uses-permission id="FitContributor"/>
-            <iq:uses-permission id="Positioning"/>
-            <iq:uses-permission id="Sensor"/>
+            <iq:uses-permission id="FitContributor" />
+            <iq:uses-permission id="Fit" />
+            <iq:uses-permission id="Positioning" />
+            <iq:uses-permission id="Sensor" />
         </iq:permissions>
         <!--
             Use "Monkey C: Edit Languages" from the Visual Studio Code command
             palette to edit your compatible language list.
         -->
-        <iq:languages/>
+        <iq:languages />
         <!--
             Use "Monkey C: Configure Monkey Barrel" from the Visual Studio Code
             command palette to edit the included barrels.
         -->
-        <iq:barrels/>
+        <iq:barrels />
     </iq:application>
 </iq:manifest>

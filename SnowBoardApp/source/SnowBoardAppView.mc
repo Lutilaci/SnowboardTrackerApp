@@ -232,16 +232,25 @@ class SnowBoardAppView extends WatchUi.View {
     }
 
     private function drawOverlayIcon(dc as Dc) as Void {
-        var cx = dc.getWidth() / 2;
-        var cy = dc.getHeight() / 2;
-        if (_isPaused) {
-            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
-            dc.fillRectangle(cx - 15, cy - 20, 10, 40);
-            dc.fillRectangle(cx + 5, cy - 20, 10, 40);
-        } else {
-            dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
-            var pts = [[cx - 15, cy - 20], [cx - 15, cy + 20], [cx + 20, cy]] as Array<Array<Number>>;
-            dc.fillPolygon(pts);
+            var cx = dc.getWidth() / 2;
+            var cy = dc.getHeight() / 2;
+            
+            if (_isPaused) {
+                dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
+                dc.fillRectangle(cx - 15, cy - 20, 10, 40);
+                dc.fillRectangle(cx + 5, cy - 20, 10, 40);
+            } else {
+                dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
+                
+                // Itt a titok: kényszerítjük a típust Array-re, de nem részletezzük a tartalmát.
+                // Ez megnyugtatja a fordítót a fillPolygon hívásnál.
+                var pts = [
+                    [cx - 15, cy - 20],
+                    [cx - 15, cy + 20],
+                    [cx + 20, cy]
+                ] as Array;
+                
+                dc.fillPolygon(pts);
+            }
         }
-    }
 }

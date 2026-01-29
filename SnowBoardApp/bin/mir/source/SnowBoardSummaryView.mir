@@ -68,429 +68,462 @@ _Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSu
     }
     [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 22; @symbol_functiondef = [onUpdate,22,13,21]; @symbol_param<0> = [dc,22,22,24]; @symbol_param<0>_type<0> = [Dc,22,28,30]; ]
     function onUpdate(dc as Dc) as Void {
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_51_4_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 24 8 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_47_4_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 23 8 ]
         %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 24 8 10 ];
-        symbol [ setColor %tmp.2 24 11 19 ];
+        symbol [ dc %tmp.1 23 8 10 ];
+        symbol [ setColor %tmp.2 23 11 19 ];
         %tmp.2 = getv function %tmp.1 :setColor;
-        symbol [ Graphics %tmp.3 24 20 28 ];
+        symbol [ Graphics %tmp.3 23 20 28 ];
         %tmp.3 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.4 24 29 40 ];
+        symbol [ COLOR_BLACK %tmp.4 23 29 40 ];
         %tmp.4 = getv %tmp.3 :COLOR_BLACK;
-        symbol [ Graphics %tmp.5 24 42 50 ];
+        symbol [ Graphics %tmp.5 23 42 50 ];
         %tmp.5 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.6 24 51 62 ];
+        symbol [ COLOR_BLACK %tmp.6 23 51 62 ];
         %tmp.6 = getv %tmp.5 :COLOR_BLACK;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 25 8 ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 24 8 ]
         %tmp.7 = lgetv %dc;
-        symbol [ dc %tmp.7 25 8 10 ];
-        symbol [ clear %tmp.8 25 11 16 ];
+        symbol [ dc %tmp.7 24 8 10 ];
+        symbol [ clear %tmp.8 24 11 16 ];
         %tmp.8 = getv function %tmp.7 :clear;
         invoke %tmp.7 %tmp.8();
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 27 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_51_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_51_4_stop" ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 26 8 ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_47_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_47_4_stop" ]
         %w.1 = local;
-        symbol [ w %w.1 27 12 13 ];
+        symbol [ w %w.1 26 12 13 ];
         %tmp.9 = lgetv %dc;
-        symbol [ dc %tmp.9 27 16 18 ];
-        symbol [ getWidth %tmp.10 27 19 27 ];
+        symbol [ dc %tmp.9 26 16 18 ];
+        symbol [ getWidth %tmp.10 26 19 27 ];
         %tmp.10 = getv function %tmp.9 :getWidth;
         %tmp.11 = invoke %tmp.9 %tmp.10();
         lputv %w.1 %tmp.11;
-        symbol [ w %w.1 27 12 13 ];
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 28 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_51_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_51_4_stop" ]
+        symbol [ w %w.1 26 12 13 ];
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 27 8 ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_47_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_47_4_stop" ]
         %h.2 = local;
-        symbol [ h %h.2 28 12 13 ];
+        symbol [ h %h.2 27 12 13 ];
         %tmp.12 = lgetv %dc;
-        symbol [ dc %tmp.12 28 16 18 ];
-        symbol [ getHeight %tmp.13 28 19 28 ];
+        symbol [ dc %tmp.12 27 16 18 ];
+        symbol [ getHeight %tmp.13 27 19 28 ];
         %tmp.13 = getv function %tmp.12 :getHeight;
         %tmp.14 = invoke %tmp.12 %tmp.13();
         lputv %h.2 %tmp.14;
-        symbol [ h %h.2 28 12 13 ];
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 31 8 ]
+        symbol [ h %h.2 27 12 13 ];
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 29 8 ]
         %tmp.15 = lgetv %dc;
-        symbol [ dc %tmp.15 31 8 10 ];
-        symbol [ setColor %tmp.16 31 11 19 ];
+        symbol [ dc %tmp.15 29 8 10 ];
+        symbol [ setColor %tmp.16 29 11 19 ];
         %tmp.16 = getv function %tmp.15 :setColor;
-        symbol [ Graphics %tmp.17 31 20 28 ];
+        symbol [ Graphics %tmp.17 29 20 28 ];
         %tmp.17 = getm $.Toybox.Graphics;
-        symbol [ COLOR_ORANGE %tmp.18 31 29 41 ];
+        symbol [ COLOR_ORANGE %tmp.18 29 29 41 ];
         %tmp.18 = getv %tmp.17 :COLOR_ORANGE;
-        symbol [ Graphics %tmp.19 31 43 51 ];
+        symbol [ Graphics %tmp.19 29 43 51 ];
         %tmp.19 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.20 31 52 69 ];
+        symbol [ COLOR_TRANSPARENT %tmp.20 29 52 69 ];
         %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
         invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 32 8 ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 31 8 ]
         %tmp.21 = lgetv %dc;
-        symbol [ dc %tmp.21 32 8 10 ];
-        symbol [ drawText %tmp.22 32 11 19 ];
+        symbol [ dc %tmp.21 31 8 10 ];
+        symbol [ drawText %tmp.22 31 11 19 ];
         %tmp.22 = getv function %tmp.21 :drawText;
         %tmp.23 = lgetv %w.1;
-        symbol [ w %tmp.23 32 20 21 ];
+        symbol [ w %tmp.23 31 20 21 ];
         %tmp.24 = 2;
         %tmp.25 = div %tmp.23 %tmp.24;
         %tmp.26 = lgetv %h.2;
-        symbol [ h %tmp.26 32 27 28 ];
+        symbol [ h %tmp.26 31 28 29 ];
         %tmp.27 = 0.12;
         %tmp.28 = mul %tmp.26 %tmp.27;
-        symbol [ Graphics %tmp.29 32 37 45 ];
-        %tmp.29 = getm $.Toybox.Graphics;
-        symbol [ FONT_MEDIUM %tmp.30 32 46 57 ];
-        %tmp.30 = getv %tmp.29 :FONT_MEDIUM;
-        %tmp.31 = "NAPI ÖSSZESÍTŐ";
-        symbol [ Graphics %tmp.32 32 77 85 ];
-        %tmp.32 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.33 32 86 105 ];
-        %tmp.33 = getv %tmp.32 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.21 %tmp.22(%tmp.25, %tmp.28, %tmp.30, %tmp.31, %tmp.33);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 35 8 ]
-        %tmp.34 = lgetv %dc;
-        symbol [ dc %tmp.34 35 8 10 ];
-        symbol [ setColor %tmp.35 35 11 19 ];
-        %tmp.35 = getv function %tmp.34 :setColor;
-        symbol [ Graphics %tmp.36 35 20 28 ];
-        %tmp.36 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.37 35 29 40 ];
-        %tmp.37 = getv %tmp.36 :COLOR_WHITE;
-        symbol [ Graphics %tmp.38 35 42 50 ];
+        symbol [ toNumber %tmp.29 31 38 46 ];
+        %tmp.29 = getv function %tmp.28 :toNumber;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        symbol [ Graphics %tmp.31 31 50 58 ];
+        %tmp.31 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.32 31 59 70 ];
+        %tmp.32 = getv %tmp.31 :FONT_MEDIUM;
+        %tmp.33 = "NAPI ÖSSZESÍTŐ";
+        symbol [ Graphics %tmp.34 31 90 98 ];
+        %tmp.34 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.35 31 99 118 ];
+        %tmp.35 = getv %tmp.34 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.21 %tmp.22(%tmp.25, %tmp.30, %tmp.32, %tmp.33, %tmp.35);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 33 8 ]
+        %tmp.36 = lgetv %dc;
+        symbol [ dc %tmp.36 33 8 10 ];
+        symbol [ setColor %tmp.37 33 11 19 ];
+        %tmp.37 = getv function %tmp.36 :setColor;
+        symbol [ Graphics %tmp.38 33 20 28 ];
         %tmp.38 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.39 35 51 68 ];
-        %tmp.39 = getv %tmp.38 :COLOR_TRANSPARENT;
-        invoke %tmp.34 %tmp.35(%tmp.37, %tmp.39);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 36 8 ]
-        %tmp.40 = lgetv %dc;
-        symbol [ dc %tmp.40 36 8 10 ];
-        symbol [ drawLine %tmp.41 36 11 19 ];
-        %tmp.41 = getv function %tmp.40 :drawLine;
-        %tmp.42 = lgetv %w.1;
-        symbol [ w %tmp.42 36 20 21 ];
-        %tmp.43 = 0.2;
-        %tmp.44 = mul %tmp.42 %tmp.43;
-        %tmp.45 = lgetv %h.2;
-        symbol [ h %tmp.45 36 29 30 ];
-        %tmp.46 = 0.22;
-        %tmp.47 = mul %tmp.45 %tmp.46;
-        %tmp.48 = lgetv %w.1;
-        symbol [ w %tmp.48 36 39 40 ];
-        %tmp.49 = 0.8;
-        %tmp.50 = mul %tmp.48 %tmp.49;
-        %tmp.51 = lgetv %h.2;
-        symbol [ h %tmp.51 36 48 49 ];
-        %tmp.52 = 0.22;
-        %tmp.53 = mul %tmp.51 %tmp.52;
-        invoke %tmp.40 %tmp.41(%tmp.44, %tmp.47, %tmp.50, %tmp.53);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 39 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_51_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_51_4_stop" ]
-        %yStart.3 = local;
-        symbol [ yStart %yStart.3 39 12 18 ];
-        %tmp.54 = lgetv %h.2;
-        symbol [ h %tmp.54 39 21 22 ];
-        %tmp.55 = 0.28;
+        symbol [ COLOR_WHITE %tmp.39 33 29 40 ];
+        %tmp.39 = getv %tmp.38 :COLOR_WHITE;
+        symbol [ Graphics %tmp.40 33 42 50 ];
+        %tmp.40 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.41 33 51 68 ];
+        %tmp.41 = getv %tmp.40 :COLOR_TRANSPARENT;
+        invoke %tmp.36 %tmp.37(%tmp.39, %tmp.41);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 34 8 ]
+        %tmp.42 = lgetv %dc;
+        symbol [ dc %tmp.42 34 8 10 ];
+        symbol [ drawLine %tmp.43 34 11 19 ];
+        %tmp.43 = getv function %tmp.42 :drawLine;
+        %tmp.44 = lgetv %w.1;
+        symbol [ w %tmp.44 34 21 22 ];
+        %tmp.45 = 0.2;
+        %tmp.46 = mul %tmp.44 %tmp.45;
+        symbol [ toNumber %tmp.47 34 30 38 ];
+        %tmp.47 = getv function %tmp.46 :toNumber;
+        %tmp.48 = invoke %tmp.46 %tmp.47();
+        %tmp.49 = lgetv %h.2;
+        symbol [ h %tmp.49 34 43 44 ];
+        %tmp.50 = 0.22;
+        %tmp.51 = mul %tmp.49 %tmp.50;
+        symbol [ toNumber %tmp.52 34 53 61 ];
+        %tmp.52 = getv function %tmp.51 :toNumber;
+        %tmp.53 = invoke %tmp.51 %tmp.52();
+        %tmp.54 = lgetv %w.1;
+        symbol [ w %tmp.54 34 66 67 ];
+        %tmp.55 = 0.8;
         %tmp.56 = mul %tmp.54 %tmp.55;
-        lputv %yStart.3 %tmp.56;
-        symbol [ yStart %yStart.3 39 12 18 ];
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 40 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_51_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_51_4_stop" ]
+        symbol [ toNumber %tmp.57 34 75 83 ];
+        %tmp.57 = getv function %tmp.56 :toNumber;
+        %tmp.58 = invoke %tmp.56 %tmp.57();
+        %tmp.59 = lgetv %h.2;
+        symbol [ h %tmp.59 34 88 89 ];
+        %tmp.60 = 0.22;
+        %tmp.61 = mul %tmp.59 %tmp.60;
+        symbol [ toNumber %tmp.62 34 98 106 ];
+        %tmp.62 = getv function %tmp.61 :toNumber;
+        %tmp.63 = invoke %tmp.61 %tmp.62();
+        invoke %tmp.42 %tmp.43(%tmp.48, %tmp.53, %tmp.58, %tmp.63);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 36 8 ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_47_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_47_4_stop" ]
+        %yStart.3 = local;
+        symbol [ yStart %yStart.3 36 12 18 ];
+        %tmp.64 = lgetv %h.2;
+        symbol [ h %tmp.64 36 21 22 ];
+        %tmp.65 = 0.28;
+        %tmp.66 = mul %tmp.64 %tmp.65;
+        lputv %yStart.3 %tmp.66;
+        symbol [ yStart %yStart.3 36 12 18 ];
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 37 8 ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_47_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_47_4_stop" ]
         %ySpace.4 = local;
-        symbol [ ySpace %ySpace.4 40 12 18 ];
-        %tmp.57 = lgetv %h.2;
-        symbol [ h %tmp.57 40 21 22 ];
-        %tmp.58 = 0.11;
-        %tmp.59 = mul %tmp.57 %tmp.58;
-        lputv %ySpace.4 %tmp.59;
-        symbol [ ySpace %ySpace.4 40 12 18 ];
+        symbol [ ySpace %ySpace.4 37 12 18 ];
+        %tmp.67 = lgetv %h.2;
+        symbol [ h %tmp.67 37 21 22 ];
+        %tmp.68 = 0.11;
+        %tmp.69 = mul %tmp.67 %tmp.68;
+        lputv %ySpace.4 %tmp.69;
+        symbol [ ySpace %ySpace.4 37 12 18 ];
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 39 8 ]
+        %tmp.70 = self;
+        symbol [ drawSummaryRow %tmp.71 39 8 22 ];
+        %tmp.71 = getv function %tmp.70 :drawSummaryRow;
+        %tmp.72 = lgetv %dc;
+        symbol [ dc %tmp.72 39 23 25 ];
+        %tmp.73 = lgetv %w.1;
+        symbol [ w %tmp.73 39 27 28 ];
+        %tmp.74 = 2;
+        %tmp.75 = div %tmp.73 %tmp.74;
+        %tmp.76 = lgetv %yStart.3;
+        symbol [ yStart %tmp.76 39 34 40 ];
+        symbol [ toNumber %tmp.77 39 41 49 ];
+        %tmp.77 = getv function %tmp.76 :toNumber;
+        %tmp.78 = invoke %tmp.76 %tmp.77();
+        %tmp.79 = "MENETEK:";
+        symbol [ _runs %tmp.81 39 65 70 ];
+        %tmp.81 = getv ? :_runs;
+        symbol [ toString %tmp.82 39 71 79 ];
+        %tmp.82 = getv function %tmp.81 :toString;
+        %tmp.83 = invoke %tmp.81 %tmp.82();
+        invoke %tmp.70 %tmp.71(%tmp.72, %tmp.75, %tmp.78, %tmp.79, %tmp.83);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 40 8 ]
+        %tmp.84 = self;
+        symbol [ drawSummaryRow %tmp.85 40 8 22 ];
+        %tmp.85 = getv function %tmp.84 :drawSummaryRow;
+        %tmp.86 = lgetv %dc;
+        symbol [ dc %tmp.86 40 23 25 ];
+        %tmp.87 = lgetv %w.1;
+        symbol [ w %tmp.87 40 27 28 ];
+        %tmp.88 = 2;
+        %tmp.89 = div %tmp.87 %tmp.88;
+        %tmp.90 = lgetv %yStart.3;
+        symbol [ yStart %tmp.90 40 35 41 ];
+        %tmp.91 = lgetv %ySpace.4;
+        symbol [ ySpace %tmp.91 40 44 50 ];
+        %tmp.92 = add %tmp.90 %tmp.91;
+        symbol [ toNumber %tmp.93 40 52 60 ];
+        %tmp.93 = getv function %tmp.92 :toNumber;
+        %tmp.94 = invoke %tmp.92 %tmp.93();
+        %tmp.95 = "LIFTEK:";
+        symbol [ _lifts %tmp.97 40 75 81 ];
+        %tmp.97 = getv ? :_lifts;
+        symbol [ toString %tmp.98 40 82 90 ];
+        %tmp.98 = getv function %tmp.97 :toString;
+        %tmp.99 = invoke %tmp.97 %tmp.98();
+        invoke %tmp.84 %tmp.85(%tmp.86, %tmp.89, %tmp.94, %tmp.95, %tmp.99);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 41 8 ]
+        %tmp.100 = self;
+        symbol [ drawSummaryRow %tmp.101 41 8 22 ];
+        %tmp.101 = getv function %tmp.100 :drawSummaryRow;
+        %tmp.102 = lgetv %dc;
+        symbol [ dc %tmp.102 41 23 25 ];
+        %tmp.103 = lgetv %w.1;
+        symbol [ w %tmp.103 41 27 28 ];
+        %tmp.104 = 2;
+        %tmp.105 = div %tmp.103 %tmp.104;
+        %tmp.106 = lgetv %yStart.3;
+        symbol [ yStart %tmp.106 41 35 41 ];
+        %tmp.107 = lgetv %ySpace.4;
+        symbol [ ySpace %tmp.107 41 45 51 ];
+        %tmp.108 = 2;
+        %tmp.109 = mul %tmp.107 %tmp.108;
+        %tmp.110 = add %tmp.106 %tmp.109;
+        symbol [ toNumber %tmp.111 41 58 66 ];
+        %tmp.111 = getv function %tmp.110 :toNumber;
+        %tmp.112 = invoke %tmp.110 %tmp.111();
+        %tmp.113 = "TÁVOLSÁG:";
+        symbol [ _distance %tmp.115 41 83 92 ];
+        %tmp.115 = getv ? :_distance;
+        symbol [ format %tmp.116 41 93 99 ];
+        %tmp.116 = getv function %tmp.115 :format;
+        %tmp.117 = "%.2f";
+        %tmp.118 = invoke %tmp.115 %tmp.116(%tmp.117);
+        %tmp.119 = " km";
+        %tmp.120 = add %tmp.118 %tmp.119;
+        invoke %tmp.100 %tmp.101(%tmp.102, %tmp.105, %tmp.112, %tmp.113, %tmp.120);
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 42 8 ]
-        %tmp.60 = self;
-        symbol [ drawSummaryRow %tmp.61 42 8 22 ];
-        %tmp.61 = getv function %tmp.60 :drawSummaryRow;
-        %tmp.62 = lgetv %dc;
-        symbol [ dc %tmp.62 42 23 25 ];
-        %tmp.63 = lgetv %w.1;
-        symbol [ w %tmp.63 42 27 28 ];
-        %tmp.64 = 2;
-        %tmp.65 = div %tmp.63 %tmp.64;
-        %tmp.66 = lgetv %yStart.3;
-        symbol [ yStart %tmp.66 42 34 40 ];
-        %tmp.67 = "MENETEK:";
-        symbol [ _runs %tmp.69 42 54 59 ];
-        %tmp.69 = getv ? :_runs;
-        symbol [ toString %tmp.70 42 60 68 ];
-        %tmp.70 = getv function %tmp.69 :toString;
-        %tmp.71 = invoke %tmp.69 %tmp.70();
-        invoke %tmp.60 %tmp.61(%tmp.62, %tmp.65, %tmp.66, %tmp.67, %tmp.71);
+        %tmp.121 = self;
+        symbol [ drawSummaryRow %tmp.122 42 8 22 ];
+        %tmp.122 = getv function %tmp.121 :drawSummaryRow;
+        %tmp.123 = lgetv %dc;
+        symbol [ dc %tmp.123 42 23 25 ];
+        %tmp.124 = lgetv %w.1;
+        symbol [ w %tmp.124 42 27 28 ];
+        %tmp.125 = 2;
+        %tmp.126 = div %tmp.124 %tmp.125;
+        %tmp.127 = lgetv %yStart.3;
+        symbol [ yStart %tmp.127 42 35 41 ];
+        %tmp.128 = lgetv %ySpace.4;
+        symbol [ ySpace %tmp.128 42 45 51 ];
+        %tmp.129 = 3;
+        %tmp.130 = mul %tmp.128 %tmp.129;
+        %tmp.131 = add %tmp.127 %tmp.130;
+        symbol [ toNumber %tmp.132 42 58 66 ];
+        %tmp.132 = getv function %tmp.131 :toNumber;
+        %tmp.133 = invoke %tmp.131 %tmp.132();
+        %tmp.134 = "MAX SEB.:";
+        symbol [ _maxSpeed %tmp.136 42 83 92 ];
+        %tmp.136 = getv ? :_maxSpeed;
+        symbol [ format %tmp.137 42 93 99 ];
+        %tmp.137 = getv function %tmp.136 :format;
+        %tmp.138 = "%.1f";
+        %tmp.139 = invoke %tmp.136 %tmp.137(%tmp.138);
+        %tmp.140 = " km/h";
+        %tmp.141 = add %tmp.139 %tmp.140;
+        invoke %tmp.121 %tmp.122(%tmp.123, %tmp.126, %tmp.133, %tmp.134, %tmp.141);
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 43 8 ]
-        %tmp.72 = self;
-        symbol [ drawSummaryRow %tmp.73 43 8 22 ];
-        %tmp.73 = getv function %tmp.72 :drawSummaryRow;
-        %tmp.74 = lgetv %dc;
-        symbol [ dc %tmp.74 43 23 25 ];
-        %tmp.75 = lgetv %w.1;
-        symbol [ w %tmp.75 43 27 28 ];
-        %tmp.76 = 2;
-        %tmp.77 = div %tmp.75 %tmp.76;
-        %tmp.78 = lgetv %yStart.3;
-        symbol [ yStart %tmp.78 43 34 40 ];
-        %tmp.79 = lgetv %ySpace.4;
-        symbol [ ySpace %tmp.79 43 43 49 ];
-        %tmp.80 = add %tmp.78 %tmp.79;
-        %tmp.81 = "LIFTEK:";
-        symbol [ _lifts %tmp.83 43 62 68 ];
-        %tmp.83 = getv ? :_lifts;
-        symbol [ toString %tmp.84 43 69 77 ];
-        %tmp.84 = getv function %tmp.83 :toString;
-        %tmp.85 = invoke %tmp.83 %tmp.84();
-        invoke %tmp.72 %tmp.73(%tmp.74, %tmp.77, %tmp.80, %tmp.81, %tmp.85);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 44 8 ]
-        %tmp.86 = self;
-        symbol [ drawSummaryRow %tmp.87 44 8 22 ];
-        %tmp.87 = getv function %tmp.86 :drawSummaryRow;
-        %tmp.88 = lgetv %dc;
-        symbol [ dc %tmp.88 44 23 25 ];
-        %tmp.89 = lgetv %w.1;
-        symbol [ w %tmp.89 44 27 28 ];
-        %tmp.90 = 2;
-        %tmp.91 = div %tmp.89 %tmp.90;
-        %tmp.92 = lgetv %yStart.3;
-        symbol [ yStart %tmp.92 44 34 40 ];
-        %tmp.93 = lgetv %ySpace.4;
-        symbol [ ySpace %tmp.93 44 44 50 ];
-        %tmp.94 = 2;
-        %tmp.95 = mul %tmp.93 %tmp.94;
-        %tmp.96 = add %tmp.92 %tmp.95;
-        %tmp.97 = "TÁVOLSÁG:";
-        symbol [ _distance %tmp.99 44 70 79 ];
-        %tmp.99 = getv ? :_distance;
-        symbol [ format %tmp.100 44 80 86 ];
-        %tmp.100 = getv function %tmp.99 :format;
-        %tmp.101 = "%.2f";
-        %tmp.102 = invoke %tmp.99 %tmp.100(%tmp.101);
-        %tmp.103 = " km";
-        %tmp.104 = add %tmp.102 %tmp.103;
-        invoke %tmp.86 %tmp.87(%tmp.88, %tmp.91, %tmp.96, %tmp.97, %tmp.104);
+        %tmp.142 = self;
+        symbol [ drawSummaryRow %tmp.143 43 8 22 ];
+        %tmp.143 = getv function %tmp.142 :drawSummaryRow;
+        %tmp.144 = lgetv %dc;
+        symbol [ dc %tmp.144 43 23 25 ];
+        %tmp.145 = lgetv %w.1;
+        symbol [ w %tmp.145 43 27 28 ];
+        %tmp.146 = 2;
+        %tmp.147 = div %tmp.145 %tmp.146;
+        %tmp.148 = lgetv %yStart.3;
+        symbol [ yStart %tmp.148 43 35 41 ];
+        %tmp.149 = lgetv %ySpace.4;
+        symbol [ ySpace %tmp.149 43 45 51 ];
+        %tmp.150 = 4;
+        %tmp.151 = mul %tmp.149 %tmp.150;
+        %tmp.152 = add %tmp.148 %tmp.151;
+        symbol [ toNumber %tmp.153 43 58 66 ];
+        %tmp.153 = getv function %tmp.152 :toNumber;
+        %tmp.154 = invoke %tmp.152 %tmp.153();
+        %tmp.155 = "SÜLLYEDÉS:";
+        symbol [ _totalDescend %tmp.157 43 84 97 ];
+        %tmp.157 = getv ? :_totalDescend;
+        symbol [ format %tmp.158 43 98 104 ];
+        %tmp.158 = getv function %tmp.157 :format;
+        %tmp.159 = "%d";
+        %tmp.160 = invoke %tmp.157 %tmp.158(%tmp.159);
+        %tmp.161 = " m";
+        %tmp.162 = add %tmp.160 %tmp.161;
+        invoke %tmp.142 %tmp.143(%tmp.144, %tmp.147, %tmp.154, %tmp.155, %tmp.162);
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 45 8 ]
-        %tmp.105 = self;
-        symbol [ drawSummaryRow %tmp.106 45 8 22 ];
-        %tmp.106 = getv function %tmp.105 :drawSummaryRow;
-        %tmp.107 = lgetv %dc;
-        symbol [ dc %tmp.107 45 23 25 ];
-        %tmp.108 = lgetv %w.1;
-        symbol [ w %tmp.108 45 27 28 ];
-        %tmp.109 = 2;
-        %tmp.110 = div %tmp.108 %tmp.109;
-        %tmp.111 = lgetv %yStart.3;
-        symbol [ yStart %tmp.111 45 34 40 ];
-        %tmp.112 = lgetv %ySpace.4;
-        symbol [ ySpace %tmp.112 45 44 50 ];
-        %tmp.113 = 3;
-        %tmp.114 = mul %tmp.112 %tmp.113;
-        %tmp.115 = add %tmp.111 %tmp.114;
-        %tmp.116 = "MAX SEB.:";
-        symbol [ _maxSpeed %tmp.118 45 70 79 ];
-        %tmp.118 = getv ? :_maxSpeed;
-        symbol [ format %tmp.119 45 80 86 ];
-        %tmp.119 = getv function %tmp.118 :format;
-        %tmp.120 = "%.1f";
-        %tmp.121 = invoke %tmp.118 %tmp.119(%tmp.120);
-        %tmp.122 = " km/h";
-        %tmp.123 = add %tmp.121 %tmp.122;
-        invoke %tmp.105 %tmp.106(%tmp.107, %tmp.110, %tmp.115, %tmp.116, %tmp.123);
+        %tmp.163 = lgetv %dc;
+        symbol [ dc %tmp.163 45 8 10 ];
+        symbol [ setColor %tmp.164 45 11 19 ];
+        %tmp.164 = getv function %tmp.163 :setColor;
+        symbol [ Graphics %tmp.165 45 20 28 ];
+        %tmp.165 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.166 45 29 42 ];
+        %tmp.166 = getv %tmp.165 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.167 45 44 52 ];
+        %tmp.167 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.168 45 53 70 ];
+        %tmp.168 = getv %tmp.167 :COLOR_TRANSPARENT;
+        invoke %tmp.163 %tmp.164(%tmp.166, %tmp.168);
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 46 8 ]
-        %tmp.124 = self;
-        symbol [ drawSummaryRow %tmp.125 46 8 22 ];
-        %tmp.125 = getv function %tmp.124 :drawSummaryRow;
-        %tmp.126 = lgetv %dc;
-        symbol [ dc %tmp.126 46 23 25 ];
-        %tmp.127 = lgetv %w.1;
-        symbol [ w %tmp.127 46 27 28 ];
-        %tmp.128 = 2;
-        %tmp.129 = div %tmp.127 %tmp.128;
-        %tmp.130 = lgetv %yStart.3;
-        symbol [ yStart %tmp.130 46 34 40 ];
-        %tmp.131 = lgetv %ySpace.4;
-        symbol [ ySpace %tmp.131 46 44 50 ];
-        %tmp.132 = 4;
-        %tmp.133 = mul %tmp.131 %tmp.132;
-        %tmp.134 = add %tmp.130 %tmp.133;
-        %tmp.135 = "SÜLLYEDÉS:";
-        symbol [ _totalDescend %tmp.137 46 71 84 ];
-        %tmp.137 = getv ? :_totalDescend;
-        symbol [ format %tmp.138 46 85 91 ];
-        %tmp.138 = getv function %tmp.137 :format;
-        %tmp.139 = "%d";
-        %tmp.140 = invoke %tmp.137 %tmp.138(%tmp.139);
-        %tmp.141 = " m";
-        %tmp.142 = add %tmp.140 %tmp.141;
-        invoke %tmp.124 %tmp.125(%tmp.126, %tmp.129, %tmp.134, %tmp.135, %tmp.142);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 49 8 ]
-        %tmp.143 = lgetv %dc;
-        symbol [ dc %tmp.143 49 8 10 ];
-        symbol [ setColor %tmp.144 49 11 19 ];
-        %tmp.144 = getv function %tmp.143 :setColor;
-        symbol [ Graphics %tmp.145 49 20 28 ];
-        %tmp.145 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.146 49 29 42 ];
-        %tmp.146 = getv %tmp.145 :COLOR_LT_GRAY;
-        symbol [ Graphics %tmp.147 49 44 52 ];
-        %tmp.147 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.148 49 53 70 ];
-        %tmp.148 = getv %tmp.147 :COLOR_TRANSPARENT;
-        invoke %tmp.143 %tmp.144(%tmp.146, %tmp.148);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 50 8 ]
-        %tmp.149 = lgetv %dc;
-        symbol [ dc %tmp.149 50 8 10 ];
-        symbol [ drawText %tmp.150 50 11 19 ];
-        %tmp.150 = getv function %tmp.149 :drawText;
-        %tmp.151 = lgetv %w.1;
-        symbol [ w %tmp.151 50 20 21 ];
-        %tmp.152 = 2;
-        %tmp.153 = div %tmp.151 %tmp.152;
-        %tmp.154 = lgetv %h.2;
-        symbol [ h %tmp.154 50 27 28 ];
-        %tmp.155 = 0.88;
-        %tmp.156 = mul %tmp.154 %tmp.155;
-        symbol [ Graphics %tmp.157 50 37 45 ];
-        %tmp.157 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.158 50 46 56 ];
-        %tmp.158 = getv %tmp.157 :FONT_XTINY;
-        %tmp.159 = "START a kilépéshez";
-        symbol [ Graphics %tmp.160 50 80 88 ];
-        %tmp.160 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.161 50 89 108 ];
-        %tmp.161 = getv %tmp.160 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.149 %tmp.150(%tmp.153, %tmp.156, %tmp.158, %tmp.159, %tmp.161);
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_51_4_stop:
+        %tmp.169 = lgetv %dc;
+        symbol [ dc %tmp.169 46 8 10 ];
+        symbol [ drawText %tmp.170 46 11 19 ];
+        %tmp.170 = getv function %tmp.169 :drawText;
+        %tmp.171 = lgetv %w.1;
+        symbol [ w %tmp.171 46 20 21 ];
+        %tmp.172 = 2;
+        %tmp.173 = div %tmp.171 %tmp.172;
+        %tmp.174 = lgetv %h.2;
+        symbol [ h %tmp.174 46 28 29 ];
+        %tmp.175 = 0.88;
+        %tmp.176 = mul %tmp.174 %tmp.175;
+        symbol [ toNumber %tmp.177 46 38 46 ];
+        %tmp.177 = getv function %tmp.176 :toNumber;
+        %tmp.178 = invoke %tmp.176 %tmp.177();
+        symbol [ Graphics %tmp.179 46 50 58 ];
+        %tmp.179 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.180 46 59 69 ];
+        %tmp.180 = getv %tmp.179 :FONT_XTINY;
+        %tmp.181 = "START a kilépéshez";
+        symbol [ Graphics %tmp.182 46 93 101 ];
+        %tmp.182 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.183 46 102 121 ];
+        %tmp.183 = getv %tmp.182 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.169 %tmp.170(%tmp.173, %tmp.178, %tmp.180, %tmp.181, %tmp.183);
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_22_40_47_4_stop:
     }
-    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 54; @symbol_functiondef = [drawSummaryRow,54,21,35]; @symbol_param<0> = [dc,54,36,38]; @symbol_param<0>_type<0> = [Dc,54,42,44]; @symbol_param<1> = [x,54,46,47]; @symbol_param<1>_type<0> = [Number,54,51,57]; @symbol_param<2> = [y,54,59,60]; @symbol_param<2>_type<0> = [Number,54,64,70]; @symbol_param<3> = [label,54,72,77]; @symbol_param<3>_type<0> = [String,54,81,87]; @symbol_param<4> = [value,54,89,94]; @symbol_param<4>_type<0> = [String,54,98,104]; ]
+    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 49; @symbol_functiondef = [drawSummaryRow,49,21,35]; @symbol_param<0> = [dc,49,36,38]; @symbol_param<0>_type<0> = [Dc,49,42,44]; @symbol_param<1> = [x,49,46,47]; @symbol_param<1>_type<0> = [Number,49,51,57]; @symbol_param<2> = [y,49,59,60]; @symbol_param<2>_type<0> = [Number,49,64,70]; @symbol_param<3> = [label,49,72,77]; @symbol_param<3>_type<0> = [String,49,81,87]; @symbol_param<4> = [value,49,89,94]; @symbol_param<4>_type<0> = [String,49,98,104]; ]
     private
     function drawSummaryRow(dc as Dc, x as Number, y as Number, label as String, value as String) as Void {
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_54_114_62_4_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 56 8 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_49_114_54_4_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 50 8 ]
         %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 56 8 10 ];
-        symbol [ setColor %tmp.2 56 11 19 ];
+        symbol [ dc %tmp.1 50 8 10 ];
+        symbol [ setColor %tmp.2 50 11 19 ];
         %tmp.2 = getv function %tmp.1 :setColor;
-        symbol [ Graphics %tmp.3 56 20 28 ];
+        symbol [ Graphics %tmp.3 50 20 28 ];
         %tmp.3 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.4 56 29 42 ];
+        symbol [ COLOR_LT_GRAY %tmp.4 50 29 42 ];
         %tmp.4 = getv %tmp.3 :COLOR_LT_GRAY;
-        symbol [ Graphics %tmp.5 56 44 52 ];
+        symbol [ Graphics %tmp.5 50 44 52 ];
         %tmp.5 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.6 56 53 70 ];
+        symbol [ COLOR_TRANSPARENT %tmp.6 50 53 70 ];
         %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 57 8 ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 51 8 ]
         %tmp.7 = lgetv %dc;
-        symbol [ dc %tmp.7 57 8 10 ];
-        symbol [ drawText %tmp.8 57 11 19 ];
+        symbol [ dc %tmp.7 51 8 10 ];
+        symbol [ drawText %tmp.8 51 11 19 ];
         %tmp.8 = getv function %tmp.7 :drawText;
         %tmp.9 = lgetv %x;
-        symbol [ x %tmp.9 57 20 21 ];
+        symbol [ x %tmp.9 51 20 21 ];
         %tmp.10 = 10;
         %tmp.11 = sub %tmp.9 %tmp.10;
         %tmp.12 = lgetv %y;
-        symbol [ y %tmp.12 57 28 29 ];
-        symbol [ Graphics %tmp.13 57 31 39 ];
+        symbol [ y %tmp.12 51 28 29 ];
+        symbol [ Graphics %tmp.13 51 31 39 ];
         %tmp.13 = getm $.Toybox.Graphics;
-        symbol [ FONT_TINY %tmp.14 57 40 49 ];
+        symbol [ FONT_TINY %tmp.14 51 40 49 ];
         %tmp.14 = getv %tmp.13 :FONT_TINY;
         %tmp.15 = lgetv %label;
-        symbol [ label %tmp.15 57 51 56 ];
-        symbol [ Graphics %tmp.16 57 58 66 ];
+        symbol [ label %tmp.15 51 51 56 ];
+        symbol [ Graphics %tmp.16 51 58 66 ];
         %tmp.16 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_RIGHT %tmp.17 57 67 85 ];
+        symbol [ TEXT_JUSTIFY_RIGHT %tmp.17 51 67 85 ];
         %tmp.17 = getv %tmp.16 :TEXT_JUSTIFY_RIGHT;
         invoke %tmp.7 %tmp.8(%tmp.11, %tmp.12, %tmp.14, %tmp.15, %tmp.17);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 60 8 ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 52 8 ]
         %tmp.18 = lgetv %dc;
-        symbol [ dc %tmp.18 60 8 10 ];
-        symbol [ setColor %tmp.19 60 11 19 ];
+        symbol [ dc %tmp.18 52 8 10 ];
+        symbol [ setColor %tmp.19 52 11 19 ];
         %tmp.19 = getv function %tmp.18 :setColor;
-        symbol [ Graphics %tmp.20 60 20 28 ];
+        symbol [ Graphics %tmp.20 52 20 28 ];
         %tmp.20 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.21 60 29 40 ];
+        symbol [ COLOR_WHITE %tmp.21 52 29 40 ];
         %tmp.21 = getv %tmp.20 :COLOR_WHITE;
-        symbol [ Graphics %tmp.22 60 42 50 ];
+        symbol [ Graphics %tmp.22 52 42 50 ];
         %tmp.22 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.23 60 51 68 ];
+        symbol [ COLOR_TRANSPARENT %tmp.23 52 51 68 ];
         %tmp.23 = getv %tmp.22 :COLOR_TRANSPARENT;
         invoke %tmp.18 %tmp.19(%tmp.21, %tmp.23);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 61 8 ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 53 8 ]
         %tmp.24 = lgetv %dc;
-        symbol [ dc %tmp.24 61 8 10 ];
-        symbol [ drawText %tmp.25 61 11 19 ];
+        symbol [ dc %tmp.24 53 8 10 ];
+        symbol [ drawText %tmp.25 53 11 19 ];
         %tmp.25 = getv function %tmp.24 :drawText;
         %tmp.26 = lgetv %x;
-        symbol [ x %tmp.26 61 20 21 ];
+        symbol [ x %tmp.26 53 20 21 ];
         %tmp.27 = 10;
         %tmp.28 = add %tmp.26 %tmp.27;
         %tmp.29 = lgetv %y;
-        symbol [ y %tmp.29 61 28 29 ];
-        symbol [ Graphics %tmp.30 61 31 39 ];
+        symbol [ y %tmp.29 53 28 29 ];
+        symbol [ Graphics %tmp.30 53 31 39 ];
         %tmp.30 = getm $.Toybox.Graphics;
-        symbol [ FONT_TINY %tmp.31 61 40 49 ];
+        symbol [ FONT_TINY %tmp.31 53 40 49 ];
         %tmp.31 = getv %tmp.30 :FONT_TINY;
         %tmp.32 = lgetv %value;
-        symbol [ value %tmp.32 61 51 56 ];
-        symbol [ Graphics %tmp.33 61 58 66 ];
+        symbol [ value %tmp.32 53 51 56 ];
+        symbol [ Graphics %tmp.33 53 58 66 ];
         %tmp.33 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_LEFT %tmp.34 61 67 84 ];
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.34 53 67 84 ];
         %tmp.34 = getv %tmp.33 :TEXT_JUSTIFY_LEFT;
         invoke %tmp.24 %tmp.25(%tmp.28, %tmp.29, %tmp.31, %tmp.32, %tmp.34);
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_54_114_62_4_stop:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_49_114_54_4_stop:
     }
 }
-[ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 66; @symbol_classdef = [SnowBoardSummaryDelegate,66,6,30]; @symbol_extends<0> = [WatchUi,66,39,46]; @symbol_extends<1> = [BehaviorDelegate,66,47,63]; ]
+[ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 57; @symbol_classdef = [SnowBoardSummaryDelegate,57,6,30]; @symbol_extends<0> = [WatchUi,57,39,46]; @symbol_extends<1> = [BehaviorDelegate,57,47,63]; ]
 class SnowBoardSummaryDelegate extends WatchUi.BehaviorDelegate {
-    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 66; ]
+    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 57; ]
     <init> {
     }
-    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 66; ]
+    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 57; ]
     static
     <init> {
     }
-    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 67; @symbol_functiondef = [initialize,67,13,23]; ]
+    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 58; @symbol_functiondef = [initialize,58,13,23]; ]
     function initialize() as Void {
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_67_26_69_4_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 68 8 ]
-        symbol [ BehaviorDelegate %tmp.2 68 8 24 ];
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_58_26_58_59_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 58 28 ]
+        symbol [ BehaviorDelegate %tmp.2 58 28 44 ];
         %tmp.2 = getv ? :BehaviorDelegate;
-        symbol [ initialize %tmp.3 68 25 35 ];
+        symbol [ initialize %tmp.3 58 45 55 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_67_26_69_4_stop:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_58_26_58_59_stop:
     }
-    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 72; @symbol_functiondef = [onSelect,72,13,21]; @symbol_return<0> = [Boolean,72,27,34]; ]
+    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 59; @symbol_functiondef = [onSelect,59,13,21]; @symbol_return<0> = [Boolean,59,27,34]; ]
     function onSelect() as Boolean {
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_72_35_75_4_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 73 8 ]
-        symbol [ System %tmp.1 73 8 14 ];
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_59_35_59_65_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 59 37 ]
+        symbol [ System %tmp.1 59 37 43 ];
         %tmp.1 = getm $.Toybox.System;
-        symbol [ exit %tmp.2 73 15 19 ];
+        symbol [ exit %tmp.2 59 44 48 ];
         %tmp.2 = getv function %tmp.1 :exit;
         invoke %tmp.1 %tmp.2();
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 74 8 ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 59 52 ]
         %tmp.3 = true;
         ret %tmp.3;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_72_35_75_4_stop:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_59_35_59_65_stop:
     }
-    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 78; @symbol_functiondef = [onBack,78,13,19]; @symbol_return<0> = [Boolean,78,25,32]; ]
+    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 60; @symbol_functiondef = [onBack,60,13,19]; @symbol_return<0> = [Boolean,60,25,32]; ]
     function onBack() as Boolean {
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_78_33_81_4_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 79 8 ]
-        symbol [ System %tmp.1 79 8 14 ];
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_60_33_60_63_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 60 35 ]
+        symbol [ System %tmp.1 60 35 41 ];
         %tmp.1 = getm $.Toybox.System;
-        symbol [ exit %tmp.2 79 15 19 ];
+        symbol [ exit %tmp.2 60 42 46 ];
         %tmp.2 = getv function %tmp.1 :exit;
         invoke %tmp.1 %tmp.2();
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 80 8 ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" 60 50 ]
         %tmp.3 = true;
         ret %tmp.3;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_78_33_81_4_stop:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardSummaryView_mc_60_33_60_63_stop:
     }
 }
 [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc"; @line = 1; ]
