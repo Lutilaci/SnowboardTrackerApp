@@ -1,0 +1,82 @@
+import Toybox.WatchUi;
+import Toybox.Graphics;
+import Toybox.System;
+import Toybox.Lang;
+
+class SnowBoardSummaryView extends WatchUi.View {
+    private var _runs as Number;
+    private var _lifts as Number;
+    private var _maxSpeed as Float;
+    private var _totalDescend as Float;
+    private var _distance as Float;
+
+    function initialize(runs as Number, lifts as Number, maxSpeed as Float, totalDescend as Float, distance as Float) {
+        View.initialize();
+        _runs = runs;
+        _lifts = lifts;
+        _maxSpeed = maxSpeed;
+        _totalDescend = totalDescend;
+        _distance = distance;
+    }
+
+    function onUpdate(dc as Dc) as Void {
+        // Háttér törlése
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        dc.clear();
+
+        var w = dc.getWidth();
+        var h = dc.getHeight();
+
+        // Cím rajzolása
+        dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(w / 2, h * 0.12, Graphics.FONT_MEDIUM, "NAPI ÖSSZESÍTŐ", Graphics.TEXT_JUSTIFY_CENTER);
+        
+        // Elválasztó vonal
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawLine(w * 0.2, h * 0.22, w * 0.8, h * 0.22);
+
+        // Adatsorok pozicionálása
+        var yStart = h * 0.28;
+        var ySpace = h * 0.11;
+
+        drawSummaryRow(dc, w / 2, yStart, "MENETEK:", _runs.toString());
+        drawSummaryRow(dc, w / 2, yStart + ySpace, "LIFTEK:", _lifts.toString());
+        drawSummaryRow(dc, w / 2, yStart + (ySpace * 2), "TÁVOLSÁG:", _distance.format("%.2f") + " km");
+        drawSummaryRow(dc, w / 2, yStart + (ySpace * 3), "MAX SEB.:", _maxSpeed.format("%.1f") + " km/h");
+        drawSummaryRow(dc, w / 2, yStart + (ySpace * 4), "SÜLLYEDÉS:", _totalDescend.format("%d") + " m");
+
+        // Kilépési utasítás
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(w / 2, h * 0.88, Graphics.FONT_XTINY, "START a kilépéshez", Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    // Segédfüggvény az adatsorok esztétikus elrendezéséhez
+    private function drawSummaryRow(dc as Dc, x as Number, y as Number, label as String, value as String) as Void {
+        // Felirat (szürke, jobbra zárt)
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(x - 10, y, Graphics.FONT_TINY, label, Graphics.TEXT_JUSTIFY_RIGHT);
+        
+        // Érték (fehér, balra zárt)
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(x + 10, y, Graphics.FONT_TINY, value, Graphics.TEXT_JUSTIFY_LEFT);
+    }
+}
+
+// Delegate az összefoglaló nézethez a végső kilépés kezelésére
+class SnowBoardSummaryDelegate extends WatchUi.BehaviorDelegate {
+    function initialize() {
+        BehaviorDelegate.initialize();
+    }
+
+    // A Start gomb megnyomására az app végleg bezárul
+    function onSelect() as Boolean {
+        System.exit();
+        return true;
+    }
+
+    // A Back gomb megnyomása is kiléptethet itt már
+    function onBack() as Boolean {
+        System.exit();
+        return true;
+    }
+}

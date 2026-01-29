@@ -8,7 +8,7 @@ import Toybox.System;
 import Toybox.Lang;
 
 class SnowBoardAppView extends WatchUi.View {
-    // Erőforrások és állapotok
+    // Erőforrások és munkamenet
     private var _backgroundImage as BitmapResource?;
     private var _session as Session?;
     private var _isTracking as Boolean = false;
@@ -22,18 +22,19 @@ class SnowBoardAppView extends WatchUi.View {
     private var _maxSpeedCurrentRun as Float = 0.0;
     private var _topSpeedEver as Float = 0.0;
     private var _totalDescend as Float = 0.0;
+    private var _totalDistance as Float = 0.0;
     private var _lastAltitude as Float? = null;
     private var _isDescending as Boolean = false;
 
     function initialize() {
         View.initialize();
         
-        // Háttérkép betöltése manuálisan a drawables-ből
+        // Háttérkép betöltése (layout.xml nélkül)
         if (Rez.Drawables has :BackgroundImage) {
             _backgroundImage = WatchUi.loadResource(Rez.Drawables.BackgroundImage) as BitmapResource;
         }
         
-        // Rekord sebesség betöltése a memóriából
+        // Rekord sebesség betöltése a Storage-ból
         var savedTopSpeed = Storage.getValue("topSpeedEver");
         if (savedTopSpeed != null) {
             _topSpeedEver = savedTopSpeed.toFloat();
@@ -41,15 +42,19 @@ class SnowBoardAppView extends WatchUi.View {
     }
 
     function onLayout(dc as Dc) as Void {
-        // Üresen hagyjuk, mert mindent onUpdate-ben rajzolunk
+        // Üres, mert onUpdate-ben manuálisan rajzolunk mindent
     }
 
-    function isTracking() as Boolean {
-        return _isTracking;
-    }
+    // --- GETTEREK A MENÜ ÉS ÖSSZESÍTŐ SZÁMÁRA ---
+    function isTracking() as Boolean { return _isTracking; }
+    function hasActiveSession() as Boolean { return _session != null; }
+    function getRunCount() as Number { return _runCount; }
+    function getLiftCount() as Number { return _liftCount; }
+    function getMaxSpeed() as Float { return _topSpeedEver; }
+    function getTotalDescend() as Float { return _totalDescend; }
+    function getTotalDistance() as Float { return _totalDistance; }
 
-    // --- RÖGZÍTÉS KEZELÉSE ---
-
+    // --- RÖGZÍTÉS VEZÉRLÉS ---
     function startTracking() as Void {
         if (Toybox has :ActivityRecording && _session == null) {
             _session = ActivityRecording.createSession({
@@ -72,7 +77,7 @@ class SnowBoardAppView extends WatchUi.View {
                 _session.start();
                 _isPaused = false;
             }
-            _pauseTimer = 5; // 5 másodpercig mutatjuk az ikont
+            _pauseTimer = 5;
             vibrate(1);
         }
     }
@@ -86,8 +91,16 @@ class SnowBoardAppView extends WatchUi.View {
         }
     }
 
-    // --- VIBRÁCIÓ ---
+    function stopAndDiscard() as Void {
+        if (_session != null) {
+            _session.stop();
+            _session.discard();
+            _session = null;
+            _isTracking = false;
+        }
+    }
 
+    // --- VIBRÁCIÓ KEZELŐ ---
     function vibrate(count as Number) as Void {
         if (Attention has :vibrate) {
             var vibeData = [] as Array<Attention.VibeProfile>;
@@ -101,10 +114,8 @@ class SnowBoardAppView extends WatchUi.View {
         }
     }
 
-    // --- RAJZOLÁS ---
-
+    // --- FŐ RAJZOLÁSI CIKLUS ---
     function onUpdate(dc as Dc) as Void {
-        // Képernyő törlése (Fekete háttér alapértelmezetten)
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
 
@@ -118,12 +129,10 @@ class SnowBoardAppView extends WatchUi.View {
     }
 
     private function drawStartScreen(dc as Dc, info as Activity.Info?) as Void {
-        // 1. Háttérkép
         if (_backgroundImage != null) {
             dc.drawBitmap(0, 0, _backgroundImage);
         }
 
-        // 2. GPS Állapot Kör
         _gpsAccuracy = (info != null && info.currentLocationAccuracy != null) ? info.currentLocationAccuracy : 0;
         var ringColor = (_gpsAccuracy >= 3) ? Graphics.COLOR_GREEN : Graphics.COLOR_RED;
         
@@ -131,25 +140,25 @@ class SnowBoardAppView extends WatchUi.View {
         dc.setColor(ringColor, Graphics.COLOR_TRANSPARENT);
         dc.drawCircle(dc.getWidth()/2, dc.getHeight()/2, (dc.getWidth()/2) - 4);
         
-        // 3. Szöveges állapot
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         var statusText = (_gpsAccuracy >= 3) ? "START-ra kész!" : "GPS keresése...";
-        dc.drawText(dc.getWidth()/2, dc.getHeight() - 60, Graphics.FONT_XTINY, statusText, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(dc.getWidth()/2, dc.getHeight() - 65, Graphics.FONT_XTINY, statusText, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private function drawMainScreen(dc as Dc, info as Activity.Info?) as Void {
         var speed = (info != null && info.currentSpeed != null) ? info.currentSpeed * 3.6 : 0.0;
         var altitude = (info != null && info.altitude != null) ? info.altitude : 0.0;
         var elapsedTime = (info != null && info.elapsedTime != null) ? info.elapsedTime / 1000 : 0;
+        _totalDistance = (info != null && info.elapsedDistance != null) ? info.elapsedDistance / 1000.0 : 0.0;
         _totalDescend = (info != null && info.totalDescent != null) ? info.totalDescent.toFloat() : 0.0;
 
-        // Run és Lift logika (Magasság alapú)
+        // Run és Lift logika
         if (_lastAltitude != null) {
             var diff = altitude - _lastAltitude;
             if (diff < -1.5 && !_isDescending) { 
                 _isDescending = true;
                 _maxSpeedCurrentRun = 0.0;
-            } else if (diff > 2.0 && _isDescending) {
+            } else if (diff > 2.5 && _isDescending) { // Felvonó érzékelése
                 _isDescending = false;
                 _runCount++;
                 _liftCount++;
@@ -158,7 +167,7 @@ class SnowBoardAppView extends WatchUi.View {
         }
         _lastAltitude = altitude.toFloat();
 
-        // Rekord és Max sebesség figyelés
+        // Sebesség és rekordok
         if (_isDescending) {
             if (speed > _maxSpeedCurrentRun) { _maxSpeedCurrentRun = speed.toFloat(); }
             if (speed > _topSpeedEver) {
@@ -168,11 +177,11 @@ class SnowBoardAppView extends WatchUi.View {
             }
         }
 
-        // Auto-Pause rögzítés közben
+        // Auto-Pause kezelés
         if (_session != null) {
-            if (!_isPaused && speed < 2.0 && _session.isRecording()) { 
+            if (!_isPaused && speed < 1.5 && _session.isRecording()) { 
                 _session.stop(); _isPaused = true; _pauseTimer = 5; vibrate(1); 
-            } else if (_isPaused && speed > 5.0 && !_session.isRecording()) { 
+            } else if (_isPaused && speed > 4.0 && !_session.isRecording()) { 
                 _session.start(); _isPaused = false; _pauseTimer = 5; vibrate(1); 
             }
         }
@@ -180,33 +189,35 @@ class SnowBoardAppView extends WatchUi.View {
         var w = dc.getWidth();
         var h = dc.getHeight();
 
-        // Grafikai elrendezés (Vonalak)
+        // Elrendezés (Vonalak)
         dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawLine(0, h*0.3, w, h*0.3);
-        dc.drawLine(0, h*0.7, w, h*0.7);
+        dc.drawLine(0, h*0.68, w, h*0.68);
 
-        // FELSŐ SÁV (Idő és Körök)
+        // FELSŐ SÁV (Idő és Run)
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(w/2, 15, Graphics.FONT_XTINY, formatTime(elapsedTime), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(w/2, 15, Graphics.FONT_XTINY, formatTime(elapsedTime.toNumber()), Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(w/2, 40, Graphics.FONT_SMALL, "RUNS: " + _runCount, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(w/2, 38, Graphics.FONT_SMALL, "RUNS: " + _runCount + " | LIFTS: " + _liftCount, Graphics.TEXT_JUSTIFY_CENTER);
 
         // KÖZÉPSŐ SÁV (Sebesség)
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(w/2, h/2 - 35, Graphics.FONT_NUMBER_THAI_HOT, speed.format("%.1f"), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(w/2, h/2 - 40, Graphics.FONT_NUMBER_THAI_HOT, speed.format("%.1f"), Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_TRANSPARENT);
         dc.drawText(w/2, h/2 + 25, Graphics.FONT_TINY, "TOP: " + _topSpeedEver.format("%.1f"), Graphics.TEXT_JUSTIFY_CENTER);
 
-        // ALSÓ SÁV (Süllyedés és Max Run Speed)
+        // ALSÓ SÁV (Három oszlop: DESC | DIST | MAX R)
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(w*0.25, h*0.75, Graphics.FONT_XTINY, "DESC", Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(w*0.75, h*0.75, Graphics.FONT_XTINY, "MAX R", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(w*0.22, h*0.70, Graphics.FONT_XTINY, "DESC", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(w*0.50, h*0.70, Graphics.FONT_XTINY, "KM", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(w*0.78, h*0.70, Graphics.FONT_XTINY, "MAX R", Graphics.TEXT_JUSTIFY_CENTER);
         
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(w*0.25, h*0.85, Graphics.FONT_SMALL, _totalDescend.format("%d") + "m", Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(w*0.75, h*0.85, Graphics.FONT_SMALL, _maxSpeedCurrentRun.format("%.1f"), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(w*0.22, h*0.80, Graphics.FONT_TINY, _totalDescend.format("%d") + "m", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(w*0.50, h*0.80, Graphics.FONT_TINY, _totalDistance.format("%.2f"), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(w*0.78, h*0.80, Graphics.FONT_TINY, _maxSpeedCurrentRun.format("%.1f"), Graphics.TEXT_JUSTIFY_CENTER);
 
-        // Overlay ikon (Play/Pause)
+        // Play/Pause ikon
         if (_pauseTimer > 0) {
             drawOverlayIcon(dc);
             _pauseTimer--;
@@ -218,16 +229,6 @@ class SnowBoardAppView extends WatchUi.View {
         var mm = (seconds % 3600) / 60;
         var ss = seconds % 60;
         return hh.format("%02d") + ":" + mm.format("%02d") + ":" + ss.format("%02d");
-    }
-
-    // Session elvetése mentés nélkül
-    function stopAndDiscard() as Void {
-        if (_session != null) {
-            _session.stop();
-            _session.discard(); // Törli a FIT fájlt, nem menti el
-            _session = null;
-            _isTracking = false;
-        }
     }
 
     private function drawOverlayIcon(dc as Dc) as Void {
