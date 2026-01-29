@@ -220,6 +220,16 @@ class SnowBoardAppView extends WatchUi.View {
         return hh.format("%02d") + ":" + mm.format("%02d") + ":" + ss.format("%02d");
     }
 
+    // Session elvetése mentés nélkül
+    function stopAndDiscard() as Void {
+        if (_session != null) {
+            _session.stop();
+            _session.discard(); // Törli a FIT fájlt, nem menti el
+            _session = null;
+            _isTracking = false;
+        }
+    }
+
     private function drawOverlayIcon(dc as Dc) as Void {
         var cx = dc.getWidth() / 2;
         var cy = dc.getHeight() / 2;
