@@ -1,5 +1,4 @@
 import Toybox.Application;
-import Toybox.Lang;
 import Toybox.WatchUi;
 
 class SnowBoardAppApp extends Application.AppBase {
@@ -8,21 +7,9 @@ class SnowBoardAppApp extends Application.AppBase {
         AppBase.initialize();
     }
 
-    // onStart() is called on application start up
-    function onStart(state as Dictionary?) as Void {
+    function getInitialView() {
+        var view = new SnowBoardAppView();
+        var delegate = new SnowBoardAppDelegate(view);
+        return [ view, delegate ];
     }
-
-    // onStop() is called when your application is exiting
-    function onStop(state as Dictionary?) as Void {
-    }
-
-    // Return the initial view of your application here
-    function getInitialView() as [Views] or [Views, InputDelegates] {
-        return [ new SnowBoardAppView(), new SnowBoardAppDelegate() ];
-    }
-
-}
-
-function getApp() as SnowBoardAppApp {
-    return Application.getApp() as SnowBoardAppApp;
 }
