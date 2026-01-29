@@ -148,7 +148,6 @@ class SnowBoardAppView extends WatchUi.View {
         var altitude = (info != null && info.altitude != null) ? info.altitude : 0.0;
         var elapsedSec = (info != null && info.elapsedTime != null) ? info.elapsedTime / 1000 : 0;
         _totalDistance = (info != null && info.elapsedDistance != null) ? info.elapsedDistance / 1000.0 : 0.0;
-        _totalDescend = (info != null && info.totalDescent != null) ? info.totalDescent.toFloat() : 0.0;
 
         if (_lastAltitude != null) {
             var diff = altitude - _lastAltitude;
@@ -160,12 +159,9 @@ class SnowBoardAppView extends WatchUi.View {
         }
         _lastAltitude = altitude.toFloat();
 
-        if (_isDescending) {
-            if (speed > _maxSpeedCurrentRun) { _maxSpeedCurrentRun = speed.toFloat(); }
-            if (speed > _topSpeedEver) {
-                _topSpeedEver = speed.toFloat();
-                Storage.setValue("topSpeedEver", _topSpeedEver);
-            }
+        if (_isDescending && speed > _topSpeedEver) {
+            _topSpeedEver = speed.toFloat();
+            Storage.setValue("topSpeedEver", _topSpeedEver);
         }
 
         if (_session != null) {
@@ -176,43 +172,51 @@ class SnowBoardAppView extends WatchUi.View {
             }
         }
 
+        // --- HÁTTÉR ÉS RÁCS ---
         if (_isPaused) {
             dc.setPenWidth(10);
             dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
             dc.drawCircle(centerX, centerY, centerX - 5);
-            dc.setPenWidth(1);
         }
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(2);
-        dc.drawLine(centerX, (h * 0.25).toNumber(), centerX, (h * 0.82).toNumber());
-        dc.drawLine((w * 0.15).toNumber(), centerY, (w * 0.85).toNumber(), centerY);
+        dc.drawLine(centerX, (h * 0.22).toNumber(), centerX, (h * 0.80).toNumber()); // Függőleges
+        dc.drawLine((w * 0.10).toNumber(), centerY, (w * 0.90).toNumber(), centerY); // Vízszintes
         dc.setPenWidth(1);
 
+        // --- ADATOK ELHELYEZÉSE ---
+        
+        // 1. Pontos idő (Felül)
         var now = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         var timeStr = Lang.format("$1$:$2$", [now.hour.format("%02d"), now.min.format("%02d")]);
-        dc.drawText(centerX, (h * 0.12).toNumber(), Graphics.FONT_MEDIUM, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX, (h * 0.10).toNumber(), Graphics.FONT_MEDIUM, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
 
+        // BAL FELÜL - Eltelt idő
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX - 40, (centerY - 48).toNumber(), Graphics.FONT_XTINY, "ELAPS", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX - 45, centerY - 55, Graphics.FONT_XTINY, "ELAPS", Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX - 40, (centerY - 32).toNumber(), Graphics.FONT_NUMBER_MEDIUM, formatTime(elapsedSec.toNumber()), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX - 45, centerY - 40, Graphics.FONT_NUMBER_MEDIUM, formatTime(elapsedSec.toNumber()), Graphics.TEXT_JUSTIFY_CENTER);
 
+        // JOBB FELÜL - Távolság
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX + 40, (centerY - 48).toNumber(), Graphics.FONT_XTINY, "DIST", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX + 45, centerY - 55, Graphics.FONT_XTINY, "DIST", Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX + 40, (centerY - 32).toNumber(), Graphics.FONT_NUMBER_MEDIUM, _totalDistance.format("%.2f"), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX + 45, centerY - 40, Graphics.FONT_NUMBER_MEDIUM, _totalDistance.format("%.2f"), Graphics.TEXT_JUSTIFY_CENTER);
 
+        // BAL ALUL - Top Speed
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX - 40, (centerY + 38).toNumber(), Graphics.FONT_XTINY, "MAX SPD", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX - 45, centerY + 5, Graphics.FONT_XTINY, "MAX SPD", Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX - 40, (centerY + 6).toNumber(), Graphics.FONT_NUMBER_MEDIUM, _topSpeedEver.format("%.1f"), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX - 45, centerY + 20, Graphics.FONT_NUMBER_MEDIUM, _topSpeedEver.format("%.1f"), Graphics.TEXT_JUSTIFY_CENTER);
 
+        // JOBB ALUL - Runs
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX + 40, (centerY + 38).toNumber(), Graphics.FONT_XTINY, "RUNS", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX + 45, centerY + 5, Graphics.FONT_XTINY, "RUNS", Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX + 40, (centerY + 6).toNumber(), Graphics.FONT_NUMBER_MEDIUM, _runCount.toString(), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX + 45, centerY + 20, Graphics.FONT_NUMBER_MEDIUM, _runCount.toString(), Graphics.TEXT_JUSTIFY_CENTER);
 
+        // AKKU (Legalul)
         var battery = System.getSystemStats().battery;
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawText(centerX, (h * 0.85).toNumber(), Graphics.FONT_XTINY, battery.format("%d") + "%", Graphics.TEXT_JUSTIFY_CENTER);
@@ -234,11 +238,11 @@ class SnowBoardAppView extends WatchUi.View {
         var cy = dc.getHeight() / 2;
         if (_isPaused) {
             dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
-            dc.fillRectangle(cx - 20, cy - 25, 12, 50);
-            dc.fillRectangle(cx + 8, cy - 25, 12, 50);
+            dc.fillRectangle(cx - 15, cy - 20, 10, 40);
+            dc.fillRectangle(cx + 5, cy - 20, 10, 40);
         } else {
             dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
-            var pts = [[cx - 20, cy - 30], [cx - 20, cy + 30], [cx + 30, cy]];
+            var pts = [[cx - 15, cy - 20], [cx - 15, cy + 20], [cx + 20, cy]];
             dc.fillPolygon(pts);
         }
     }
