@@ -10,6 +10,7 @@ import Toybox.Time;
 import Toybox.Time.Gregorian;
 
 class SnowBoardAppView extends WatchUi.View {
+    // --- OSZTÁLY VÁLTOZÓK ---
     private var _backgroundImage as BitmapResource?;
     private var _session as Session? = null;
     private var _isTracking as Boolean = false;
@@ -17,6 +18,7 @@ class SnowBoardAppView extends WatchUi.View {
     private var _gpsAccuracy as Number = 0;
     private var _pauseTimer as Number = 0;
 
+    // Snowboard specifikus adatok
     private var _runCount as Number = 0;
     private var _liftCount as Number = 0;
     private var _maxSpeedCurrentRun as Float = 0.0;
@@ -26,28 +28,56 @@ class SnowBoardAppView extends WatchUi.View {
     private var _lastAltitude as Float? = null;
     private var _isDescending as Boolean = false;
 
+    // --- INICIALIZÁLÁS ---
     function initialize() {
         View.initialize();
+        
+        // Háttérkép betöltése az erőforrásokból
         if (Rez.Drawables has :BackgroundImage) {
             _backgroundImage = WatchUi.loadResource(Rez.Drawables.BackgroundImage) as BitmapResource;
         }
         
+        // Rekord sebesség betöltése a memóriából
         var savedTopSpeed = Storage.getValue("topSpeedEver");
         if (savedTopSpeed != null) {
             _topSpeedEver = savedTopSpeed.toFloat();
         }
     }
 
-    function onLayout(dc as Dc) as Void {}
+    function onLayout(dc as Dc) as Void {
+        // A layout-ot manuálisan kezeljük az onUpdate-ben
+    }
 
-    function isTracking() as Boolean { return _isTracking; }
-    function hasActiveSession() as Boolean { return _session != null; }
-    function getRunCount() as Number { return _runCount; }
-    function getLiftCount() as Number { return _liftCount; }
-    function getMaxSpeed() as Float { return _topSpeedEver; }
-    function getTotalDescend() as Float { return _totalDescend; }
-    function getTotalDistance() as Float { return _totalDistance; }
+    // --- ADATLEKÉRŐK ---
+    function isTracking() as Boolean {
+        return _isTracking;
+    }
 
+    function hasActiveSession() as Boolean {
+        return _session != null;
+    }
+
+    function getRunCount() as Number {
+        return _runCount;
+    }
+
+    function getLiftCount() as Number {
+        return _liftCount;
+    }
+
+    function getMaxSpeed() as Float {
+        return _topSpeedEver;
+    }
+
+    function getTotalDescend() as Float {
+        return _totalDescend;
+    }
+
+    function getTotalDistance() as Float {
+        return _totalDistance;
+    }
+
+    // --- RÖGZÍTÉS VEZÉRLÉSE ---
     function startTracking() as Void {
         if (Toybox has :ActivityRecording && _session == null) {
             _session = ActivityRecording.createSession({
@@ -93,6 +123,7 @@ class SnowBoardAppView extends WatchUi.View {
         }
     }
 
+    // --- JELZÉSEK ---
     function vibrate(count as Number) as Void {
         if (Attention has :vibrate) {
             var vibeData = [] as Array<Attention.VibeProfile>;
@@ -106,61 +137,73 @@ class SnowBoardAppView extends WatchUi.View {
         }
     }
 
+    // --- FŐ RAJZOLÁSI CIKLUS ---
     function onUpdate(dc as Dc) as Void {
+        // Képernyő törlése (AMOLED fekete)
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
 
-        // Itt kérjük le az adatokat
         var info = Activity.getActivityInfo();
 
         if (!_isTracking) {
-            // Itt átadjuk a dc-t ÉS az info-t is
             drawStartScreen(dc, info);
         } else {
-            // Itt is átadjuk mindkét argumentumot
             drawMainScreen(dc, info);
         }
     }
 
+    // --- KEZDŐ KÉPERNYŐ (v1.0 felirattal) ---
     private function drawStartScreen(dc as Dc, info as Activity.Info?) as Void {
         if (_backgroundImage != null) {
             dc.drawBitmap(0, 0, _backgroundImage);
         }
+
+        // Verziószám v1.0
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawText(dc.getWidth()/2, (dc.getHeight() * 0.88).toNumber(), Graphics.FONT_XTINY, "v1.0", Graphics.TEXT_JUSTIFY_CENTER);
+
         _gpsAccuracy = (info != null && info.currentLocationAccuracy != null) ? info.currentLocationAccuracy : 0;
         var ringColor = (_gpsAccuracy >= 3) ? Graphics.COLOR_GREEN : Graphics.COLOR_RED;
+        
         dc.setPenWidth(8);
         dc.setColor(ringColor, Graphics.COLOR_TRANSPARENT);
         dc.drawCircle(dc.getWidth()/2, dc.getHeight()/2, (dc.getWidth()/2) - 4);
+        
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         var statusText = (_gpsAccuracy >= 3) ? "START-ra kész!" : "GPS keresése...";
         dc.drawText(dc.getWidth()/2, (dc.getHeight() * 0.72).toNumber(), Graphics.FONT_XTINY, statusText, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
-    private function drawMainScreen(dc as Dc) as Void {
+    // --- ADAT KÉPERNYŐ ---
+    private function drawMainScreen(dc as Dc, info as Activity.Info?) as Void {
         var w = dc.getWidth();
         var h = dc.getHeight();
         var centerX = w / 2;
         var centerY = h / 2;
 
-        var info = Activity.getActivityInfo();
+        // Adatok lekérése
         var speed = (info != null && info.currentSpeed != null) ? info.currentSpeed * 3.6 : 0.0;
         var altitude = (info != null && info.altitude != null) ? info.altitude : 0.0;
         var elapsedSec = (info != null && info.elapsedTime != null) ? info.elapsedTime / 1000 : 0;
         _totalDistance = (info != null && info.elapsedDistance != null) ? info.elapsedDistance / 1000.0 : 0.0;
 
-        // --- Logika (Menetszámláló, Pause, stb.) változatlan marad ---
+        // Run/Lift logika
         if (_lastAltitude != null) {
             var diff = altitude - _lastAltitude;
             if (!_isDescending && diff < -1.5 && speed > 7.0) { 
-                _isDescending = true; _runCount++; _maxSpeedCurrentRun = 0.0; vibrate(1);
+                _isDescending = true; 
+                _runCount++; 
+                _maxSpeedCurrentRun = 0.0; 
+                vibrate(1);
             } else if (_isDescending && diff > 2.5) { 
-                _isDescending = false; _liftCount++; vibrate(2);
+                _isDescending = false; 
+                _liftCount++; 
+                vibrate(2);
             }
         }
         _lastAltitude = altitude.toFloat();
 
+        // Sebesség rögzítés
         if (_isDescending && speed > _maxSpeedCurrentRun) {
             _maxSpeedCurrentRun = speed.toFloat();
         }
@@ -169,93 +212,106 @@ class SnowBoardAppView extends WatchUi.View {
             Storage.setValue("topSpeedEver", _topSpeedEver);
         }
 
+        // Auto-Pause logika
         if (_session != null) {
-            if (!_isPaused && speed < 1.5 && _session.isRecording()) { 
-                _session.stop(); _isPaused = true; _pauseTimer = 2; vibrate(1);
-            } else if (_isPaused && speed > 4.0 && !_session.isRecording()) { 
-                _session.start(); _isPaused = false; _pauseTimer = 2; vibrate(1);
+            if (!_isPaused && speed < 1.5 && _session.isRecording()) {
+                _session.stop();
+                _isPaused = true;
+                _pauseTimer = 2;
+                vibrate(1);
+            } else if (_isPaused && speed > 4.0 && !_session.isRecording()) {
+                _session.start();
+                _isPaused = false;
+                _pauseTimer = 2;
+                vibrate(1);
             }
         }
 
-        // --- RAJZOLÁS ---
+        // --- VIZUÁLIS ELEMEK ---
 
-        // Pause esetén piros kör a szélén
+        // Piros gyűrű pause esetén
         if (_isPaused) {
             dc.setPenWidth(10);
             dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
             dc.drawCircle(centerX, centerY, centerX - 5);
         }
 
-        // RÁCS (Kicsit rövidebb vonalak, hogy ne lógjanak a számokra)
+        // Rövidített rács vonalak
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(2);
-        dc.drawLine(centerX, (h * 0.25).toNumber(), centerX, (h * 0.75).toNumber()); // Függőleges
-        dc.drawLine((w * 0.15).toNumber(), centerY, (w * 0.85).toNumber(), centerY); // Vízszintes
-        dc.setPenWidth(1);
+        dc.drawLine(centerX, (centerY - 35).toNumber(), centerX, (centerY + 35).toNumber());
+        dc.drawLine((centerX - 70).toNumber(), centerY, (centerX + 70).toNumber(), centerY);
 
-        // ÓRA (Legfelül)
+        // Pontos idő (Felül)
         var now = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         var timeStr = Lang.format("$1$:$2$", [now.hour.format("%02d"), now.min.format("%02d")]);
         dc.drawText(centerX, (h * 0.12).toNumber(), Graphics.FONT_MEDIUM, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
 
-        // --- ADATMEZŐK (Széttolva a szélek felé) ---
-        // Megjegyzés: A VCENTER igazítás miatt a koordináta a szám közepe!
-
-        var labelOffset = 55; // Felirat távolsága a középvonaltól
-        var valueOffset = 30; // Érték távolsága a középvonaltól
-        var sideOffset = 60;  // Oldalsó távolság a középső függőleges vonaltól
-
-        // BAL FELÜL - Idő
+        // Akkumulátor (Alul - v1.0 nélkül)
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX - sideOffset, centerY - labelOffset, Graphics.FONT_XTINY, "ELAPS", Graphics.TEXT_JUSTIFY_CENTER);
+        var batteryStr = System.getSystemStats().battery.format("%d") + "%";
+        dc.drawText(centerX, (h * 0.88).toNumber(), Graphics.FONT_TINY, batteryStr, Graphics.TEXT_JUSTIFY_CENTER);
+
+        // --- ADATMEZŐK ELRENDEZÉSE (Széttolva a fotók alapján) ---
+        var sideOffset = 72; // Maximális távolság oldalra
+        var topLabelY = (centerY - 80).toNumber();
+        var topValueY = (centerY - 55).toNumber();
+        var botLabelY = (centerY + 12).toNumber();
+        var botValueY = (centerY + 37).toNumber();
+
+        // 1. BAL FELÜL - Eltelt idő
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(centerX - sideOffset, topLabelY, Graphics.FONT_XTINY, "ELAPS", Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX - sideOffset, centerY - valueOffset, Graphics.FONT_NUMBER_MEDIUM, formatTime(elapsedSec.toNumber()), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(centerX - sideOffset, topValueY, Graphics.FONT_NUMBER_MEDIUM, formatTime(elapsedSec.toNumber()), Graphics.TEXT_JUSTIFY_CENTER);
 
-        // JOBB FELÜL - Távolság
+        // 2. JOBB FELÜL - Távolság
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX + sideOffset, centerY - labelOffset, Graphics.FONT_XTINY, "DIST", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX + sideOffset, topLabelY, Graphics.FONT_XTINY, "DIST", Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX + sideOffset, centerY - valueOffset, Graphics.FONT_NUMBER_MEDIUM, _totalDistance.format("%.2f"), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(centerX + sideOffset, topValueY, Graphics.FONT_NUMBER_MEDIUM, _totalDistance.format("%.2f"), Graphics.TEXT_JUSTIFY_CENTER);
 
-        // BAL ALUL - Aktuális Max Sebesség (Figyelmeztetés javítva!)
+        // 3. BAL ALUL - Aktuális Max Sebesség
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX - sideOffset, centerY + valueOffset - 5, Graphics.FONT_XTINY, "CUR MAX", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX - sideOffset, botLabelY, Graphics.FONT_XTINY, "CUR MAX", Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX - sideOffset, centerY + labelOffset - 5, Graphics.FONT_NUMBER_MEDIUM, _maxSpeedCurrentRun.format("%.1f"), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(centerX - sideOffset, botValueY, Graphics.FONT_NUMBER_MEDIUM, _maxSpeedCurrentRun.format("%.1f"), Graphics.TEXT_JUSTIFY_CENTER);
 
-        // JOBB ALUL - Menetek
+        // 4. JOBB ALUL - Menetek száma
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX + sideOffset, centerY + valueOffset - 5, Graphics.FONT_XTINY, "RUNS", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX + sideOffset, botLabelY, Graphics.FONT_XTINY, "RUNS", Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX + sideOffset, centerY + labelOffset - 5, Graphics.FONT_NUMBER_MEDIUM, _runCount.toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(centerX + sideOffset, botValueY, Graphics.FONT_NUMBER_MEDIUM, _runCount.toString(), Graphics.TEXT_JUSTIFY_CENTER);
 
-        // AKKU ÉS VERZIÓ (Legalul)
-        var battery = System.getSystemStats().battery;
-        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX, (h * 0.88).toNumber(), Graphics.FONT_XTINY, battery.format("%d") + "% | v1.0", Graphics.TEXT_JUSTIFY_CENTER);
-
+        // Overlay ikonok kezelése
         if (_pauseTimer > 0) {
             drawOverlayIcon(dc);
             _pauseTimer--;
         }
     }
 
+    // --- SEGÉDFÜGGVÉNYEK ---
     private function formatTime(seconds as Number) as String {
-        var mm = (seconds % 3600) / 60;
-        var ss = seconds % 60;
-        return mm.format("%d") + ":" + ss.format("%02d");
+        var min = seconds / 60;
+        var sec = seconds % 60;
+        return min.format("%d") + ":" + sec.format("%02d");
     }
 
     private function drawOverlayIcon(dc as Dc) as Void {
         var cx = dc.getWidth() / 2;
         var cy = dc.getHeight() / 2;
+        
         if (_isPaused) {
             dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
             dc.fillRectangle(cx - 15, cy - 20, 10, 40);
             dc.fillRectangle(cx + 5, cy - 20, 10, 40);
         } else {
             dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
-            var pts = [[cx - 15, cy - 20], [cx - 15, cy + 20], [cx + 20, cy]];
+            var pts = [
+                [cx - 15, cy - 20],
+                [cx - 15, cy + 20],
+                [cx + 20, cy]
+            ] as Array;
             dc.fillPolygon(pts);
         }
     }

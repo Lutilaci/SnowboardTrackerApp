@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="1" lineNum="57" parent="globals/SnowBoardSummaryDelegate" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="2" lineNum="6" parent="globals/SnowBoardSummaryView" pc="268435472" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="3" lineNum="5" parent="globals/SnowBoardAppMenuDelegate" pc="268435484" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/bin/gen/006-B4433-00/source/Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435496" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="5" lineNum="12" parent="globals/SnowBoardAppView" pc="268435516" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppApp.mc" id="6" lineNum="4" parent="globals/SnowBoardAppApp" pc="268435528" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="7" lineNum="3" parent="globals/SnowBoardAppDelegate" pc="268435540" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="8" lineNum="67" parent="globals/SnowBoardSummaryDelegate" pc="268435552" symbol="onBack"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="8" lineNum="68" parent="globals/SnowBoardSummaryDelegate" pc="268435554" symbol="onBack"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="8" lineNum="69" parent="globals/SnowBoardSummaryDelegate" pc="268435565" symbol="onBack"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="9" lineNum="58" parent="globals/SnowBoardSummaryDelegate" pc="268435567" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="9" lineNum="59" parent="globals/SnowBoardSummaryDelegate" pc="268435569" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="10" lineNum="62" parent="globals/SnowBoardSummaryDelegate" pc="268435582" symbol="onSelect"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="10" lineNum="63" parent="globals/SnowBoardSummaryDelegate" pc="268435584" symbol="onSelect"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="10" lineNum="64" parent="globals/SnowBoardSummaryDelegate" pc="268435595" symbol="onSelect"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="11" lineNum="49" parent="globals/SnowBoardSummaryView" pc="268435597" symbol="&lt;globals/SnowBoardSummaryView/&lt;&gt;drawSummaryRow&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="11" lineNum="50" parent="globals/SnowBoardSummaryView" pc="268435599" symbol="&lt;globals/SnowBoardSummaryView/&lt;&gt;drawSummaryRow&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="11" lineNum="51" parent="globals/SnowBoardSummaryView" pc="268435616" symbol="&lt;globals/SnowBoardSummaryView/&lt;&gt;drawSummaryRow&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="11" lineNum="52" parent="globals/SnowBoardSummaryView" pc="268435638" symbol="&lt;globals/SnowBoardSummaryView/&lt;&gt;drawSummaryRow&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="11" lineNum="53" parent="globals/SnowBoardSummaryView" pc="268435655" symbol="&lt;globals/SnowBoardSummaryView/&lt;&gt;drawSummaryRow&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="12" lineNum="13" parent="globals/SnowBoardSummaryView" pc="268435679" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="12" lineNum="14" parent="globals/SnowBoardSummaryView" pc="268435681" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="12" lineNum="15" parent="globals/SnowBoardSummaryView" pc="268435693" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="12" lineNum="16" parent="globals/SnowBoardSummaryView" pc="268435702" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="12" lineNum="17" parent="globals/SnowBoardSummaryView" pc="268435711" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="12" lineNum="18" parent="globals/SnowBoardSummaryView" pc="268435720" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="12" lineNum="19" parent="globals/SnowBoardSummaryView" pc="268435729" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="22" parent="globals/SnowBoardSummaryView" pc="268435739" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="23" parent="globals/SnowBoardSummaryView" pc="268435742" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="24" parent="globals/SnowBoardSummaryView" pc="268435754" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="26" parent="globals/SnowBoardSummaryView" pc="268435762" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="27" parent="globals/SnowBoardSummaryView" pc="268435771" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="28" parent="globals/SnowBoardSummaryView" pc="268435780" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="30" parent="globals/SnowBoardSummaryView" pc="268435787" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="31" parent="globals/SnowBoardSummaryView" pc="268435804" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="33" parent="globals/SnowBoardSummaryView" pc="268435839" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="34" parent="globals/SnowBoardSummaryView" pc="268435856" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="36" parent="globals/SnowBoardSummaryView" pc="268435922" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="37" parent="globals/SnowBoardSummaryView" pc="268435932" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="39" parent="globals/SnowBoardSummaryView" pc="268435942" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="40" parent="globals/SnowBoardSummaryView" pc="268435978" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="41" parent="globals/SnowBoardSummaryView" pc="268436018" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="42" parent="globals/SnowBoardSummaryView" pc="268436074" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="43" parent="globals/SnowBoardSummaryView" pc="268436130" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="45" parent="globals/SnowBoardSummaryView" pc="268436186" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardSummaryView.mc" id="13" lineNum="46" parent="globals/SnowBoardSummaryView" pc="268436203" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="14" lineNum="15" parent="globals/SnowBoardAppMenuDelegate" pc="268436238" symbol="onMenuItem"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="14" lineNum="16" parent="globals/SnowBoardAppMenuDelegate" pc="268436241" symbol="onMenuItem"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="14" lineNum="18" parent="globals/SnowBoardAppMenuDelegate" pc="268436252" symbol="onMenuItem"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="14" lineNum="19" parent="globals/SnowBoardAppMenuDelegate" pc="268436265" symbol="onMenuItem"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="14" lineNum="20" parent="globals/SnowBoardAppMenuDelegate" pc="268436278" symbol="onMenuItem"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="14" lineNum="21" parent="globals/SnowBoardAppMenuDelegate" pc="268436291" symbol="onMenuItem"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="14" lineNum="22" parent="globals/SnowBoardAppMenuDelegate" pc="268436304" symbol="onMenuItem"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="14" lineNum="25" parent="globals/SnowBoardAppMenuDelegate" pc="268436317" symbol="onMenuItem"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="14" lineNum="29" parent="globals/SnowBoardAppMenuDelegate" pc="268436329" symbol="onMenuItem"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="14" lineNum="35" parent="globals/SnowBoardAppMenuDelegate" pc="268436392" symbol="onMenuItem"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="14" lineNum="37" parent="globals/SnowBoardAppMenuDelegate" pc="268436403" symbol="onMenuItem"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="14" lineNum="40" parent="globals/SnowBoardAppMenuDelegate" pc="268436415" symbol="onMenuItem"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="14" lineNum="42" parent="globals/SnowBoardAppMenuDelegate" pc="268436429" symbol="onMenuItem"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="14" lineNum="44" parent="globals/SnowBoardAppMenuDelegate" pc="268436440" symbol="onMenuItem"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="15" lineNum="9" parent="globals/SnowBoardAppMenuDelegate" pc="268436459" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="15" lineNum="10" parent="globals/SnowBoardAppMenuDelegate" pc="268436461" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppMenuDelegate.mc" id="15" lineNum="11" parent="globals/SnowBoardAppMenuDelegate" pc="268436473" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="16" lineNum="76" parent="globals/SnowBoardAppView" pc="268436483" symbol="getTotalDistance"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="16" lineNum="77" parent="globals/SnowBoardAppView" pc="268436485" symbol="getTotalDistance"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="17" lineNum="60" parent="globals/SnowBoardAppView" pc="268436491" symbol="getRunCount"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="17" lineNum="61" parent="globals/SnowBoardAppView" pc="268436493" symbol="getRunCount"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="18" lineNum="127" parent="globals/SnowBoardAppView" pc="268436499" symbol="vibrate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="18" lineNum="128" parent="globals/SnowBoardAppView" pc="268436502" symbol="vibrate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="18" lineNum="129" parent="globals/SnowBoardAppView" pc="268436517" symbol="vibrate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="18" lineNum="130" parent="globals/SnowBoardAppView" pc="268436521" symbol="vibrate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="18" lineNum="131" parent="globals/SnowBoardAppView" pc="268436532" symbol="vibrate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="18" lineNum="132" parent="globals/SnowBoardAppView" pc="268436569" symbol="vibrate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="18" lineNum="133" parent="globals/SnowBoardAppView" pc="268436580" symbol="vibrate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="18" lineNum="136" parent="globals/SnowBoardAppView" pc="268436629" symbol="vibrate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="19" lineNum="108" parent="globals/SnowBoardAppView" pc="268436648" symbol="stopAndSave"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="19" lineNum="109" parent="globals/SnowBoardAppView" pc="268436650" symbol="stopAndSave"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="19" lineNum="110" parent="globals/SnowBoardAppView" pc="268436659" symbol="stopAndSave"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="19" lineNum="111" parent="globals/SnowBoardAppView" pc="268436671" symbol="stopAndSave"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="19" lineNum="112" parent="globals/SnowBoardAppView" pc="268436683" symbol="stopAndSave"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="19" lineNum="113" parent="globals/SnowBoardAppView" pc="268436691" symbol="stopAndSave"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="20" lineNum="117" parent="globals/SnowBoardAppView" pc="268436703" symbol="stopAndDiscard"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="20" lineNum="118" parent="globals/SnowBoardAppView" pc="268436705" symbol="stopAndDiscard"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="20" lineNum="119" parent="globals/SnowBoardAppView" pc="268436714" symbol="stopAndDiscard"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="20" lineNum="120" parent="globals/SnowBoardAppView" pc="268436726" symbol="stopAndDiscard"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="20" lineNum="121" parent="globals/SnowBoardAppView" pc="268436738" symbol="stopAndDiscard"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="20" lineNum="122" parent="globals/SnowBoardAppView" pc="268436746" symbol="stopAndDiscard"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="178" parent="globals/SnowBoardAppView" pc="268436758" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="179" parent="globals/SnowBoardAppView" pc="268436761" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="180" parent="globals/SnowBoardAppView" pc="268436770" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="181" parent="globals/SnowBoardAppView" pc="268436779" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="182" parent="globals/SnowBoardAppView" pc="268436786" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="185" parent="globals/SnowBoardAppView" pc="268436793" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="186" parent="globals/SnowBoardAppView" pc="268436829" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="187" parent="globals/SnowBoardAppView" pc="268436859" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="188" parent="globals/SnowBoardAppView" pc="268436893" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="191" parent="globals/SnowBoardAppView" pc="268436934" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="192" parent="globals/SnowBoardAppView" pc="268436943" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="193" parent="globals/SnowBoardAppView" pc="268436953" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="194" parent="globals/SnowBoardAppView" pc="268436984" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="195" parent="globals/SnowBoardAppView" pc="268436992" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="196" parent="globals/SnowBoardAppView" pc="268437007" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="197" parent="globals/SnowBoardAppView" pc="268437015" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="198" parent="globals/SnowBoardAppView" pc="268437029" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="199" parent="globals/SnowBoardAppView" pc="268437048" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="200" parent="globals/SnowBoardAppView" pc="268437056" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="201" parent="globals/SnowBoardAppView" pc="268437071" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="204" parent="globals/SnowBoardAppView" pc="268437088" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="207" parent="globals/SnowBoardAppView" pc="268437102" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="208" parent="globals/SnowBoardAppView" pc="268437121" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="210" parent="globals/SnowBoardAppView" pc="268437138" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="211" parent="globals/SnowBoardAppView" pc="268437149" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="212" parent="globals/SnowBoardAppView" pc="268437163" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="216" parent="globals/SnowBoardAppView" pc="268437189" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="217" parent="globals/SnowBoardAppView" pc="268437198" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="218" parent="globals/SnowBoardAppView" pc="268437232" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="219" parent="globals/SnowBoardAppView" pc="268437244" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="220" parent="globals/SnowBoardAppView" pc="268437252" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="221" parent="globals/SnowBoardAppView" pc="268437261" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="222" parent="globals/SnowBoardAppView" pc="268437275" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="223" parent="globals/SnowBoardAppView" pc="268437309" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="224" parent="globals/SnowBoardAppView" pc="268437321" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="225" parent="globals/SnowBoardAppView" pc="268437329" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="226" parent="globals/SnowBoardAppView" pc="268437338" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="233" parent="globals/SnowBoardAppView" pc="268437355" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="234" parent="globals/SnowBoardAppView" pc="268437363" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="235" parent="globals/SnowBoardAppView" pc="268437375" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="236" parent="globals/SnowBoardAppView" pc="268437392" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="240" parent="globals/SnowBoardAppView" pc="268437414" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="241" parent="globals/SnowBoardAppView" pc="268437431" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="242" parent="globals/SnowBoardAppView" pc="268437443" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="243" parent="globals/SnowBoardAppView" pc="268437479" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="246" parent="globals/SnowBoardAppView" pc="268437515" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="247" parent="globals/SnowBoardAppView" pc="268437540" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="248" parent="globals/SnowBoardAppView" pc="268437607" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="251" parent="globals/SnowBoardAppView" pc="268437639" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="252" parent="globals/SnowBoardAppView" pc="268437656" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="253" parent="globals/SnowBoardAppView" pc="268437692" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="256" parent="globals/SnowBoardAppView" pc="268437724" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="257" parent="globals/SnowBoardAppView" pc="268437728" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="258" parent="globals/SnowBoardAppView" pc="268437741" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="259" parent="globals/SnowBoardAppView" pc="268437754" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="260" parent="globals/SnowBoardAppView" pc="268437767" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="263" parent="globals/SnowBoardAppView" pc="268437780" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="264" parent="globals/SnowBoardAppView" pc="268437797" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="265" parent="globals/SnowBoardAppView" pc="268437822" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="266" parent="globals/SnowBoardAppView" pc="268437839" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="269" parent="globals/SnowBoardAppView" pc="268437875" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="270" parent="globals/SnowBoardAppView" pc="268437892" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="271" parent="globals/SnowBoardAppView" pc="268437917" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="272" parent="globals/SnowBoardAppView" pc="268437934" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="275" parent="globals/SnowBoardAppView" pc="268437973" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="276" parent="globals/SnowBoardAppView" pc="268437990" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="277" parent="globals/SnowBoardAppView" pc="268438015" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="278" parent="globals/SnowBoardAppView" pc="268438032" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="281" parent="globals/SnowBoardAppView" pc="268438071" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="282" parent="globals/SnowBoardAppView" pc="268438088" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="283" parent="globals/SnowBoardAppView" pc="268438113" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="284" parent="globals/SnowBoardAppView" pc="268438130" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="287" parent="globals/SnowBoardAppView" pc="268438162" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="288" parent="globals/SnowBoardAppView" pc="268438172" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="21" lineNum="289" parent="globals/SnowBoardAppView" pc="268438183" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="22" lineNum="300" parent="globals/SnowBoardAppView" pc="268438202" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawOverlayIcon&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="22" lineNum="301" parent="globals/SnowBoardAppView" pc="268438205" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawOverlayIcon&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="22" lineNum="302" parent="globals/SnowBoardAppView" pc="268438217" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawOverlayIcon&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="22" lineNum="304" parent="globals/SnowBoardAppView" pc="268438229" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawOverlayIcon&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="22" lineNum="305" parent="globals/SnowBoardAppView" pc="268438237" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawOverlayIcon&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="22" lineNum="306" parent="globals/SnowBoardAppView" pc="268438253" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawOverlayIcon&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="22" lineNum="307" parent="globals/SnowBoardAppView" pc="268438277" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawOverlayIcon&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="22" lineNum="309" parent="globals/SnowBoardAppView" pc="268438304" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawOverlayIcon&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="22" lineNum="310" parent="globals/SnowBoardAppView" pc="268438319" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawOverlayIcon&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="22" lineNum="315" parent="globals/SnowBoardAppView" pc="268438391" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawOverlayIcon&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="23" lineNum="56" parent="globals/SnowBoardAppView" pc="268438404" symbol="hasActiveSession"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="23" lineNum="57" parent="globals/SnowBoardAppView" pc="268438406" symbol="hasActiveSession"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="24" lineNum="47" parent="globals/SnowBoardAppView" pc="268438413" symbol="onLayout"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="25" lineNum="294" parent="globals/SnowBoardAppView" pc="268438416" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;formatTime&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="25" lineNum="295" parent="globals/SnowBoardAppView" pc="268438419" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;formatTime&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="25" lineNum="296" parent="globals/SnowBoardAppView" pc="268438426" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;formatTime&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="25" lineNum="297" parent="globals/SnowBoardAppView" pc="268438433" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;formatTime&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="26" lineNum="72" parent="globals/SnowBoardAppView" pc="268438469" symbol="getTotalDescend"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="26" lineNum="73" parent="globals/SnowBoardAppView" pc="268438471" symbol="getTotalDescend"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="27" lineNum="52" parent="globals/SnowBoardAppView" pc="268438477" symbol="isTracking"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="27" lineNum="53" parent="globals/SnowBoardAppView" pc="268438479" symbol="isTracking"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="28" lineNum="81" parent="globals/SnowBoardAppView" pc="268438485" symbol="startTracking"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="28" lineNum="82" parent="globals/SnowBoardAppView" pc="268438487" symbol="startTracking"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="28" lineNum="83" parent="globals/SnowBoardAppView" pc="268438511" symbol="startTracking"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="28" lineNum="87" parent="globals/SnowBoardAppView" pc="268438554" symbol="startTracking"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="28" lineNum="88" parent="globals/SnowBoardAppView" pc="268438566" symbol="startTracking"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="28" lineNum="89" parent="globals/SnowBoardAppView" pc="268438574" symbol="startTracking"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="28" lineNum="90" parent="globals/SnowBoardAppView" pc="268438582" symbol="startTracking"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="29" lineNum="64" parent="globals/SnowBoardAppView" pc="268438597" symbol="getLiftCount"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="29" lineNum="65" parent="globals/SnowBoardAppView" pc="268438599" symbol="getLiftCount"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="30" lineNum="94" parent="globals/SnowBoardAppView" pc="268438605" symbol="toggleManualPause"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="30" lineNum="95" parent="globals/SnowBoardAppView" pc="268438607" symbol="toggleManualPause"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="30" lineNum="96" parent="globals/SnowBoardAppView" pc="268438616" symbol="toggleManualPause"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="30" lineNum="97" parent="globals/SnowBoardAppView" pc="268438630" symbol="toggleManualPause"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="30" lineNum="98" parent="globals/SnowBoardAppView" pc="268438642" symbol="toggleManualPause"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="30" lineNum="100" parent="globals/SnowBoardAppView" pc="268438653" symbol="toggleManualPause"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="30" lineNum="101" parent="globals/SnowBoardAppView" pc="268438665" symbol="toggleManualPause"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="30" lineNum="103" parent="globals/SnowBoardAppView" pc="268438673" symbol="toggleManualPause"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="30" lineNum="104" parent="globals/SnowBoardAppView" pc="268438682" symbol="toggleManualPause"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="31" lineNum="32" parent="globals/SnowBoardAppView" pc="268438697" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="31" lineNum="33" parent="globals/SnowBoardAppView" pc="268438700" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="31" lineNum="36" parent="globals/SnowBoardAppView" pc="268438712" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="31" lineNum="37" parent="globals/SnowBoardAppView" pc="268438716" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="31" lineNum="41" parent="globals/SnowBoardAppView" pc="268438757" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="31" lineNum="42" parent="globals/SnowBoardAppView" pc="268438776" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="31" lineNum="43" parent="globals/SnowBoardAppView" pc="268438782" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="32" lineNum="68" parent="globals/SnowBoardAppView" pc="268438801" symbol="getMaxSpeed"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="32" lineNum="69" parent="globals/SnowBoardAppView" pc="268438803" symbol="getMaxSpeed"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="33" lineNum="156" parent="globals/SnowBoardAppView" pc="268438809" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawStartScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="33" lineNum="157" parent="globals/SnowBoardAppView" pc="268438812" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawStartScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="33" lineNum="158" parent="globals/SnowBoardAppView" pc="268438821" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawStartScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="33" lineNum="162" parent="globals/SnowBoardAppView" pc="268438841" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawStartScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="33" lineNum="163" parent="globals/SnowBoardAppView" pc="268438858" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawStartScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="33" lineNum="165" parent="globals/SnowBoardAppView" pc="268438905" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawStartScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="33" lineNum="166" parent="globals/SnowBoardAppView" pc="268438940" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawStartScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="33" lineNum="168" parent="globals/SnowBoardAppView" pc="268438965" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawStartScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="33" lineNum="169" parent="globals/SnowBoardAppView" pc="268438977" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawStartScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="33" lineNum="170" parent="globals/SnowBoardAppView" pc="268438991" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawStartScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="33" lineNum="172" parent="globals/SnowBoardAppView" pc="268439034" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawStartScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="33" lineNum="173" parent="globals/SnowBoardAppView" pc="268439051" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawStartScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="33" lineNum="174" parent="globals/SnowBoardAppView" pc="268439077" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawStartScreen&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="34" lineNum="141" parent="globals/SnowBoardAppView" pc="268439122" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="34" lineNum="143" parent="globals/SnowBoardAppView" pc="268439125" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="34" lineNum="144" parent="globals/SnowBoardAppView" pc="268439137" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="34" lineNum="146" parent="globals/SnowBoardAppView" pc="268439145" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="34" lineNum="148" parent="globals/SnowBoardAppView" pc="268439157" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="34" lineNum="149" parent="globals/SnowBoardAppView" pc="268439166" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" id="34" lineNum="151" parent="globals/SnowBoardAppView" pc="268439182" symbol="onUpdate"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppApp.mc" id="35" lineNum="10" parent="globals/SnowBoardAppApp" pc="268439196" symbol="getInitialView"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppApp.mc" id="35" lineNum="11" parent="globals/SnowBoardAppApp" pc="268439199" symbol="getInitialView"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppApp.mc" id="35" lineNum="12" parent="globals/SnowBoardAppApp" pc="268439219" symbol="getInitialView"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppApp.mc" id="35" lineNum="13" parent="globals/SnowBoardAppApp" pc="268439241" symbol="getInitialView"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppApp.mc" id="36" lineNum="6" parent="globals/SnowBoardAppApp" pc="268439256" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppApp.mc" id="36" lineNum="7" parent="globals/SnowBoardAppApp" pc="268439258" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="37" lineNum="31" parent="globals/SnowBoardAppDelegate" pc="268439271" symbol="onBack"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="37" lineNum="32" parent="globals/SnowBoardAppDelegate" pc="268439273" symbol="onBack"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="37" lineNum="35" parent="globals/SnowBoardAppDelegate" pc="268439287" symbol="onBack"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="37" lineNum="36" parent="globals/SnowBoardAppDelegate" pc="268439299" symbol="onBack"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="37" lineNum="38" parent="globals/SnowBoardAppDelegate" pc="268439304" symbol="onBack"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="38" lineNum="47" parent="globals/SnowBoardAppDelegate" pc="268439306" symbol="onHold"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="38" lineNum="47" parent="globals/SnowBoardAppDelegate" pc="268439308" symbol="onHold"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="39" lineNum="46" parent="globals/SnowBoardAppDelegate" pc="268439310" symbol="onSwipe"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="39" lineNum="46" parent="globals/SnowBoardAppDelegate" pc="268439312" symbol="onSwipe"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="40" lineNum="6" parent="globals/SnowBoardAppDelegate" pc="268439314" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="40" lineNum="7" parent="globals/SnowBoardAppDelegate" pc="268439316" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="40" lineNum="8" parent="globals/SnowBoardAppDelegate" pc="268439328" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="41" lineNum="45" parent="globals/SnowBoardAppDelegate" pc="268439338" symbol="onTap"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="41" lineNum="45" parent="globals/SnowBoardAppDelegate" pc="268439340" symbol="onTap"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="42" lineNum="12" parent="globals/SnowBoardAppDelegate" pc="268439342" symbol="onSelect"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="42" lineNum="13" parent="globals/SnowBoardAppDelegate" pc="268439345" symbol="onSelect"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="42" lineNum="15" parent="globals/SnowBoardAppDelegate" pc="268439360" symbol="onSelect"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="42" lineNum="18" parent="globals/SnowBoardAppDelegate" pc="268439375" symbol="onSelect"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="42" lineNum="19" parent="globals/SnowBoardAppDelegate" pc="268439399" symbol="onSelect"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="42" lineNum="20" parent="globals/SnowBoardAppDelegate" pc="268439414" symbol="onSelect"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="42" lineNum="21" parent="globals/SnowBoardAppDelegate" pc="268439434" symbol="onSelect"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="42" lineNum="22" parent="globals/SnowBoardAppDelegate" pc="268439454" symbol="onSelect"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="42" lineNum="24" parent="globals/SnowBoardAppDelegate" pc="268439474" symbol="onSelect"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="42" lineNum="26" parent="globals/SnowBoardAppDelegate" pc="268439514" symbol="onSelect"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" id="42" lineNum="27" parent="globals/SnowBoardAppDelegate" pc="268439525" symbol="onSelect"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/bin/gen/006-B4433-00/source/Rez.mcgen" id="43" lineNum="14" parent="globals/Rez/Layouts" pc="268439527" symbol="MainLayout"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/bin/gen/006-B4433-00/source/Rez.mcgen" id="43" lineNum="15" parent="globals/Rez/Layouts" pc="268439537" symbol="MainLayout"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/bin/gen/006-B4433-00/source/Rez.mcgen" id="44" lineNum="20" parent="globals/Rez/Menus/MainMenu" pc="268439540" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/bin/gen/006-B4433-00/source/Rez.mcgen" id="45" lineNum="21" parent="globals/Rez/Menus/MainMenu" pc="268439552" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/bin/gen/006-B4433-00/source/Rez.mcgen" id="45" lineNum="22" parent="globals/Rez/Menus/MainMenu" pc="268439554" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/bin/gen/006-B4433-00/source/Rez.mcgen" id="45" lineNum="23" parent="globals/Rez/Menus/MainMenu" pc="268439566" symbol="initialize"/>
+        <entry filename="/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/bin/gen/006-B4433-00/source/Rez.mcgen" id="45" lineNum="24" parent="globals/Rez/Menus/MainMenu" pc="268439611" symbol="initialize"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry field="true" id="51" symbol="&lt;globals/SnowBoardAppDelegate/&lt;&gt;_view&gt;"/>
+        <entry field="true" id="25" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;_isPaused&gt;"/>
+        <entry field="true" id="32" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;_session&gt;"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="5" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="50" method="true" symbol="toggleManualPause"/>
+        <entry field="true" id="13" symbol="&lt;globals/SnowBoardSummaryView/&lt;&gt;_distance&gt;"/>
+        <entry id="47" method="true" symbol="startTracking"/>
+        <entry id="7" object="true" symbol="SnowBoardAppApp"/>
+        <entry id="8388638" module="true" symbol="ActivityRecording"/>
+        <entry id="11" object="true" symbol="SnowBoardSummaryDelegate"/>
+        <entry id="54" method="true" symbol="MainLayout"/>
+        <entry id="39" method="true" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;formatTime&gt;"/>
+        <entry id="46" method="true" symbol="isTracking"/>
+        <entry field="true" id="8388890" symbol="sport"/>
+        <entry id="8390424" module="true" symbol="Storage"/>
+        <entry id="8391787" symbol="resume"/>
+        <entry id="8388924" module="true" symbol="Gregorian"/>
+        <entry field="true" id="33" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;_topSpeedEver&gt;"/>
+        <entry field="true" id="19" symbol="&lt;globals/SnowBoardAppMenuDelegate/&lt;&gt;_view&gt;"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="44" method="true" symbol="getTotalDistance"/>
+        <entry field="true" id="31" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;_runCount&gt;"/>
+        <entry field="true" id="30" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;_pauseTimer&gt;"/>
+        <entry id="38" method="true" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawStartScreen&gt;"/>
+        <entry field="true" id="56" symbol="AppName"/>
+        <entry id="6" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="37" method="true" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawOverlayIcon&gt;"/>
+        <entry id="8388631" module="true" symbol="Activity"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389081" method="true" symbol="onBack"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="59" symbol="prompt"/>
+        <entry id="8388883" method="true" symbol="discard"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="61" symbol="item_2"/>
+        <entry id="60" symbol="item_1"/>
+        <entry id="21" module="true" symbol="Menus"/>
+        <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry field="true" id="27" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;_lastAltitude&gt;"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="14" symbol="&lt;globals/SnowBoardSummaryView/&lt;&gt;_lifts&gt;"/>
+        <entry field="true" id="23" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;_gpsAccuracy&gt;"/>
+        <entry id="42" method="true" symbol="getRunCount"/>
+        <entry id="45" method="true" symbol="hasActiveSession"/>
+        <entry id="8389098" method="true" symbol="onTap"/>
+        <entry field="true" id="26" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;_isTracking&gt;"/>
+        <entry id="8388987" method="true" symbol="vibrate"/>
+        <entry id="8388882" method="true" symbol="save"/>
+        <entry id="9" object="true" symbol="SnowBoardAppMenuDelegate"/>
+        <entry field="true" id="29" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;_maxSpeedCurrentRun&gt;"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="43" method="true" symbol="getTotalDescend"/>
+        <entry id="55" object="true" symbol="MainMenu"/>
+        <entry id="36" method="true" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;"/>
+        <entry id="40" method="true" symbol="getLiftCount"/>
+        <entry id="8" object="true" symbol="SnowBoardAppDelegate"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry field="true" id="15" symbol="&lt;globals/SnowBoardSummaryView/&lt;&gt;_maxSpeed&gt;"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="10" object="true" symbol="SnowBoardAppView"/>
+        <entry id="48" method="true" symbol="stopAndDiscard"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="28" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;_liftCount&gt;"/>
+        <entry field="true" id="53" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="41" method="true" symbol="getMaxSpeed"/>
+        <entry field="true" id="16" symbol="&lt;globals/SnowBoardSummaryView/&lt;&gt;_runs&gt;"/>
+        <entry field="true" id="24" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;_isDescending&gt;"/>
+        <entry id="18" method="true" symbol="&lt;globals/SnowBoardSummaryView/&lt;&gt;drawSummaryRow&gt;"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="49" method="true" symbol="stopAndSave"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry field="true" id="35" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;_totalDistance&gt;"/>
+        <entry field="true" id="8388892" symbol="name"/>
+        <entry field="true" id="52" symbol="BackgroundImage"/>
+        <entry id="12" object="true" symbol="SnowBoardSummaryView"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389109" method="true" symbol="onMenuItem"/>
+        <entry field="true" id="22" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;_backgroundImage&gt;"/>
+        <entry field="true" id="17" symbol="&lt;globals/SnowBoardSummaryView/&lt;&gt;_totalDescend&gt;"/>
+        <entry id="20" module="true" symbol="Layouts"/>
+        <entry id="8388636" module="true" symbol="Attention"/>
+        <entry field="true" id="34" symbol="&lt;globals/SnowBoardAppView/&lt;&gt;_totalDescend&gt;"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry id="8389099" method="true" symbol="onHold"/>
+        <entry field="true" id="58" symbol="menu_label_2"/>
+        <entry field="true" id="57" symbol="menu_label_1"/>
+        <entry id="8389101" method="true" symbol="onSwipe"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435678" name="dc" stackId="1" startPc="268435597"/>
+        <entry arg="true" endPc="268435678" name="x" stackId="2" startPc="268435597"/>
+        <entry arg="true" endPc="268435678" name="y" stackId="3" startPc="268435597"/>
+        <entry arg="true" endPc="268435678" name="label" stackId="4" startPc="268435597"/>
+        <entry arg="true" endPc="268435678" name="value" stackId="5" startPc="268435597"/>
+        <entry arg="true" endPc="268435738" name="runs" stackId="1" startPc="268435679"/>
+        <entry arg="true" endPc="268435738" name="lifts" stackId="2" startPc="268435679"/>
+        <entry arg="true" endPc="268435738" name="maxSpeed" stackId="3" startPc="268435679"/>
+        <entry arg="true" endPc="268435738" name="totalDescend" stackId="4" startPc="268435679"/>
+        <entry arg="true" endPc="268435738" name="distance" stackId="5" startPc="268435679"/>
+        <entry arg="true" endPc="268436237" name="dc" stackId="1" startPc="268435739"/>
+        <entry endPc="268436236" name="w" stackId="2" startPc="268435742"/>
+        <entry endPc="268436236" name="h" stackId="3" startPc="268435742"/>
+        <entry endPc="268436236" name="centerX" stackId="4" startPc="268435742"/>
+        <entry endPc="268436236" name="yStart" stackId="5" startPc="268435742"/>
+        <entry endPc="268436236" name="ySpace" stackId="6" startPc="268435742"/>
+        <entry arg="true" endPc="268436458" name="item" stackId="1" startPc="268436238"/>
+        <entry endPc="268436388" name="runs" stackId="2" startPc="268436252"/>
+        <entry endPc="268436388" name="lifts" stackId="3" startPc="268436252"/>
+        <entry endPc="268436388" name="maxSpeed" stackId="4" startPc="268436252"/>
+        <entry endPc="268436388" name="descend" stackId="5" startPc="268436252"/>
+        <entry endPc="268436388" name="distance" stackId="6" startPc="268436252"/>
+        <entry arg="true" endPc="268436482" name="view" stackId="1" startPc="268436459"/>
+        <entry arg="true" endPc="268436647" name="count" stackId="1" startPc="268436499"/>
+        <entry endPc="268436643" name="vibeData" stackId="2" startPc="268436517"/>
+        <entry endPc="268436628" name="i" stackId="3" startPc="268436532"/>
+        <entry arg="true" endPc="268438201" name="dc" stackId="1" startPc="268436758"/>
+        <entry arg="true" endPc="268438201" name="info" stackId="2" startPc="268436758"/>
+        <entry endPc="268438200" name="w" stackId="3" startPc="268436761"/>
+        <entry endPc="268438200" name="h" stackId="4" startPc="268436761"/>
+        <entry endPc="268438200" name="centerX" stackId="5" startPc="268436761"/>
+        <entry endPc="268438200" name="centerY" stackId="6" startPc="268436761"/>
+        <entry endPc="268438200" name="speed" stackId="7" startPc="268436761"/>
+        <entry endPc="268438200" name="altitude" stackId="8" startPc="268436761"/>
+        <entry endPc="268438200" name="elapsedSec" stackId="9" startPc="268436761"/>
+        <entry endPc="268437084" name="diff" stackId="10" startPc="268436943"/>
+        <entry endPc="268438200" name="now" stackId="11" startPc="268436761"/>
+        <entry endPc="268438200" name="timeStr" stackId="12" startPc="268436761"/>
+        <entry endPc="268438200" name="batteryStr" stackId="13" startPc="268436761"/>
+        <entry endPc="268438200" name="sideOffset" stackId="14" startPc="268436761"/>
+        <entry endPc="268438200" name="topLabelY" stackId="15" startPc="268436761"/>
+        <entry endPc="268438200" name="topValueY" stackId="16" startPc="268436761"/>
+        <entry endPc="268438200" name="botLabelY" stackId="17" startPc="268436761"/>
+        <entry endPc="268438200" name="botValueY" stackId="18" startPc="268436761"/>
+        <entry arg="true" endPc="268438403" name="dc" stackId="1" startPc="268438202"/>
+        <entry endPc="268438402" name="cx" stackId="2" startPc="268438205"/>
+        <entry endPc="268438402" name="cy" stackId="3" startPc="268438205"/>
+        <entry endPc="268438402" name="pts" stackId="4" startPc="268438304"/>
+        <entry arg="true" endPc="268438468" name="seconds" stackId="1" startPc="268438416"/>
+        <entry endPc="268438468" name="min" stackId="2" startPc="268438419"/>
+        <entry endPc="268438468" name="sec" stackId="3" startPc="268438419"/>
+        <entry endPc="268438799" name="savedTopSpeed" stackId="1" startPc="268438700"/>
+        <entry arg="true" endPc="268439121" name="dc" stackId="1" startPc="268438809"/>
+        <entry arg="true" endPc="268439121" name="info" stackId="2" startPc="268438809"/>
+        <entry endPc="268439120" name="ringColor" stackId="3" startPc="268438812"/>
+        <entry endPc="268439120" name="statusText" stackId="4" startPc="268438812"/>
+        <entry arg="true" endPc="268439195" name="dc" stackId="1" startPc="268439122"/>
+        <entry endPc="268439194" name="info" stackId="2" startPc="268439125"/>
+        <entry endPc="268439255" name="view" stackId="1" startPc="268439199"/>
+        <entry endPc="268439255" name="delegate" stackId="2" startPc="268439199"/>
+        <entry arg="true" endPc="268439309" name="evt" stackId="1" startPc="268439306"/>
+        <entry arg="true" endPc="268439313" name="evt" stackId="1" startPc="268439310"/>
+        <entry arg="true" endPc="268439337" name="view" stackId="1" startPc="268439314"/>
+        <entry arg="true" endPc="268439341" name="evt" stackId="1" startPc="268439338"/>
+        <entry endPc="268439513" name="menu" stackId="1" startPc="268439375"/>
+        <entry arg="true" endPc="268439539" name="dc" stackId="1" startPc="268439527"/>
+    </localVars>
+    <deviceInfo deviceVersion="5c7ae9cf907f88c116a91dc4ffd75be9b5b7d2e9" partNumber="006-B4433-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_2"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="BackgroundImage"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_1"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="prompt"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/SnowBoardSummaryDelegate" offset="161" parentId="globals" symbolId="SnowBoardSummaryDelegate" type="class"/>
+        <dataEntry label="globals/SnowBoardSummaryView" offset="223" parentId="globals" symbolId="SnowBoardSummaryView" type="class"/>
+        <dataEntry label="globals/SnowBoardAppMenuDelegate" offset="330" parentId="globals" symbolId="SnowBoardAppMenuDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="392" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/SnowBoardAppView" offset="454" parentId="globals" symbolId="SnowBoardAppView" type="class"/>
+        <dataEntry label="globals/SnowBoardAppApp" offset="786" parentId="globals" symbolId="SnowBoardAppApp" type="class"/>
+        <dataEntry label="globals/SnowBoardAppDelegate" offset="839" parentId="globals" symbolId="SnowBoardAppDelegate" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="937" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="981" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="1016" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1051" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="1113" parentId="Menus" symbolId="MainMenu" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="SnowBoardSummaryDelegate" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435483" name="&lt;init&gt;" parent="SnowBoardSummaryView" startPc="268435472">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435495" name="&lt;init&gt;" parent="SnowBoardAppMenuDelegate" startPc="268435484">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435515" name="&lt;init&gt;" parent="Rez" startPc="268435496">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435527" name="&lt;init&gt;" parent="SnowBoardAppView" startPc="268435516">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435539" name="&lt;init&gt;" parent="SnowBoardAppApp" startPc="268435528">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435551" name="&lt;init&gt;" parent="SnowBoardAppDelegate" startPc="268435540">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435566" name="onBack" parent="SnowBoardSummaryDelegate" startPc="268435552">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435581" name="initialize" parent="SnowBoardSummaryDelegate" startPc="268435567">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435596" name="onSelect" parent="SnowBoardSummaryDelegate" startPc="268435582">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268435678" name="&lt;globals/SnowBoardSummaryView/&lt;&gt;drawSummaryRow&gt;" parent="SnowBoardSummaryView" startPc="268435597">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="label"/>
+            <param id="value"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435738" name="initialize" parent="SnowBoardSummaryView" startPc="268435679">
+            <param id="runs"/>
+            <param id="lifts"/>
+            <param id="maxSpeed"/>
+            <param id="totalDescend"/>
+            <param id="distance"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436237" name="onUpdate" parent="SnowBoardSummaryView" startPc="268435739">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436458" name="onMenuItem" parent="SnowBoardAppMenuDelegate" startPc="268436238">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436482" name="initialize" parent="SnowBoardAppMenuDelegate" startPc="268436459">
+            <param id="view"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436490" name="getTotalDistance" parent="SnowBoardAppView" startPc="268436483">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436498" name="getRunCount" parent="SnowBoardAppView" startPc="268436491">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436647" name="vibrate" parent="SnowBoardAppView" startPc="268436499">
+            <param id="count"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436702" name="stopAndSave" parent="SnowBoardAppView" startPc="268436648">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436757" name="stopAndDiscard" parent="SnowBoardAppView" startPc="268436703">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268438201" name="&lt;globals/SnowBoardAppView/&lt;&gt;drawMainScreen&gt;" parent="SnowBoardAppView" startPc="268436758">
+            <param id="dc"/>
+            <param id="info"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268438403" name="&lt;globals/SnowBoardAppView/&lt;&gt;drawOverlayIcon&gt;" parent="SnowBoardAppView" startPc="268438202">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438412" name="hasActiveSession" parent="SnowBoardAppView" startPc="268438404">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438415" name="onLayout" parent="SnowBoardAppView" startPc="268438413">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268438468" name="&lt;globals/SnowBoardAppView/&lt;&gt;formatTime&gt;" parent="SnowBoardAppView" startPc="268438416">
+            <param id="seconds"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438476" name="getTotalDescend" parent="SnowBoardAppView" startPc="268438469">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438484" name="isTracking" parent="SnowBoardAppView" startPc="268438477">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438596" name="startTracking" parent="SnowBoardAppView" startPc="268438485">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438604" name="getLiftCount" parent="SnowBoardAppView" startPc="268438597">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438696" name="toggleManualPause" parent="SnowBoardAppView" startPc="268438605">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438800" name="initialize" parent="SnowBoardAppView" startPc="268438697">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438808" name="getMaxSpeed" parent="SnowBoardAppView" startPc="268438801">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268439121" name="&lt;globals/SnowBoardAppView/&lt;&gt;drawStartScreen&gt;" parent="SnowBoardAppView" startPc="268438809">
+            <param id="dc"/>
+            <param id="info"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439195" name="onUpdate" parent="SnowBoardAppView" startPc="268439122">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439255" name="getInitialView" parent="SnowBoardAppApp" startPc="268439196">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439270" name="initialize" parent="SnowBoardAppApp" startPc="268439256">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439305" name="onBack" parent="SnowBoardAppDelegate" startPc="268439271">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439309" name="onHold" parent="SnowBoardAppDelegate" startPc="268439306">
+            <param id="evt"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439313" name="onSwipe" parent="SnowBoardAppDelegate" startPc="268439310">
+            <param id="evt"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439337" name="initialize" parent="SnowBoardAppDelegate" startPc="268439314">
+            <param id="view"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439341" name="onTap" parent="SnowBoardAppDelegate" startPc="268439338">
+            <param id="evt"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439526" name="onSelect" parent="SnowBoardAppDelegate" startPc="268439342">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439539" name="MainLayout" parent="Layouts" startPc="268439527">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439551" name="&lt;init&gt;" parent="MainMenu" startPc="268439540">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439656" name="initialize" parent="MainMenu" startPc="268439552">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
