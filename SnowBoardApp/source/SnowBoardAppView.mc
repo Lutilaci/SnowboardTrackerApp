@@ -110,10 +110,14 @@ class SnowBoardAppView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
 
+        // Itt kérjük le az adatokat
         var info = Activity.getActivityInfo();
+
         if (!_isTracking) {
+            // Itt átadjuk a dc-t ÉS az info-t is
             drawStartScreen(dc, info);
         } else {
+            // Itt is átadjuk mindkét argumentumot
             drawMainScreen(dc, info);
         }
     }
@@ -122,33 +126,31 @@ class SnowBoardAppView extends WatchUi.View {
         if (_backgroundImage != null) {
             dc.drawBitmap(0, 0, _backgroundImage);
         }
-
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawText(dc.getWidth()/2, (dc.getHeight() * 0.88).toNumber(), Graphics.FONT_XTINY, "v1.0", Graphics.TEXT_JUSTIFY_CENTER);
-
         _gpsAccuracy = (info != null && info.currentLocationAccuracy != null) ? info.currentLocationAccuracy : 0;
         var ringColor = (_gpsAccuracy >= 3) ? Graphics.COLOR_GREEN : Graphics.COLOR_RED;
-        
         dc.setPenWidth(8);
         dc.setColor(ringColor, Graphics.COLOR_TRANSPARENT);
         dc.drawCircle(dc.getWidth()/2, dc.getHeight()/2, (dc.getWidth()/2) - 4);
-        
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         var statusText = (_gpsAccuracy >= 3) ? "START-ra kész!" : "GPS keresése...";
         dc.drawText(dc.getWidth()/2, (dc.getHeight() * 0.72).toNumber(), Graphics.FONT_XTINY, statusText, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
-    private function drawMainScreen(dc as Dc, info as Activity.Info?) as Void {
+    private function drawMainScreen(dc as Dc) as Void {
         var w = dc.getWidth();
         var h = dc.getHeight();
         var centerX = w / 2;
         var centerY = h / 2;
 
+        var info = Activity.getActivityInfo();
         var speed = (info != null && info.currentSpeed != null) ? info.currentSpeed * 3.6 : 0.0;
         var altitude = (info != null && info.altitude != null) ? info.altitude : 0.0;
         var elapsedSec = (info != null && info.elapsedTime != null) ? info.elapsedTime / 1000 : 0;
         _totalDistance = (info != null && info.elapsedDistance != null) ? info.elapsedDistance / 1000.0 : 0.0;
 
+        // --- Logika (Menetszámláló, Pause, stb.) változatlan marad ---
         if (_lastAltitude != null) {
             var diff = altitude - _lastAltitude;
             if (!_isDescending && diff < -1.5 && speed > 7.0) { 
@@ -159,7 +161,10 @@ class SnowBoardAppView extends WatchUi.View {
         }
         _lastAltitude = altitude.toFloat();
 
-        if (_isDescending && speed > _topSpeedEver) {
+        if (_isDescending && speed > _maxSpeedCurrentRun) {
+            _maxSpeedCurrentRun = speed.toFloat();
+        }
+        if (speed > _topSpeedEver) {
             _topSpeedEver = speed.toFloat();
             Storage.setValue("topSpeedEver", _topSpeedEver);
         }
@@ -172,54 +177,62 @@ class SnowBoardAppView extends WatchUi.View {
             }
         }
 
-        // --- HÁTTÉR ÉS RÁCS ---
+        // --- RAJZOLÁS ---
+
+        // Pause esetén piros kör a szélén
         if (_isPaused) {
             dc.setPenWidth(10);
             dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
             dc.drawCircle(centerX, centerY, centerX - 5);
         }
 
+        // RÁCS (Kicsit rövidebb vonalak, hogy ne lógjanak a számokra)
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(2);
-        dc.drawLine(centerX, (h * 0.22).toNumber(), centerX, (h * 0.80).toNumber()); // Függőleges
-        dc.drawLine((w * 0.10).toNumber(), centerY, (w * 0.90).toNumber(), centerY); // Vízszintes
+        dc.drawLine(centerX, (h * 0.25).toNumber(), centerX, (h * 0.75).toNumber()); // Függőleges
+        dc.drawLine((w * 0.15).toNumber(), centerY, (w * 0.85).toNumber(), centerY); // Vízszintes
         dc.setPenWidth(1);
 
-        // --- ADATOK ELHELYEZÉSE ---
-        
-        // 1. Pontos idő (Felül)
+        // ÓRA (Legfelül)
         var now = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         var timeStr = Lang.format("$1$:$2$", [now.hour.format("%02d"), now.min.format("%02d")]);
-        dc.drawText(centerX, (h * 0.10).toNumber(), Graphics.FONT_MEDIUM, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX, (h * 0.12).toNumber(), Graphics.FONT_MEDIUM, timeStr, Graphics.TEXT_JUSTIFY_CENTER);
 
-        // BAL FELÜL - Eltelt idő
+        // --- ADATMEZŐK (Széttolva a szélek felé) ---
+        // Megjegyzés: A VCENTER igazítás miatt a koordináta a szám közepe!
+
+        var labelOffset = 55; // Felirat távolsága a középvonaltól
+        var valueOffset = 30; // Érték távolsága a középvonaltól
+        var sideOffset = 60;  // Oldalsó távolság a középső függőleges vonaltól
+
+        // BAL FELÜL - Idő
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX - 45, centerY - 55, Graphics.FONT_XTINY, "ELAPS", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX - sideOffset, centerY - labelOffset, Graphics.FONT_XTINY, "ELAPS", Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX - 45, centerY - 40, Graphics.FONT_NUMBER_MEDIUM, formatTime(elapsedSec.toNumber()), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX - sideOffset, centerY - valueOffset, Graphics.FONT_NUMBER_MEDIUM, formatTime(elapsedSec.toNumber()), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
         // JOBB FELÜL - Távolság
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX + 45, centerY - 55, Graphics.FONT_XTINY, "DIST", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX + sideOffset, centerY - labelOffset, Graphics.FONT_XTINY, "DIST", Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX + 45, centerY - 40, Graphics.FONT_NUMBER_MEDIUM, _totalDistance.format("%.2f"), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX + sideOffset, centerY - valueOffset, Graphics.FONT_NUMBER_MEDIUM, _totalDistance.format("%.2f"), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
-        // BAL ALUL - Top Speed
+        // BAL ALUL - Aktuális Max Sebesség (Figyelmeztetés javítva!)
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX - 45, centerY + 5, Graphics.FONT_XTINY, "MAX SPD", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX - sideOffset, centerY + valueOffset - 5, Graphics.FONT_XTINY, "CUR MAX", Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX - 45, centerY + 20, Graphics.FONT_NUMBER_MEDIUM, _topSpeedEver.format("%.1f"), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX - sideOffset, centerY + labelOffset - 5, Graphics.FONT_NUMBER_MEDIUM, _maxSpeedCurrentRun.format("%.1f"), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
-        // JOBB ALUL - Runs
+        // JOBB ALUL - Menetek
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX + 45, centerY + 5, Graphics.FONT_XTINY, "RUNS", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX + sideOffset, centerY + valueOffset - 5, Graphics.FONT_XTINY, "RUNS", Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX + 45, centerY + 20, Graphics.FONT_NUMBER_MEDIUM, _runCount.toString(), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX + sideOffset, centerY + labelOffset - 5, Graphics.FONT_NUMBER_MEDIUM, _runCount.toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
-        // AKKU (Legalul)
+        // AKKU ÉS VERZIÓ (Legalul)
         var battery = System.getSystemStats().battery;
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(centerX, (h * 0.85).toNumber(), Graphics.FONT_XTINY, battery.format("%d") + "%", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX, (h * 0.88).toNumber(), Graphics.FONT_XTINY, battery.format("%d") + "% | v1.0", Graphics.TEXT_JUSTIFY_CENTER);
 
         if (_pauseTimer > 0) {
             drawOverlayIcon(dc);

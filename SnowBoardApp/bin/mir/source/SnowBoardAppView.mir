@@ -529,7 +529,7 @@ _Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAp
     }
     [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc"; @line = 109; @symbol_functiondef = [onUpdate,109,13,21]; @symbol_param<0> = [dc,109,22,24]; @symbol_param<0>_type<0> = [Dc,109,28,30]; ]
     function onUpdate(dc as Dc) as Void {
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_109_40_119_4_start:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_109_40_123_4_start:
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 110 8 ]
         %tmp.1 = lgetv %dc;
         symbol [ dc %tmp.1 110 8 10 ];
@@ -550,227 +550,227 @@ _Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAp
         symbol [ clear %tmp.8 111 11 16 ];
         %tmp.8 = getv function %tmp.7 :clear;
         invoke %tmp.7 %tmp.8();
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 113 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_109_40_119_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_109_40_119_4_stop" ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 114 8 ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_109_40_123_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_109_40_123_4_stop" ]
         %info.1 = local;
-        symbol [ info %info.1 113 12 16 ];
-        symbol [ Activity %tmp.9 113 19 27 ];
+        symbol [ info %info.1 114 12 16 ];
+        symbol [ Activity %tmp.9 114 19 27 ];
         %tmp.9 = getm $.Toybox.Activity;
-        symbol [ getActivityInfo %tmp.10 113 28 43 ];
+        symbol [ getActivityInfo %tmp.10 114 28 43 ];
         %tmp.10 = getv function %tmp.9 :getActivityInfo;
         %tmp.11 = invoke %tmp.9 %tmp.10();
         lputv %info.1 %tmp.11;
-        symbol [ info %info.1 113 12 16 ];
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 114 8 ]
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_114_8_118_8_if_stmt:
-        symbol [ _isTracking %tmp.13 114 13 24 ];
+        symbol [ info %info.1 114 12 16 ];
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 116 8 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_116_8_122_8_if_stmt:
+        symbol [ _isTracking %tmp.13 116 13 24 ];
         %tmp.13 = getv ? :_isTracking;
         %tmp.14 = not %tmp.13;
-        bf %tmp.14 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_114_8_118_8_if_else_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_114_8_118_8_if_true:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_114_26_116_8_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 115 12 ]
+        bf %tmp.14 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_116_8_122_8_if_else_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_116_8_122_8_if_true:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_116_26_119_8_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 118 12 ]
         %tmp.15 = self;
-        symbol [ drawStartScreen %tmp.16 115 12 27 ];
+        symbol [ drawStartScreen %tmp.16 118 12 27 ];
         %tmp.16 = getv function %tmp.15 :drawStartScreen;
         %tmp.17 = lgetv %dc;
-        symbol [ dc %tmp.17 115 28 30 ];
+        symbol [ dc %tmp.17 118 28 30 ];
         %tmp.18 = lgetv %info.1;
-        symbol [ info %tmp.18 115 32 36 ];
+        symbol [ info %tmp.18 118 32 36 ];
         invoke %tmp.15 %tmp.16(%tmp.17, %tmp.18);
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_114_26_116_8_stop:
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_114_8_118_8_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_114_8_118_8_if_else_false:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_116_15_118_8_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 117 12 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_116_26_119_8_stop:
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_116_8_122_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_116_8_122_8_if_else_false:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_119_15_122_8_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 121 12 ]
         %tmp.19 = self;
-        symbol [ drawMainScreen %tmp.20 117 12 26 ];
+        symbol [ drawMainScreen %tmp.20 121 12 26 ];
         %tmp.20 = getv function %tmp.19 :drawMainScreen;
         %tmp.21 = lgetv %dc;
-        symbol [ dc %tmp.21 117 27 29 ];
+        symbol [ dc %tmp.21 121 27 29 ];
         %tmp.22 = lgetv %info.1;
-        symbol [ info %tmp.22 117 31 35 ];
+        symbol [ info %tmp.22 121 31 35 ];
         invoke %tmp.19 %tmp.20(%tmp.21, %tmp.22);
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_116_15_118_8_stop:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_114_8_118_8_if_end:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_109_40_119_4_stop:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_119_15_122_8_stop:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_116_8_122_8_if_end:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_109_40_123_4_stop:
     }
-    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc"; @line = 121; @symbol_functiondef = [drawStartScreen,121,21,36]; @symbol_param<0> = [dc,121,37,39]; @symbol_param<0>_type<0> = [Dc,121,43,45]; @symbol_param<1> = [info,121,47,51]; @symbol_param<1>_type<0> = [Activity,121,55,63]; @symbol_param<1>_type<1> = [Info,121,64,68]; ]
+    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc"; @line = 125; @symbol_functiondef = [drawStartScreen,125,21,36]; @symbol_param<0> = [dc,125,37,39]; @symbol_param<0>_type<0> = [Dc,125,43,45]; @symbol_param<1> = [info,125,47,51]; @symbol_param<1>_type<0> = [Activity,125,55,63]; @symbol_param<1>_type<1> = [Info,125,64,68]; ]
     private
     function drawStartScreen(dc as Dc, info as Activity.Info or Null) as Void {
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_121_79_139_4_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 122 8 ]
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_122_8_124_8_if_stmt:
-        symbol [ _backgroundImage %tmp.2 122 12 28 ];
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_125_79_139_4_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 126 8 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_126_8_128_8_if_stmt:
+        symbol [ _backgroundImage %tmp.2 126 12 28 ];
         %tmp.2 = getv ? :_backgroundImage;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_122_8_124_8_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_122_8_124_8_if_true:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_122_38_124_8_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 123 12 ]
+        bf %tmp.4 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_126_8_128_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_126_8_128_8_if_true:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_126_38_128_8_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 127 12 ]
         %tmp.5 = lgetv %dc;
-        symbol [ dc %tmp.5 123 12 14 ];
-        symbol [ drawBitmap %tmp.6 123 15 25 ];
+        symbol [ dc %tmp.5 127 12 14 ];
+        symbol [ drawBitmap %tmp.6 127 15 25 ];
         %tmp.6 = getv function %tmp.5 :drawBitmap;
         %tmp.7 = 0;
         %tmp.8 = 0;
-        symbol [ _backgroundImage %tmp.10 123 32 48 ];
+        symbol [ _backgroundImage %tmp.10 127 32 48 ];
         %tmp.10 = getv ? :_backgroundImage;
         %tmp.11 = as %tmp.10 { (!Null) };
         invoke %tmp.5 %tmp.6(%tmp.7, %tmp.8, %tmp.11);
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_122_38_124_8_stop:
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_122_8_124_8_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_122_8_124_8_if_end:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 126 8 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_126_38_128_8_stop:
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_126_8_128_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_126_8_128_8_if_end:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 129 8 ]
         %tmp.12 = lgetv %dc;
-        symbol [ dc %tmp.12 126 8 10 ];
-        symbol [ setColor %tmp.13 126 11 19 ];
+        symbol [ dc %tmp.12 129 8 10 ];
+        symbol [ setColor %tmp.13 129 11 19 ];
         %tmp.13 = getv function %tmp.12 :setColor;
-        symbol [ Graphics %tmp.14 126 20 28 ];
+        symbol [ Graphics %tmp.14 129 20 28 ];
         %tmp.14 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.15 126 29 42 ];
+        symbol [ COLOR_LT_GRAY %tmp.15 129 29 42 ];
         %tmp.15 = getv %tmp.14 :COLOR_LT_GRAY;
-        symbol [ Graphics %tmp.16 126 44 52 ];
+        symbol [ Graphics %tmp.16 129 44 52 ];
         %tmp.16 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.17 126 53 70 ];
+        symbol [ COLOR_TRANSPARENT %tmp.17 129 53 70 ];
         %tmp.17 = getv %tmp.16 :COLOR_TRANSPARENT;
         invoke %tmp.12 %tmp.13(%tmp.15, %tmp.17);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 127 8 ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 130 8 ]
         %tmp.18 = lgetv %dc;
-        symbol [ dc %tmp.18 127 8 10 ];
-        symbol [ drawText %tmp.19 127 11 19 ];
+        symbol [ dc %tmp.18 130 8 10 ];
+        symbol [ drawText %tmp.19 130 11 19 ];
         %tmp.19 = getv function %tmp.18 :drawText;
         %tmp.20 = lgetv %dc;
-        symbol [ dc %tmp.20 127 20 22 ];
-        symbol [ getWidth %tmp.21 127 23 31 ];
+        symbol [ dc %tmp.20 130 20 22 ];
+        symbol [ getWidth %tmp.21 130 23 31 ];
         %tmp.21 = getv function %tmp.20 :getWidth;
         %tmp.22 = invoke %tmp.20 %tmp.21();
         %tmp.23 = 2;
         %tmp.24 = div %tmp.22 %tmp.23;
         %tmp.25 = lgetv %dc;
-        symbol [ dc %tmp.25 127 38 40 ];
-        symbol [ getHeight %tmp.26 127 41 50 ];
+        symbol [ dc %tmp.25 130 38 40 ];
+        symbol [ getHeight %tmp.26 130 41 50 ];
         %tmp.26 = getv function %tmp.25 :getHeight;
         %tmp.27 = invoke %tmp.25 %tmp.26();
         %tmp.28 = 0.88;
         %tmp.29 = mul %tmp.27 %tmp.28;
-        symbol [ toNumber %tmp.30 127 61 69 ];
+        symbol [ toNumber %tmp.30 130 61 69 ];
         %tmp.30 = getv function %tmp.29 :toNumber;
         %tmp.31 = invoke %tmp.29 %tmp.30();
-        symbol [ Graphics %tmp.32 127 73 81 ];
+        symbol [ Graphics %tmp.32 130 73 81 ];
         %tmp.32 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.33 127 82 92 ];
+        symbol [ FONT_XTINY %tmp.33 130 82 92 ];
         %tmp.33 = getv %tmp.32 :FONT_XTINY;
         %tmp.34 = "v1.0";
-        symbol [ Graphics %tmp.35 127 102 110 ];
+        symbol [ Graphics %tmp.35 130 102 110 ];
         %tmp.35 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.36 127 111 130 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.36 130 111 130 ];
         %tmp.36 = getv %tmp.35 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.18 %tmp.19(%tmp.24, %tmp.31, %tmp.33, %tmp.34, %tmp.36);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 129 8 ]
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_23_129_111_begin:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_24_129_72_begin:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 131 8 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_23_131_111_begin:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_24_131_72_begin:
         %tmp.37 = lgetv %info;
-        symbol [ info %tmp.37 129 24 28 ];
+        symbol [ info %tmp.37 131 24 28 ];
         %tmp.38 = null;
         %tmp.39 = ne %tmp.37 %tmp.38;
-        bf %tmp.39 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_23_129_111_else_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_40_129_72_true:
+        bf %tmp.39 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_23_131_111_else_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_40_131_72_true:
         %tmp.40 = lgetv %info;
-        symbol [ info %tmp.40 129 40 44 ];
+        symbol [ info %tmp.40 131 40 44 ];
         %tmp.41 = as %tmp.40 { (!Null) };
-        symbol [ currentLocationAccuracy %tmp.42 129 45 68 ];
+        symbol [ currentLocationAccuracy %tmp.42 131 45 68 ];
         %tmp.42 = getv %tmp.41 :currentLocationAccuracy;
         %tmp.43 = null;
         %tmp.44 = ne %tmp.42 %tmp.43;
         push %tmp.44;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_40_129_72_end:
-        %tmp.45 = phi [%tmp.39 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_24_129_72_begin] [%tmp.44 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_40_129_72_true] [%tmp.45 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_40_129_72_end];
-        bf %tmp.45 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_23_129_111_else_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_23_129_111_true:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_40_131_72_end:
+        %tmp.45 = phi [%tmp.39 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_24_131_72_begin] [%tmp.44 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_40_131_72_true] [%tmp.45 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_40_131_72_end];
+        bf %tmp.45 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_23_131_111_else_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_23_131_111_true:
         %tmp.46 = lgetv %info;
-        symbol [ info %tmp.46 129 80 84 ];
+        symbol [ info %tmp.46 131 80 84 ];
         %tmp.47 = as %tmp.46 { (!Null) };
-        symbol [ currentLocationAccuracy %tmp.48 129 85 108 ];
+        symbol [ currentLocationAccuracy %tmp.48 131 85 108 ];
         %tmp.48 = getv %tmp.47 :currentLocationAccuracy;
         push %tmp.48;
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_23_129_111_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_23_129_111_else_false:
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_23_131_111_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_23_131_111_else_false:
         %tmp.49 = 0;
         push %tmp.49;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_23_129_111_end:
-        %tmp.50 = phi [%tmp.45 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_23_129_111_begin] [%tmp.48 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_23_129_111_true] [%tmp.49 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_23_129_111_else_false] [%tmp.50 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_129_23_129_111_end];
-        symbol [ _gpsAccuracy ? 129 8 20 ];
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_23_131_111_end:
+        %tmp.50 = phi [%tmp.45 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_23_131_111_begin] [%tmp.48 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_23_131_111_true] [%tmp.49 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_23_131_111_else_false] [%tmp.50 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_131_23_131_111_end];
+        symbol [ _gpsAccuracy ? 131 8 20 ];
         putv self :_gpsAccuracy %tmp.50;
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 130 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_121_79_139_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_121_79_139_4_stop" ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 132 8 ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_125_79_139_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_125_79_139_4_stop" ]
         %ringColor.1 = local;
-        symbol [ ringColor %ringColor.1 130 12 21 ];
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_130_24_130_78_begin:
-        symbol [ _gpsAccuracy %tmp.52 130 25 37 ];
+        symbol [ ringColor %ringColor.1 132 12 21 ];
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_132_24_132_78_begin:
+        symbol [ _gpsAccuracy %tmp.52 132 25 37 ];
         %tmp.52 = getv ? :_gpsAccuracy;
         %tmp.53 = 3;
         %tmp.54 = gte %tmp.52 %tmp.53;
-        bf %tmp.54 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_130_24_130_78_else_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_130_24_130_78_true:
-        symbol [ Graphics %tmp.55 130 46 54 ];
+        bf %tmp.54 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_132_24_132_78_else_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_132_24_132_78_true:
+        symbol [ Graphics %tmp.55 132 46 54 ];
         %tmp.55 = getm $.Toybox.Graphics;
-        symbol [ COLOR_GREEN %tmp.56 130 55 66 ];
+        symbol [ COLOR_GREEN %tmp.56 132 55 66 ];
         %tmp.56 = getv %tmp.55 :COLOR_GREEN;
         push %tmp.56;
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_130_24_130_78_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_130_24_130_78_else_false:
-        symbol [ Graphics %tmp.57 130 69 77 ];
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_132_24_132_78_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_132_24_132_78_else_false:
+        symbol [ Graphics %tmp.57 132 69 77 ];
         %tmp.57 = getm $.Toybox.Graphics;
-        symbol [ COLOR_RED %tmp.58 130 78 87 ];
+        symbol [ COLOR_RED %tmp.58 132 78 87 ];
         %tmp.58 = getv %tmp.57 :COLOR_RED;
         push %tmp.58;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_130_24_130_78_end:
-        %tmp.59 = phi [%tmp.54 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_130_24_130_78_begin] [%tmp.56 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_130_24_130_78_true] [%tmp.58 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_130_24_130_78_else_false] [%tmp.59 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_130_24_130_78_end];
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_132_24_132_78_end:
+        %tmp.59 = phi [%tmp.54 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_132_24_132_78_begin] [%tmp.56 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_132_24_132_78_true] [%tmp.58 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_132_24_132_78_else_false] [%tmp.59 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_132_24_132_78_end];
         lputv %ringColor.1 %tmp.59;
-        symbol [ ringColor %ringColor.1 130 12 21 ];
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 132 8 ]
+        symbol [ ringColor %ringColor.1 132 12 21 ];
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 133 8 ]
         %tmp.60 = lgetv %dc;
-        symbol [ dc %tmp.60 132 8 10 ];
-        symbol [ setPenWidth %tmp.61 132 11 22 ];
+        symbol [ dc %tmp.60 133 8 10 ];
+        symbol [ setPenWidth %tmp.61 133 11 22 ];
         %tmp.61 = getv function %tmp.60 :setPenWidth;
         %tmp.62 = 8;
         invoke %tmp.60 %tmp.61(%tmp.62);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 133 8 ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 134 8 ]
         %tmp.63 = lgetv %dc;
-        symbol [ dc %tmp.63 133 8 10 ];
-        symbol [ setColor %tmp.64 133 11 19 ];
+        symbol [ dc %tmp.63 134 8 10 ];
+        symbol [ setColor %tmp.64 134 11 19 ];
         %tmp.64 = getv function %tmp.63 :setColor;
         %tmp.65 = lgetv %ringColor.1;
-        symbol [ ringColor %tmp.65 133 20 29 ];
-        symbol [ Graphics %tmp.66 133 31 39 ];
+        symbol [ ringColor %tmp.65 134 20 29 ];
+        symbol [ Graphics %tmp.66 134 31 39 ];
         %tmp.66 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.67 133 40 57 ];
+        symbol [ COLOR_TRANSPARENT %tmp.67 134 40 57 ];
         %tmp.67 = getv %tmp.66 :COLOR_TRANSPARENT;
         invoke %tmp.63 %tmp.64(%tmp.65, %tmp.67);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 134 8 ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 135 8 ]
         %tmp.68 = lgetv %dc;
-        symbol [ dc %tmp.68 134 8 10 ];
-        symbol [ drawCircle %tmp.69 134 11 21 ];
+        symbol [ dc %tmp.68 135 8 10 ];
+        symbol [ drawCircle %tmp.69 135 11 21 ];
         %tmp.69 = getv function %tmp.68 :drawCircle;
         %tmp.70 = lgetv %dc;
-        symbol [ dc %tmp.70 134 22 24 ];
-        symbol [ getWidth %tmp.71 134 25 33 ];
+        symbol [ dc %tmp.70 135 22 24 ];
+        symbol [ getWidth %tmp.71 135 25 33 ];
         %tmp.71 = getv function %tmp.70 :getWidth;
         %tmp.72 = invoke %tmp.70 %tmp.71();
         %tmp.73 = 2;
         %tmp.74 = div %tmp.72 %tmp.73;
         %tmp.75 = lgetv %dc;
-        symbol [ dc %tmp.75 134 39 41 ];
-        symbol [ getHeight %tmp.76 134 42 51 ];
+        symbol [ dc %tmp.75 135 39 41 ];
+        symbol [ getHeight %tmp.76 135 42 51 ];
         %tmp.76 = getv function %tmp.75 :getHeight;
         %tmp.77 = invoke %tmp.75 %tmp.76();
         %tmp.78 = 2;
         %tmp.79 = div %tmp.77 %tmp.78;
         %tmp.80 = lgetv %dc;
-        symbol [ dc %tmp.80 134 58 60 ];
-        symbol [ getWidth %tmp.81 134 61 69 ];
+        symbol [ dc %tmp.80 135 58 60 ];
+        symbol [ getWidth %tmp.81 135 61 69 ];
         %tmp.81 = getv function %tmp.80 :getWidth;
         %tmp.82 = invoke %tmp.80 %tmp.81();
         %tmp.83 = 2;
@@ -793,7 +793,7 @@ _Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAp
         %tmp.92 = getv %tmp.91 :COLOR_TRANSPARENT;
         invoke %tmp.87 %tmp.88(%tmp.90, %tmp.92);
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 137 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_121_79_139_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_121_79_139_4_stop" ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_125_79_139_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_125_79_139_4_stop" ]
         %statusText.2 = local;
         symbol [ statusText %statusText.2 137 12 22 ];
 _Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_137_25_137_66_begin:
@@ -846,14 +846,14 @@ _Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAp
         symbol [ TEXT_JUSTIFY_CENTER %tmp.118 138 115 134 ];
         %tmp.118 = getv %tmp.117 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.100 %tmp.101(%tmp.106, %tmp.113, %tmp.115, %tmp.116, %tmp.118);
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_121_79_139_4_stop:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_125_79_139_4_stop:
     }
-    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc"; @line = 141; @symbol_functiondef = [drawMainScreen,141,21,35]; @symbol_param<0> = [dc,141,36,38]; @symbol_param<0>_type<0> = [Dc,141,42,44]; @symbol_param<1> = [info,141,46,50]; @symbol_param<1>_type<0> = [Activity,141,54,62]; @symbol_param<1>_type<1> = [Info,141,63,67]; ]
+    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc"; @line = 141; @symbol_functiondef = [drawMainScreen,141,21,35]; @symbol_param<0> = [dc,141,36,38]; @symbol_param<0>_type<0> = [Dc,141,42,44]; ]
     private
-    function drawMainScreen(dc as Dc, info as Activity.Info or Null) as Void {
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_start:
+    function drawMainScreen(dc as Dc) as Void {
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_start:
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 142 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_stop" ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_stop" ]
         %w.1 = local;
         symbol [ w %w.1 142 12 13 ];
         %tmp.1 = lgetv %dc;
@@ -864,7 +864,7 @@ _Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAp
         lputv %w.1 %tmp.3;
         symbol [ w %w.1 142 12 13 ];
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 143 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_stop" ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_stop" ]
         %h.2 = local;
         symbol [ h %h.2 143 12 13 ];
         %tmp.4 = lgetv %dc;
@@ -875,7 +875,7 @@ _Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAp
         lputv %h.2 %tmp.6;
         symbol [ h %h.2 143 12 13 ];
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 144 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_stop" ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_stop" ]
         %centerX.3 = local;
         symbol [ centerX %centerX.3 144 12 19 ];
         %tmp.7 = lgetv %w.1;
@@ -885,7 +885,7 @@ _Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAp
         lputv %centerX.3 %tmp.9;
         symbol [ centerX %centerX.3 144 12 19 ];
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 145 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_stop" ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_stop" ]
         %centerY.4 = local;
         symbol [ centerY %centerY.4 145 12 19 ];
         %tmp.10 = lgetv %h.2;
@@ -895,1198 +895,1295 @@ _Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAp
         lputv %centerY.4 %tmp.12;
         symbol [ centerY %centerY.4 145 12 19 ];
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 147 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_stop" ]
-        %speed.5 = local;
-        symbol [ speed %speed.5 147 12 17 ];
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_20_147_92_begin:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_21_147_58_begin:
-        %tmp.13 = lgetv %info;
-        symbol [ info %tmp.13 147 21 25 ];
-        %tmp.14 = null;
-        %tmp.15 = ne %tmp.13 %tmp.14;
-        bf %tmp.15 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_20_147_92_else_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_37_147_58_true:
-        %tmp.16 = lgetv %info;
-        symbol [ info %tmp.16 147 37 41 ];
-        %tmp.17 = as %tmp.16 { (!Null) };
-        symbol [ currentSpeed %tmp.18 147 42 54 ];
-        %tmp.18 = getv %tmp.17 :currentSpeed;
-        %tmp.19 = null;
-        %tmp.20 = ne %tmp.18 %tmp.19;
-        push %tmp.20;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_37_147_58_end:
-        %tmp.21 = phi [%tmp.15 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_21_147_58_begin] [%tmp.20 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_37_147_58_true] [%tmp.21 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_37_147_58_end];
-        bf %tmp.21 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_20_147_92_else_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_20_147_92_true:
-        %tmp.22 = lgetv %info;
-        symbol [ info %tmp.22 147 66 70 ];
-        %tmp.23 = as %tmp.22 { (!Null) };
-        symbol [ currentSpeed %tmp.24 147 71 83 ];
-        %tmp.24 = getv %tmp.23 :currentSpeed;
-        %tmp.25 = 3.6;
-        %tmp.26 = mul %tmp.24 %tmp.25;
-        push %tmp.26;
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_20_147_92_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_20_147_92_else_false:
-        %tmp.27 = 0.0;
-        push %tmp.27;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_20_147_92_end:
-        %tmp.28 = phi [%tmp.21 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_20_147_92_begin] [%tmp.26 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_20_147_92_true] [%tmp.27 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_20_147_92_else_false] [%tmp.28 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_147_20_147_92_end];
-        lputv %speed.5 %tmp.28;
-        symbol [ speed %speed.5 147 12 17 ];
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_stop" ]
+        %info.5 = local;
+        symbol [ info %info.5 147 12 16 ];
+        symbol [ Activity %tmp.13 147 19 27 ];
+        %tmp.13 = getm $.Toybox.Activity;
+        symbol [ getActivityInfo %tmp.14 147 28 43 ];
+        %tmp.14 = getv function %tmp.13 :getActivityInfo;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        lputv %info.5 %tmp.15;
+        symbol [ info %info.5 147 12 16 ];
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 148 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_stop" ]
-        %altitude.6 = local;
-        symbol [ altitude %altitude.6 148 12 20 ];
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_23_148_81_begin:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_24_148_57_begin:
-        %tmp.29 = lgetv %info;
-        symbol [ info %tmp.29 148 24 28 ];
-        %tmp.30 = null;
-        %tmp.31 = ne %tmp.29 %tmp.30;
-        bf %tmp.31 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_23_148_81_else_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_40_148_57_true:
-        %tmp.32 = lgetv %info;
-        symbol [ info %tmp.32 148 40 44 ];
-        %tmp.33 = as %tmp.32 { (!Null) };
-        symbol [ altitude %tmp.34 148 45 53 ];
-        %tmp.34 = getv %tmp.33 :altitude;
-        %tmp.35 = null;
-        %tmp.36 = ne %tmp.34 %tmp.35;
-        push %tmp.36;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_40_148_57_end:
-        %tmp.37 = phi [%tmp.31 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_24_148_57_begin] [%tmp.36 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_40_148_57_true] [%tmp.37 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_40_148_57_end];
-        bf %tmp.37 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_23_148_81_else_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_23_148_81_true:
-        %tmp.38 = lgetv %info;
-        symbol [ info %tmp.38 148 65 69 ];
-        %tmp.39 = as %tmp.38 { (!Null) };
-        symbol [ altitude %tmp.40 148 70 78 ];
-        %tmp.40 = getv %tmp.39 :altitude;
-        push %tmp.40;
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_23_148_81_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_23_148_81_else_false:
-        %tmp.41 = 0.0;
-        push %tmp.41;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_23_148_81_end:
-        %tmp.42 = phi [%tmp.37 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_23_148_81_begin] [%tmp.40 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_23_148_81_true] [%tmp.41 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_23_148_81_else_false] [%tmp.42 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_23_148_81_end];
-        lputv %altitude.6 %tmp.42;
-        symbol [ altitude %altitude.6 148 12 20 ];
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_stop" ]
+        %speed.6 = local;
+        symbol [ speed %speed.6 148 12 17 ];
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_20_148_92_begin:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_21_148_58_begin:
+        %tmp.16 = lgetv %info.5;
+        symbol [ info %tmp.16 148 21 25 ];
+        %tmp.17 = null;
+        %tmp.18 = ne %tmp.16 %tmp.17;
+        bf %tmp.18 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_20_148_92_else_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_37_148_58_true:
+        %tmp.19 = lgetv %info.5;
+        symbol [ info %tmp.19 148 37 41 ];
+        %tmp.20 = as %tmp.19 { (!Null) };
+        symbol [ currentSpeed %tmp.21 148 42 54 ];
+        %tmp.21 = getv %tmp.20 :currentSpeed;
+        %tmp.22 = null;
+        %tmp.23 = ne %tmp.21 %tmp.22;
+        push %tmp.23;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_37_148_58_end:
+        %tmp.24 = phi [%tmp.18 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_21_148_58_begin] [%tmp.23 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_37_148_58_true] [%tmp.24 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_37_148_58_end];
+        bf %tmp.24 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_20_148_92_else_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_20_148_92_true:
+        %tmp.25 = lgetv %info.5;
+        symbol [ info %tmp.25 148 66 70 ];
+        %tmp.26 = as %tmp.25 { (!Null) };
+        symbol [ currentSpeed %tmp.27 148 71 83 ];
+        %tmp.27 = getv %tmp.26 :currentSpeed;
+        %tmp.28 = 3.6;
+        %tmp.29 = mul %tmp.27 %tmp.28;
+        push %tmp.29;
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_20_148_92_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_20_148_92_else_false:
+        %tmp.30 = 0.0;
+        push %tmp.30;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_20_148_92_end:
+        %tmp.31 = phi [%tmp.24 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_20_148_92_begin] [%tmp.29 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_20_148_92_true] [%tmp.30 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_20_148_92_else_false] [%tmp.31 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_148_20_148_92_end];
+        lputv %speed.6 %tmp.31;
+        symbol [ speed %speed.6 148 12 17 ];
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 149 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_stop" ]
-        %elapsedSec.7 = local;
-        symbol [ elapsedSec %elapsedSec.7 149 12 22 ];
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_25_149_96_begin:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_26_149_62_begin:
-        %tmp.43 = lgetv %info;
-        symbol [ info %tmp.43 149 26 30 ];
-        %tmp.44 = null;
-        %tmp.45 = ne %tmp.43 %tmp.44;
-        bf %tmp.45 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_25_149_96_else_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_42_149_62_true:
-        %tmp.46 = lgetv %info;
-        symbol [ info %tmp.46 149 42 46 ];
-        %tmp.47 = as %tmp.46 { (!Null) };
-        symbol [ elapsedTime %tmp.48 149 47 58 ];
-        %tmp.48 = getv %tmp.47 :elapsedTime;
-        %tmp.49 = null;
-        %tmp.50 = ne %tmp.48 %tmp.49;
-        push %tmp.50;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_42_149_62_end:
-        %tmp.51 = phi [%tmp.45 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_26_149_62_begin] [%tmp.50 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_42_149_62_true] [%tmp.51 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_42_149_62_end];
-        bf %tmp.51 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_25_149_96_else_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_25_149_96_true:
-        %tmp.52 = lgetv %info;
-        symbol [ info %tmp.52 149 70 74 ];
-        %tmp.53 = as %tmp.52 { (!Null) };
-        symbol [ elapsedTime %tmp.54 149 75 86 ];
-        %tmp.54 = getv %tmp.53 :elapsedTime;
-        %tmp.55 = 1000;
-        %tmp.56 = div %tmp.54 %tmp.55;
-        push %tmp.56;
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_25_149_96_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_25_149_96_else_false:
-        %tmp.57 = 0;
-        push %tmp.57;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_25_149_96_end:
-        %tmp.58 = phi [%tmp.51 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_25_149_96_begin] [%tmp.56 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_25_149_96_true] [%tmp.57 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_25_149_96_else_false] [%tmp.58 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_25_149_96_end];
-        lputv %elapsedSec.7 %tmp.58;
-        symbol [ elapsedSec %elapsedSec.7 149 12 22 ];
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_stop" ]
+        %altitude.7 = local;
+        symbol [ altitude %altitude.7 149 12 20 ];
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_23_149_81_begin:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_24_149_57_begin:
+        %tmp.32 = lgetv %info.5;
+        symbol [ info %tmp.32 149 24 28 ];
+        %tmp.33 = null;
+        %tmp.34 = ne %tmp.32 %tmp.33;
+        bf %tmp.34 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_23_149_81_else_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_40_149_57_true:
+        %tmp.35 = lgetv %info.5;
+        symbol [ info %tmp.35 149 40 44 ];
+        %tmp.36 = as %tmp.35 { (!Null) };
+        symbol [ altitude %tmp.37 149 45 53 ];
+        %tmp.37 = getv %tmp.36 :altitude;
+        %tmp.38 = null;
+        %tmp.39 = ne %tmp.37 %tmp.38;
+        push %tmp.39;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_40_149_57_end:
+        %tmp.40 = phi [%tmp.34 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_24_149_57_begin] [%tmp.39 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_40_149_57_true] [%tmp.40 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_40_149_57_end];
+        bf %tmp.40 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_23_149_81_else_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_23_149_81_true:
+        %tmp.41 = lgetv %info.5;
+        symbol [ info %tmp.41 149 65 69 ];
+        %tmp.42 = as %tmp.41 { (!Null) };
+        symbol [ altitude %tmp.43 149 70 78 ];
+        %tmp.43 = getv %tmp.42 :altitude;
+        push %tmp.43;
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_23_149_81_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_23_149_81_else_false:
+        %tmp.44 = 0.0;
+        push %tmp.44;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_23_149_81_end:
+        %tmp.45 = phi [%tmp.40 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_23_149_81_begin] [%tmp.43 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_23_149_81_true] [%tmp.44 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_23_149_81_else_false] [%tmp.45 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_149_23_149_81_end];
+        lputv %altitude.7 %tmp.45;
+        symbol [ altitude %altitude.7 149 12 20 ];
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 150 8 ]
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_106_begin:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_26_150_66_begin:
-        %tmp.59 = lgetv %info;
-        symbol [ info %tmp.59 150 26 30 ];
-        %tmp.60 = null;
-        %tmp.61 = ne %tmp.59 %tmp.60;
-        bf %tmp.61 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_106_else_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_42_150_66_true:
-        %tmp.62 = lgetv %info;
-        symbol [ info %tmp.62 150 42 46 ];
-        %tmp.63 = as %tmp.62 { (!Null) };
-        symbol [ elapsedDistance %tmp.64 150 47 62 ];
-        %tmp.64 = getv %tmp.63 :elapsedDistance;
-        %tmp.65 = null;
-        %tmp.66 = ne %tmp.64 %tmp.65;
-        push %tmp.66;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_42_150_66_end:
-        %tmp.67 = phi [%tmp.61 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_26_150_66_begin] [%tmp.66 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_42_150_66_true] [%tmp.67 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_42_150_66_end];
-        bf %tmp.67 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_106_else_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_106_true:
-        %tmp.68 = lgetv %info;
-        symbol [ info %tmp.68 150 74 78 ];
-        %tmp.69 = as %tmp.68 { (!Null) };
-        symbol [ elapsedDistance %tmp.70 150 79 94 ];
-        %tmp.70 = getv %tmp.69 :elapsedDistance;
-        %tmp.71 = 1000.0;
-        %tmp.72 = div %tmp.70 %tmp.71;
-        push %tmp.72;
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_106_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_106_else_false:
-        %tmp.73 = 0.0;
-        push %tmp.73;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_106_end:
-        %tmp.74 = phi [%tmp.67 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_106_begin] [%tmp.72 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_106_true] [%tmp.73 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_106_else_false] [%tmp.74 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_106_end];
-        symbol [ _totalDistance ? 150 8 22 ];
-        putv self :_totalDistance %tmp.74;
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 152 8 ]
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_152_8_159_8_if_stmt:
-        symbol [ _lastAltitude %tmp.76 152 12 25 ];
-        %tmp.76 = getv ? :_lastAltitude;
-        %tmp.77 = null;
-        %tmp.78 = ne %tmp.76 %tmp.77;
-        bf %tmp.78 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_152_8_159_8_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_152_8_159_8_if_true:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_152_35_159_8_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 153 12 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_152_35_159_8_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_152_35_159_8_stop" ]
-        %diff.8 = local;
-        symbol [ diff %diff.8 153 16 20 ];
-        %tmp.79 = lgetv %altitude.6;
-        symbol [ altitude %tmp.79 153 23 31 ];
-        symbol [ _lastAltitude %tmp.81 153 34 47 ];
-        %tmp.81 = getv ? :_lastAltitude;
-        %tmp.82 = as %tmp.81 { (!Null) };
-        %tmp.83 = sub %tmp.79 %tmp.82;
-        lputv %diff.8 %tmp.83;
-        symbol [ diff %diff.8 153 16 20 ];
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 154 12 ]
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_12_158_12_if_stmt:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_16_154_57_begin:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_16_154_42_begin:
-        symbol [ _isDescending %tmp.85 154 17 30 ];
-        %tmp.85 = getv ? :_isDescending;
-        %tmp.86 = not %tmp.85;
-        bf %tmp.86 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_12_158_12_if_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_34_154_42_true:
-        %tmp.87 = lgetv %diff.8;
-        symbol [ diff %tmp.87 154 34 38 ];
-        %tmp.88 = -1.5;
-        %tmp.89 = lt %tmp.87 %tmp.88;
-        push %tmp.89;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_34_154_42_end:
-        %tmp.90 = phi [%tmp.86 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_16_154_42_begin] [%tmp.89 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_34_154_42_true] [%tmp.90 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_34_154_42_end];
-        bf %tmp.90 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_12_158_12_if_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_49_154_57_true:
-        %tmp.91 = lgetv %speed.5;
-        symbol [ speed %tmp.91 154 49 54 ];
-        %tmp.92 = 7.0;
-        %tmp.93 = gt %tmp.91 %tmp.92;
-        push %tmp.93;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_49_154_57_end:
-        %tmp.94 = phi [%tmp.90 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_16_154_57_begin] [%tmp.93 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_49_154_57_true] [%tmp.94 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_49_154_57_end];
-        bf %tmp.94 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_12_158_12_if_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_12_158_12_if_true:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_62_156_12_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 155 16 ]
-        %tmp.95 = true;
-        symbol [ _isDescending ? 155 16 29 ];
-        putv self :_isDescending %tmp.95;
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 155 38 ]
-        symbol [ _runCount %tmp.98 155 38 47 ];
-        %tmp.98 = getv ? :_runCount;
-        %tmp.99 = add %tmp.98 1;
-        symbol [ _runCount ? 155 38 47 ];
-        putv self :_runCount dup %tmp.99;
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 155 51 ]
-        %tmp.100 = 0.0;
-        symbol [ _maxSpeedCurrentRun ? 155 51 70 ];
-        putv self :_maxSpeedCurrentRun %tmp.100;
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 155 78 ]
-        %tmp.101 = self;
-        symbol [ vibrate %tmp.102 155 78 85 ];
-        %tmp.102 = getv function %tmp.101 :vibrate;
-        %tmp.103 = 1;
-        invoke %tmp.101 %tmp.102(%tmp.103);
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_62_156_12_stop:
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_12_158_12_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_12_158_12_if_false:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 156 19 ]
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_19_158_12_if_stmt:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_23_156_47_begin:
-        symbol [ _isDescending %tmp.105 156 23 36 ];
-        %tmp.105 = getv ? :_isDescending;
-        bf %tmp.105 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_19_158_12_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_40_156_47_true:
-        %tmp.106 = lgetv %diff.8;
-        symbol [ diff %tmp.106 156 40 44 ];
-        %tmp.107 = 2.5;
-        %tmp.108 = gt %tmp.106 %tmp.107;
-        push %tmp.108;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_40_156_47_end:
-        %tmp.109 = phi [%tmp.105 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_23_156_47_begin] [%tmp.108 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_40_156_47_true] [%tmp.109 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_40_156_47_end];
-        bf %tmp.109 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_19_158_12_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_19_158_12_if_true:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_52_158_12_start:
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_stop" ]
+        %elapsedSec.8 = local;
+        symbol [ elapsedSec %elapsedSec.8 150 12 22 ];
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_96_begin:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_26_150_62_begin:
+        %tmp.46 = lgetv %info.5;
+        symbol [ info %tmp.46 150 26 30 ];
+        %tmp.47 = null;
+        %tmp.48 = ne %tmp.46 %tmp.47;
+        bf %tmp.48 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_96_else_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_42_150_62_true:
+        %tmp.49 = lgetv %info.5;
+        symbol [ info %tmp.49 150 42 46 ];
+        %tmp.50 = as %tmp.49 { (!Null) };
+        symbol [ elapsedTime %tmp.51 150 47 58 ];
+        %tmp.51 = getv %tmp.50 :elapsedTime;
+        %tmp.52 = null;
+        %tmp.53 = ne %tmp.51 %tmp.52;
+        push %tmp.53;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_42_150_62_end:
+        %tmp.54 = phi [%tmp.48 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_26_150_62_begin] [%tmp.53 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_42_150_62_true] [%tmp.54 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_42_150_62_end];
+        bf %tmp.54 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_96_else_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_96_true:
+        %tmp.55 = lgetv %info.5;
+        symbol [ info %tmp.55 150 70 74 ];
+        %tmp.56 = as %tmp.55 { (!Null) };
+        symbol [ elapsedTime %tmp.57 150 75 86 ];
+        %tmp.57 = getv %tmp.56 :elapsedTime;
+        %tmp.58 = 1000;
+        %tmp.59 = div %tmp.57 %tmp.58;
+        push %tmp.59;
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_96_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_96_else_false:
+        %tmp.60 = 0;
+        push %tmp.60;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_96_end:
+        %tmp.61 = phi [%tmp.54 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_96_begin] [%tmp.59 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_96_true] [%tmp.60 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_96_else_false] [%tmp.61 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_150_25_150_96_end];
+        lputv %elapsedSec.8 %tmp.61;
+        symbol [ elapsedSec %elapsedSec.8 150 12 22 ];
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 151 8 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_25_151_106_begin:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_26_151_66_begin:
+        %tmp.62 = lgetv %info.5;
+        symbol [ info %tmp.62 151 26 30 ];
+        %tmp.63 = null;
+        %tmp.64 = ne %tmp.62 %tmp.63;
+        bf %tmp.64 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_25_151_106_else_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_42_151_66_true:
+        %tmp.65 = lgetv %info.5;
+        symbol [ info %tmp.65 151 42 46 ];
+        %tmp.66 = as %tmp.65 { (!Null) };
+        symbol [ elapsedDistance %tmp.67 151 47 62 ];
+        %tmp.67 = getv %tmp.66 :elapsedDistance;
+        %tmp.68 = null;
+        %tmp.69 = ne %tmp.67 %tmp.68;
+        push %tmp.69;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_42_151_66_end:
+        %tmp.70 = phi [%tmp.64 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_26_151_66_begin] [%tmp.69 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_42_151_66_true] [%tmp.70 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_42_151_66_end];
+        bf %tmp.70 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_25_151_106_else_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_25_151_106_true:
+        %tmp.71 = lgetv %info.5;
+        symbol [ info %tmp.71 151 74 78 ];
+        %tmp.72 = as %tmp.71 { (!Null) };
+        symbol [ elapsedDistance %tmp.73 151 79 94 ];
+        %tmp.73 = getv %tmp.72 :elapsedDistance;
+        %tmp.74 = 1000.0;
+        %tmp.75 = div %tmp.73 %tmp.74;
+        push %tmp.75;
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_25_151_106_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_25_151_106_else_false:
+        %tmp.76 = 0.0;
+        push %tmp.76;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_25_151_106_end:
+        %tmp.77 = phi [%tmp.70 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_25_151_106_begin] [%tmp.75 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_25_151_106_true] [%tmp.76 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_25_151_106_else_false] [%tmp.77 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_151_25_151_106_end];
+        symbol [ _totalDistance ? 151 8 22 ];
+        putv self :_totalDistance %tmp.77;
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 154 8 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_8_161_8_if_stmt:
+        symbol [ _lastAltitude %tmp.79 154 12 25 ];
+        %tmp.79 = getv ? :_lastAltitude;
+        %tmp.80 = null;
+        %tmp.81 = ne %tmp.79 %tmp.80;
+        bf %tmp.81 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_8_161_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_8_161_8_if_true:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_35_161_8_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 155 12 ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_35_161_8_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_35_161_8_stop" ]
+        %diff.9 = local;
+        symbol [ diff %diff.9 155 16 20 ];
+        %tmp.82 = lgetv %altitude.7;
+        symbol [ altitude %tmp.82 155 23 31 ];
+        symbol [ _lastAltitude %tmp.84 155 34 47 ];
+        %tmp.84 = getv ? :_lastAltitude;
+        %tmp.85 = as %tmp.84 { (!Null) };
+        %tmp.86 = sub %tmp.82 %tmp.85;
+        lputv %diff.9 %tmp.86;
+        symbol [ diff %diff.9 155 16 20 ];
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 156 12 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_12_160_12_if_stmt:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_16_156_57_begin:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_16_156_42_begin:
+        symbol [ _isDescending %tmp.88 156 17 30 ];
+        %tmp.88 = getv ? :_isDescending;
+        %tmp.89 = not %tmp.88;
+        bf %tmp.89 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_12_160_12_if_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_34_156_42_true:
+        %tmp.90 = lgetv %diff.9;
+        symbol [ diff %tmp.90 156 34 38 ];
+        %tmp.91 = -1.5;
+        %tmp.92 = lt %tmp.90 %tmp.91;
+        push %tmp.92;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_34_156_42_end:
+        %tmp.93 = phi [%tmp.89 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_16_156_42_begin] [%tmp.92 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_34_156_42_true] [%tmp.93 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_34_156_42_end];
+        bf %tmp.93 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_12_160_12_if_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_49_156_57_true:
+        %tmp.94 = lgetv %speed.6;
+        symbol [ speed %tmp.94 156 49 54 ];
+        %tmp.95 = 7.0;
+        %tmp.96 = gt %tmp.94 %tmp.95;
+        push %tmp.96;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_49_156_57_end:
+        %tmp.97 = phi [%tmp.93 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_16_156_57_begin] [%tmp.96 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_49_156_57_true] [%tmp.97 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_49_156_57_end];
+        bf %tmp.97 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_12_160_12_if_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_12_160_12_if_true:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_62_158_12_start:
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 157 16 ]
-        %tmp.110 = false;
+        %tmp.98 = true;
         symbol [ _isDescending ? 157 16 29 ];
-        putv self :_isDescending %tmp.110;
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 157 39 ]
-        symbol [ _liftCount %tmp.113 157 39 49 ];
-        %tmp.113 = getv ? :_liftCount;
-        %tmp.114 = add %tmp.113 1;
-        symbol [ _liftCount ? 157 39 49 ];
-        putv self :_liftCount dup %tmp.114;
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 157 53 ]
-        %tmp.115 = self;
-        symbol [ vibrate %tmp.116 157 53 60 ];
-        %tmp.116 = getv function %tmp.115 :vibrate;
-        %tmp.117 = 2;
-        invoke %tmp.115 %tmp.116(%tmp.117);
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_52_158_12_stop:
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_19_158_12_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_19_158_12_if_end:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_12_158_12_if_end:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_152_35_159_8_stop:
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_152_8_159_8_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_152_8_159_8_if_end:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 160 8 ]
-        %tmp.118 = lgetv %altitude.6;
-        symbol [ altitude %tmp.118 160 24 32 ];
-        symbol [ toFloat %tmp.119 160 33 40 ];
-        %tmp.119 = getv function %tmp.118 :toFloat;
-        %tmp.120 = invoke %tmp.118 %tmp.119();
-        symbol [ _lastAltitude ? 160 8 21 ];
-        putv self :_lastAltitude %tmp.120;
+        putv self :_isDescending %tmp.98;
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 157 38 ]
+        symbol [ _runCount %tmp.101 157 38 47 ];
+        %tmp.101 = getv ? :_runCount;
+        %tmp.102 = add %tmp.101 1;
+        symbol [ _runCount ? 157 38 47 ];
+        putv self :_runCount dup %tmp.102;
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 157 51 ]
+        %tmp.103 = 0.0;
+        symbol [ _maxSpeedCurrentRun ? 157 51 70 ];
+        putv self :_maxSpeedCurrentRun %tmp.103;
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 157 78 ]
+        %tmp.104 = self;
+        symbol [ vibrate %tmp.105 157 78 85 ];
+        %tmp.105 = getv function %tmp.104 :vibrate;
+        %tmp.106 = 1;
+        invoke %tmp.104 %tmp.105(%tmp.106);
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_62_158_12_stop:
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_12_160_12_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_12_160_12_if_false:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 158 19 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_158_19_160_12_if_stmt:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_158_23_158_47_begin:
+        symbol [ _isDescending %tmp.108 158 23 36 ];
+        %tmp.108 = getv ? :_isDescending;
+        bf %tmp.108 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_158_19_160_12_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_158_40_158_47_true:
+        %tmp.109 = lgetv %diff.9;
+        symbol [ diff %tmp.109 158 40 44 ];
+        %tmp.110 = 2.5;
+        %tmp.111 = gt %tmp.109 %tmp.110;
+        push %tmp.111;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_158_40_158_47_end:
+        %tmp.112 = phi [%tmp.108 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_158_23_158_47_begin] [%tmp.111 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_158_40_158_47_true] [%tmp.112 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_158_40_158_47_end];
+        bf %tmp.112 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_158_19_160_12_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_158_19_160_12_if_true:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_158_52_160_12_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 159 16 ]
+        %tmp.113 = false;
+        symbol [ _isDescending ? 159 16 29 ];
+        putv self :_isDescending %tmp.113;
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 159 39 ]
+        symbol [ _liftCount %tmp.116 159 39 49 ];
+        %tmp.116 = getv ? :_liftCount;
+        %tmp.117 = add %tmp.116 1;
+        symbol [ _liftCount ? 159 39 49 ];
+        putv self :_liftCount dup %tmp.117;
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 159 53 ]
+        %tmp.118 = self;
+        symbol [ vibrate %tmp.119 159 53 60 ];
+        %tmp.119 = getv function %tmp.118 :vibrate;
+        %tmp.120 = 2;
+        invoke %tmp.118 %tmp.119(%tmp.120);
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_158_52_160_12_stop:
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_158_19_160_12_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_158_19_160_12_if_end:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_156_12_160_12_if_end:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_35_161_8_stop:
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_8_161_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_154_8_161_8_if_end:
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 162 8 ]
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_162_8_165_8_if_stmt:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_162_12_162_37_begin:
-        symbol [ _isDescending %tmp.122 162 12 25 ];
-        %tmp.122 = getv ? :_isDescending;
-        bf %tmp.122 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_162_8_165_8_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_162_29_162_37_true:
-        %tmp.123 = lgetv %speed.5;
-        symbol [ speed %tmp.123 162 29 34 ];
-        symbol [ _topSpeedEver %tmp.125 162 37 50 ];
-        %tmp.125 = getv ? :_topSpeedEver;
-        %tmp.126 = gt %tmp.123 %tmp.125;
-        push %tmp.126;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_162_29_162_37_end:
-        %tmp.127 = phi [%tmp.122 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_162_12_162_37_begin] [%tmp.126 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_162_29_162_37_true] [%tmp.127 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_162_29_162_37_end];
-        bf %tmp.127 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_162_8_165_8_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_162_8_165_8_if_true:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_162_52_165_8_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 163 12 ]
-        %tmp.128 = lgetv %speed.5;
-        symbol [ speed %tmp.128 163 28 33 ];
-        symbol [ toFloat %tmp.129 163 34 41 ];
-        %tmp.129 = getv function %tmp.128 :toFloat;
-        %tmp.130 = invoke %tmp.128 %tmp.129();
-        symbol [ _topSpeedEver ? 163 12 25 ];
-        putv self :_topSpeedEver %tmp.130;
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 164 12 ]
-        symbol [ Storage %tmp.131 164 12 19 ];
-        %tmp.131 = getm $.Toybox.Application.Storage;
-        symbol [ setValue %tmp.132 164 20 28 ];
-        %tmp.132 = getv function %tmp.131 :setValue;
-        %tmp.133 = "topSpeedEver";
-        symbol [ _topSpeedEver %tmp.135 164 45 58 ];
-        %tmp.135 = getv ? :_topSpeedEver;
-        invoke %tmp.131 %tmp.132(%tmp.133, %tmp.135);
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_162_52_165_8_stop:
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_162_8_165_8_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_162_8_165_8_if_end:
+        %tmp.121 = lgetv %altitude.7;
+        symbol [ altitude %tmp.121 162 24 32 ];
+        symbol [ toFloat %tmp.122 162 33 40 ];
+        %tmp.122 = getv function %tmp.121 :toFloat;
+        %tmp.123 = invoke %tmp.121 %tmp.122();
+        symbol [ _lastAltitude ? 162 8 21 ];
+        putv self :_lastAltitude %tmp.123;
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 164 8 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_164_8_166_8_if_stmt:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_164_12_164_37_begin:
+        symbol [ _isDescending %tmp.125 164 12 25 ];
+        %tmp.125 = getv ? :_isDescending;
+        bf %tmp.125 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_164_8_166_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_164_29_164_37_true:
+        %tmp.126 = lgetv %speed.6;
+        symbol [ speed %tmp.126 164 29 34 ];
+        symbol [ _maxSpeedCurrentRun %tmp.128 164 37 56 ];
+        %tmp.128 = getv ? :_maxSpeedCurrentRun;
+        %tmp.129 = gt %tmp.126 %tmp.128;
+        push %tmp.129;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_164_29_164_37_end:
+        %tmp.130 = phi [%tmp.125 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_164_12_164_37_begin] [%tmp.129 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_164_29_164_37_true] [%tmp.130 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_164_29_164_37_end];
+        bf %tmp.130 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_164_8_166_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_164_8_166_8_if_true:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_164_58_166_8_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 165 12 ]
+        %tmp.131 = lgetv %speed.6;
+        symbol [ speed %tmp.131 165 34 39 ];
+        symbol [ toFloat %tmp.132 165 40 47 ];
+        %tmp.132 = getv function %tmp.131 :toFloat;
+        %tmp.133 = invoke %tmp.131 %tmp.132();
+        symbol [ _maxSpeedCurrentRun ? 165 12 31 ];
+        putv self :_maxSpeedCurrentRun %tmp.133;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_164_58_166_8_stop:
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_164_8_166_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_164_8_166_8_if_end:
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 167 8 ]
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_167_8_173_8_if_stmt:
-        symbol [ _session %tmp.137 167 12 20 ];
-        %tmp.137 = getv ? :_session;
-        %tmp.138 = null;
-        %tmp.139 = ne %tmp.137 %tmp.138;
-        bf %tmp.139 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_167_8_173_8_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_167_8_173_8_if_true:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_167_30_173_8_start:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_167_8_170_8_if_stmt:
+        %tmp.134 = lgetv %speed.6;
+        symbol [ speed %tmp.134 167 12 17 ];
+        symbol [ _topSpeedEver %tmp.136 167 20 33 ];
+        %tmp.136 = getv ? :_topSpeedEver;
+        %tmp.137 = gt %tmp.134 %tmp.136;
+        bf %tmp.137 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_167_8_170_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_167_8_170_8_if_true:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_167_35_170_8_start:
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 168 12 ]
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_12_172_12_if_stmt:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_16_168_66_begin:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_16_168_38_begin:
-        symbol [ _isPaused %tmp.141 168 17 26 ];
-        %tmp.141 = getv ? :_isPaused;
-        %tmp.142 = not %tmp.141;
-        bf %tmp.142 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_12_172_12_if_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_30_168_38_true:
-        %tmp.143 = lgetv %speed.5;
-        symbol [ speed %tmp.143 168 30 35 ];
-        %tmp.144 = 1.5;
-        %tmp.145 = lt %tmp.143 %tmp.144;
-        push %tmp.145;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_30_168_38_end:
-        %tmp.146 = phi [%tmp.142 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_16_168_38_begin] [%tmp.145 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_30_168_38_true] [%tmp.146 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_30_168_38_end];
-        bf %tmp.146 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_12_172_12_if_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_45_168_66_true:
-        symbol [ _session %tmp.148 168 45 53 ];
-        %tmp.148 = getv ? :_session;
-        %tmp.149 = as %tmp.148 { (!Null) };
-        symbol [ isRecording %tmp.150 168 54 65 ];
-        %tmp.150 = getv function %tmp.149 :isRecording;
-        %tmp.151 = invoke %tmp.149 %tmp.150();
-        push %tmp.151;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_45_168_66_end:
-        %tmp.152 = phi [%tmp.146 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_16_168_66_begin] [%tmp.151 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_45_168_66_true] [%tmp.152 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_45_168_66_end];
-        bf %tmp.152 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_12_172_12_if_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_12_172_12_if_true:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_69_170_12_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 169 16 ]
-        symbol [ _session %tmp.154 169 16 24 ];
-        %tmp.154 = getv ? :_session;
-        symbol [ stop %tmp.155 169 25 29 ];
-        %tmp.155 = getv function %tmp.154 :stop;
-        invoke %tmp.154 %tmp.155();
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 169 33 ]
-        %tmp.156 = true;
-        symbol [ _isPaused ? 169 33 42 ];
-        putv self :_isPaused %tmp.156;
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 169 51 ]
-        %tmp.157 = 2;
-        symbol [ _pauseTimer ? 169 51 62 ];
-        putv self :_pauseTimer %tmp.157;
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 169 68 ]
-        %tmp.158 = self;
-        symbol [ vibrate %tmp.159 169 68 75 ];
-        %tmp.159 = getv function %tmp.158 :vibrate;
-        %tmp.160 = 1;
-        invoke %tmp.158 %tmp.159(%tmp.160);
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_69_170_12_stop:
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_12_172_12_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_12_172_12_if_false:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 170 19 ]
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_19_172_12_if_stmt:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_23_170_73_begin:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_23_170_44_begin:
-        symbol [ _isPaused %tmp.162 170 23 32 ];
-        %tmp.162 = getv ? :_isPaused;
-        bf %tmp.162 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_19_172_12_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_36_170_44_true:
-        %tmp.163 = lgetv %speed.5;
-        symbol [ speed %tmp.163 170 36 41 ];
-        %tmp.164 = 4.0;
-        %tmp.165 = gt %tmp.163 %tmp.164;
-        push %tmp.165;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_36_170_44_end:
-        %tmp.166 = phi [%tmp.162 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_23_170_44_begin] [%tmp.165 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_36_170_44_true] [%tmp.166 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_36_170_44_end];
-        bf %tmp.166 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_19_172_12_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_51_170_73_true:
-        symbol [ _session %tmp.168 170 52 60 ];
-        %tmp.168 = getv ? :_session;
-        symbol [ isRecording %tmp.169 170 61 72 ];
-        %tmp.169 = getv function %tmp.168 :isRecording;
-        %tmp.170 = invoke %tmp.168 %tmp.169();
-        %tmp.171 = not %tmp.170;
-        push %tmp.171;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_51_170_73_end:
-        %tmp.172 = phi [%tmp.166 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_23_170_73_begin] [%tmp.171 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_51_170_73_true] [%tmp.172 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_51_170_73_end];
-        bf %tmp.172 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_19_172_12_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_19_172_12_if_true:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_76_172_12_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 171 16 ]
-        symbol [ _session %tmp.174 171 16 24 ];
-        %tmp.174 = getv ? :_session;
-        symbol [ start %tmp.175 171 25 30 ];
-        %tmp.175 = getv function %tmp.174 :start;
-        invoke %tmp.174 %tmp.175();
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 171 34 ]
-        %tmp.176 = false;
-        symbol [ _isPaused ? 171 34 43 ];
-        putv self :_isPaused %tmp.176;
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 171 53 ]
-        %tmp.177 = 2;
-        symbol [ _pauseTimer ? 171 53 64 ];
-        putv self :_pauseTimer %tmp.177;
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 171 70 ]
-        %tmp.178 = self;
-        symbol [ vibrate %tmp.179 171 70 77 ];
-        %tmp.179 = getv function %tmp.178 :vibrate;
-        %tmp.180 = 1;
-        invoke %tmp.178 %tmp.179(%tmp.180);
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_76_172_12_stop:
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_19_172_12_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_170_19_172_12_if_end:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_168_12_172_12_if_end:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_167_30_173_8_stop:
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_167_8_173_8_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_167_8_173_8_if_end:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 176 8 ]
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_176_8_180_8_if_stmt:
-        symbol [ _isPaused %tmp.182 176 12 21 ];
-        %tmp.182 = getv ? :_isPaused;
-        bf %tmp.182 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_176_8_180_8_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_176_8_180_8_if_true:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_176_23_180_8_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 177 12 ]
-        %tmp.183 = lgetv %dc;
-        symbol [ dc %tmp.183 177 12 14 ];
-        symbol [ setPenWidth %tmp.184 177 15 26 ];
-        %tmp.184 = getv function %tmp.183 :setPenWidth;
-        %tmp.185 = 10;
-        invoke %tmp.183 %tmp.184(%tmp.185);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 178 12 ]
-        %tmp.186 = lgetv %dc;
-        symbol [ dc %tmp.186 178 12 14 ];
-        symbol [ setColor %tmp.187 178 15 23 ];
-        %tmp.187 = getv function %tmp.186 :setColor;
-        symbol [ Graphics %tmp.188 178 24 32 ];
-        %tmp.188 = getm $.Toybox.Graphics;
-        symbol [ COLOR_RED %tmp.189 178 33 42 ];
-        %tmp.189 = getv %tmp.188 :COLOR_RED;
-        symbol [ Graphics %tmp.190 178 44 52 ];
-        %tmp.190 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.191 178 53 70 ];
-        %tmp.191 = getv %tmp.190 :COLOR_TRANSPARENT;
-        invoke %tmp.186 %tmp.187(%tmp.189, %tmp.191);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 179 12 ]
-        %tmp.192 = lgetv %dc;
-        symbol [ dc %tmp.192 179 12 14 ];
-        symbol [ drawCircle %tmp.193 179 15 25 ];
-        %tmp.193 = getv function %tmp.192 :drawCircle;
-        %tmp.194 = lgetv %centerX.3;
-        symbol [ centerX %tmp.194 179 26 33 ];
-        %tmp.195 = lgetv %centerY.4;
-        symbol [ centerY %tmp.195 179 35 42 ];
-        %tmp.196 = lgetv %centerX.3;
-        symbol [ centerX %tmp.196 179 44 51 ];
-        %tmp.197 = 5;
-        %tmp.198 = sub %tmp.196 %tmp.197;
-        invoke %tmp.192 %tmp.193(%tmp.194, %tmp.195, %tmp.198);
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_176_23_180_8_stop:
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_176_8_180_8_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_176_8_180_8_if_end:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 182 8 ]
-        %tmp.199 = lgetv %dc;
-        symbol [ dc %tmp.199 182 8 10 ];
-        symbol [ setColor %tmp.200 182 11 19 ];
-        %tmp.200 = getv function %tmp.199 :setColor;
-        symbol [ Graphics %tmp.201 182 20 28 ];
-        %tmp.201 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.202 182 29 40 ];
-        %tmp.202 = getv %tmp.201 :COLOR_WHITE;
-        symbol [ Graphics %tmp.203 182 42 50 ];
-        %tmp.203 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.204 182 51 68 ];
-        %tmp.204 = getv %tmp.203 :COLOR_TRANSPARENT;
-        invoke %tmp.199 %tmp.200(%tmp.202, %tmp.204);
+        %tmp.138 = lgetv %speed.6;
+        symbol [ speed %tmp.138 168 28 33 ];
+        symbol [ toFloat %tmp.139 168 34 41 ];
+        %tmp.139 = getv function %tmp.138 :toFloat;
+        %tmp.140 = invoke %tmp.138 %tmp.139();
+        symbol [ _topSpeedEver ? 168 12 25 ];
+        putv self :_topSpeedEver %tmp.140;
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 169 12 ]
+        symbol [ Storage %tmp.141 169 12 19 ];
+        %tmp.141 = getm $.Toybox.Application.Storage;
+        symbol [ setValue %tmp.142 169 20 28 ];
+        %tmp.142 = getv function %tmp.141 :setValue;
+        %tmp.143 = "topSpeedEver";
+        symbol [ _topSpeedEver %tmp.145 169 45 58 ];
+        %tmp.145 = getv ? :_topSpeedEver;
+        invoke %tmp.141 %tmp.142(%tmp.143, %tmp.145);
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_167_35_170_8_stop:
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_167_8_170_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_167_8_170_8_if_end:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 172 8 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_172_8_178_8_if_stmt:
+        symbol [ _session %tmp.147 172 12 20 ];
+        %tmp.147 = getv ? :_session;
+        %tmp.148 = null;
+        %tmp.149 = ne %tmp.147 %tmp.148;
+        bf %tmp.149 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_172_8_178_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_172_8_178_8_if_true:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_172_30_178_8_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 173 12 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_12_177_12_if_stmt:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_16_173_66_begin:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_16_173_38_begin:
+        symbol [ _isPaused %tmp.151 173 17 26 ];
+        %tmp.151 = getv ? :_isPaused;
+        %tmp.152 = not %tmp.151;
+        bf %tmp.152 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_12_177_12_if_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_30_173_38_true:
+        %tmp.153 = lgetv %speed.6;
+        symbol [ speed %tmp.153 173 30 35 ];
+        %tmp.154 = 1.5;
+        %tmp.155 = lt %tmp.153 %tmp.154;
+        push %tmp.155;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_30_173_38_end:
+        %tmp.156 = phi [%tmp.152 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_16_173_38_begin] [%tmp.155 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_30_173_38_true] [%tmp.156 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_30_173_38_end];
+        bf %tmp.156 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_12_177_12_if_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_45_173_66_true:
+        symbol [ _session %tmp.158 173 45 53 ];
+        %tmp.158 = getv ? :_session;
+        %tmp.159 = as %tmp.158 { (!Null) };
+        symbol [ isRecording %tmp.160 173 54 65 ];
+        %tmp.160 = getv function %tmp.159 :isRecording;
+        %tmp.161 = invoke %tmp.159 %tmp.160();
+        push %tmp.161;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_45_173_66_end:
+        %tmp.162 = phi [%tmp.156 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_16_173_66_begin] [%tmp.161 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_45_173_66_true] [%tmp.162 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_45_173_66_end];
+        bf %tmp.162 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_12_177_12_if_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_12_177_12_if_true:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_69_175_12_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 174 16 ]
+        symbol [ _session %tmp.164 174 16 24 ];
+        %tmp.164 = getv ? :_session;
+        symbol [ stop %tmp.165 174 25 29 ];
+        %tmp.165 = getv function %tmp.164 :stop;
+        invoke %tmp.164 %tmp.165();
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 174 33 ]
+        %tmp.166 = true;
+        symbol [ _isPaused ? 174 33 42 ];
+        putv self :_isPaused %tmp.166;
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 174 51 ]
+        %tmp.167 = 2;
+        symbol [ _pauseTimer ? 174 51 62 ];
+        putv self :_pauseTimer %tmp.167;
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 174 68 ]
+        %tmp.168 = self;
+        symbol [ vibrate %tmp.169 174 68 75 ];
+        %tmp.169 = getv function %tmp.168 :vibrate;
+        %tmp.170 = 1;
+        invoke %tmp.168 %tmp.169(%tmp.170);
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_69_175_12_stop:
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_12_177_12_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_12_177_12_if_false:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 175 19 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_19_177_12_if_stmt:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_23_175_73_begin:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_23_175_44_begin:
+        symbol [ _isPaused %tmp.172 175 23 32 ];
+        %tmp.172 = getv ? :_isPaused;
+        bf %tmp.172 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_19_177_12_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_36_175_44_true:
+        %tmp.173 = lgetv %speed.6;
+        symbol [ speed %tmp.173 175 36 41 ];
+        %tmp.174 = 4.0;
+        %tmp.175 = gt %tmp.173 %tmp.174;
+        push %tmp.175;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_36_175_44_end:
+        %tmp.176 = phi [%tmp.172 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_23_175_44_begin] [%tmp.175 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_36_175_44_true] [%tmp.176 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_36_175_44_end];
+        bf %tmp.176 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_19_177_12_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_51_175_73_true:
+        symbol [ _session %tmp.178 175 52 60 ];
+        %tmp.178 = getv ? :_session;
+        symbol [ isRecording %tmp.179 175 61 72 ];
+        %tmp.179 = getv function %tmp.178 :isRecording;
+        %tmp.180 = invoke %tmp.178 %tmp.179();
+        %tmp.181 = not %tmp.180;
+        push %tmp.181;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_51_175_73_end:
+        %tmp.182 = phi [%tmp.176 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_23_175_73_begin] [%tmp.181 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_51_175_73_true] [%tmp.182 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_51_175_73_end];
+        bf %tmp.182 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_19_177_12_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_19_177_12_if_true:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_76_177_12_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 176 16 ]
+        symbol [ _session %tmp.184 176 16 24 ];
+        %tmp.184 = getv ? :_session;
+        symbol [ start %tmp.185 176 25 30 ];
+        %tmp.185 = getv function %tmp.184 :start;
+        invoke %tmp.184 %tmp.185();
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 176 34 ]
+        %tmp.186 = false;
+        symbol [ _isPaused ? 176 34 43 ];
+        putv self :_isPaused %tmp.186;
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 176 53 ]
+        %tmp.187 = 2;
+        symbol [ _pauseTimer ? 176 53 64 ];
+        putv self :_pauseTimer %tmp.187;
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 176 70 ]
+        %tmp.188 = self;
+        symbol [ vibrate %tmp.189 176 70 77 ];
+        %tmp.189 = getv function %tmp.188 :vibrate;
+        %tmp.190 = 1;
+        invoke %tmp.188 %tmp.189(%tmp.190);
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_76_177_12_stop:
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_19_177_12_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_175_19_177_12_if_end:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_173_12_177_12_if_end:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_172_30_178_8_stop:
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_172_8_178_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_172_8_178_8_if_end:
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 183 8 ]
-        %tmp.205 = lgetv %dc;
-        symbol [ dc %tmp.205 183 8 10 ];
-        symbol [ setPenWidth %tmp.206 183 11 22 ];
-        %tmp.206 = getv function %tmp.205 :setPenWidth;
-        %tmp.207 = 2;
-        invoke %tmp.205 %tmp.206(%tmp.207);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 184 8 ]
-        %tmp.208 = lgetv %dc;
-        symbol [ dc %tmp.208 184 8 10 ];
-        symbol [ drawLine %tmp.209 184 11 19 ];
-        %tmp.209 = getv function %tmp.208 :drawLine;
-        %tmp.210 = lgetv %centerX.3;
-        symbol [ centerX %tmp.210 184 20 27 ];
-        %tmp.211 = lgetv %h.2;
-        symbol [ h %tmp.211 184 30 31 ];
-        %tmp.212 = 0.22;
-        %tmp.213 = mul %tmp.211 %tmp.212;
-        symbol [ toNumber %tmp.214 184 40 48 ];
-        %tmp.214 = getv function %tmp.213 :toNumber;
-        %tmp.215 = invoke %tmp.213 %tmp.214();
-        %tmp.216 = lgetv %centerX.3;
-        symbol [ centerX %tmp.216 184 52 59 ];
-        %tmp.217 = lgetv %h.2;
-        symbol [ h %tmp.217 184 62 63 ];
-        %tmp.218 = 0.80;
-        %tmp.219 = mul %tmp.217 %tmp.218;
-        symbol [ toNumber %tmp.220 184 72 80 ];
-        %tmp.220 = getv function %tmp.219 :toNumber;
-        %tmp.221 = invoke %tmp.219 %tmp.220();
-        invoke %tmp.208 %tmp.209(%tmp.210, %tmp.215, %tmp.216, %tmp.221);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 185 8 ]
-        %tmp.222 = lgetv %dc;
-        symbol [ dc %tmp.222 185 8 10 ];
-        symbol [ drawLine %tmp.223 185 11 19 ];
-        %tmp.223 = getv function %tmp.222 :drawLine;
-        %tmp.224 = lgetv %w.1;
-        symbol [ w %tmp.224 185 21 22 ];
-        %tmp.225 = 0.10;
-        %tmp.226 = mul %tmp.224 %tmp.225;
-        symbol [ toNumber %tmp.227 185 31 39 ];
-        %tmp.227 = getv function %tmp.226 :toNumber;
-        %tmp.228 = invoke %tmp.226 %tmp.227();
-        %tmp.229 = lgetv %centerY.4;
-        symbol [ centerY %tmp.229 185 43 50 ];
-        %tmp.230 = lgetv %w.1;
-        symbol [ w %tmp.230 185 53 54 ];
-        %tmp.231 = 0.90;
-        %tmp.232 = mul %tmp.230 %tmp.231;
-        symbol [ toNumber %tmp.233 185 63 71 ];
-        %tmp.233 = getv function %tmp.232 :toNumber;
-        %tmp.234 = invoke %tmp.232 %tmp.233();
-        %tmp.235 = lgetv %centerY.4;
-        symbol [ centerY %tmp.235 185 75 82 ];
-        invoke %tmp.222 %tmp.223(%tmp.228, %tmp.229, %tmp.234, %tmp.235);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 186 8 ]
-        %tmp.236 = lgetv %dc;
-        symbol [ dc %tmp.236 186 8 10 ];
-        symbol [ setPenWidth %tmp.237 186 11 22 ];
-        %tmp.237 = getv function %tmp.236 :setPenWidth;
-        %tmp.238 = 1;
-        invoke %tmp.236 %tmp.237(%tmp.238);
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_183_8_187_8_if_stmt:
+        symbol [ _isPaused %tmp.192 183 12 21 ];
+        %tmp.192 = getv ? :_isPaused;
+        bf %tmp.192 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_183_8_187_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_183_8_187_8_if_true:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_183_23_187_8_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 184 12 ]
+        %tmp.193 = lgetv %dc;
+        symbol [ dc %tmp.193 184 12 14 ];
+        symbol [ setPenWidth %tmp.194 184 15 26 ];
+        %tmp.194 = getv function %tmp.193 :setPenWidth;
+        %tmp.195 = 10;
+        invoke %tmp.193 %tmp.194(%tmp.195);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 185 12 ]
+        %tmp.196 = lgetv %dc;
+        symbol [ dc %tmp.196 185 12 14 ];
+        symbol [ setColor %tmp.197 185 15 23 ];
+        %tmp.197 = getv function %tmp.196 :setColor;
+        symbol [ Graphics %tmp.198 185 24 32 ];
+        %tmp.198 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.199 185 33 42 ];
+        %tmp.199 = getv %tmp.198 :COLOR_RED;
+        symbol [ Graphics %tmp.200 185 44 52 ];
+        %tmp.200 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.201 185 53 70 ];
+        %tmp.201 = getv %tmp.200 :COLOR_TRANSPARENT;
+        invoke %tmp.196 %tmp.197(%tmp.199, %tmp.201);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 186 12 ]
+        %tmp.202 = lgetv %dc;
+        symbol [ dc %tmp.202 186 12 14 ];
+        symbol [ drawCircle %tmp.203 186 15 25 ];
+        %tmp.203 = getv function %tmp.202 :drawCircle;
+        %tmp.204 = lgetv %centerX.3;
+        symbol [ centerX %tmp.204 186 26 33 ];
+        %tmp.205 = lgetv %centerY.4;
+        symbol [ centerY %tmp.205 186 35 42 ];
+        %tmp.206 = lgetv %centerX.3;
+        symbol [ centerX %tmp.206 186 44 51 ];
+        %tmp.207 = 5;
+        %tmp.208 = sub %tmp.206 %tmp.207;
+        invoke %tmp.202 %tmp.203(%tmp.204, %tmp.205, %tmp.208);
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_183_23_187_8_stop:
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_183_8_187_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_183_8_187_8_if_end:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 190 8 ]
+        %tmp.209 = lgetv %dc;
+        symbol [ dc %tmp.209 190 8 10 ];
+        symbol [ setColor %tmp.210 190 11 19 ];
+        %tmp.210 = getv function %tmp.209 :setColor;
+        symbol [ Graphics %tmp.211 190 20 28 ];
+        %tmp.211 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.212 190 29 40 ];
+        %tmp.212 = getv %tmp.211 :COLOR_WHITE;
+        symbol [ Graphics %tmp.213 190 42 50 ];
+        %tmp.213 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.214 190 51 68 ];
+        %tmp.214 = getv %tmp.213 :COLOR_TRANSPARENT;
+        invoke %tmp.209 %tmp.210(%tmp.212, %tmp.214);
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 191 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_stop" ]
-        %now.9 = local;
-        symbol [ now %now.9 191 12 15 ];
-        symbol [ Gregorian %tmp.239 191 18 27 ];
-        %tmp.239 = getm $.Toybox.Time.Gregorian;
-        symbol [ info %tmp.240 191 28 32 ];
-        %tmp.240 = getv function %tmp.239 :info;
-        symbol [ Time %tmp.241 191 33 37 ];
-        %tmp.241 = getm $.Toybox.Time;
-        symbol [ now %tmp.242 191 38 41 ];
-        %tmp.242 = getv function %tmp.241 :now;
-        %tmp.243 = invoke %tmp.241 %tmp.242();
-        symbol [ Time %tmp.244 191 45 49 ];
-        %tmp.244 = getm $.Toybox.Time;
-        symbol [ FORMAT_SHORT %tmp.245 191 50 62 ];
-        %tmp.245 = getv %tmp.244 :FORMAT_SHORT;
-        %tmp.246 = invoke %tmp.239 %tmp.240(%tmp.243, %tmp.245);
-        lputv %now.9 %tmp.246;
-        symbol [ now %now.9 191 12 15 ];
+        %tmp.215 = lgetv %dc;
+        symbol [ dc %tmp.215 191 8 10 ];
+        symbol [ setPenWidth %tmp.216 191 11 22 ];
+        %tmp.216 = getv function %tmp.215 :setPenWidth;
+        %tmp.217 = 2;
+        invoke %tmp.215 %tmp.216(%tmp.217);
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 192 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_stop" ]
-        %timeStr.10 = local;
-        symbol [ timeStr %timeStr.10 192 12 19 ];
-        symbol [ Lang %tmp.247 192 22 26 ];
-        %tmp.247 = getm $.Toybox.Lang;
-        symbol [ format %tmp.248 192 27 33 ];
-        %tmp.248 = getv function %tmp.247 :format;
-        %tmp.249 = "$1$:$2$";
-        %tmp.250 = newa 2;
-        %tmp.251 = lgetv %now.9;
-        symbol [ now %tmp.251 192 46 49 ];
-        symbol [ hour %tmp.252 192 50 54 ];
-        %tmp.252 = getv %tmp.251 :hour;
-        symbol [ format %tmp.253 192 55 61 ];
-        %tmp.253 = getv function %tmp.252 :format;
-        %tmp.254 = "%02d";
-        %tmp.255 = invoke %tmp.252 %tmp.253(%tmp.254);
-        %tmp.256 = dup %tmp.250;
-        %tmp.257 = aputv %tmp.256 0 %tmp.255;
-        %tmp.258 = lgetv %now.9;
-        symbol [ now %tmp.258 192 71 74 ];
-        symbol [ min %tmp.259 192 75 78 ];
-        %tmp.259 = getv %tmp.258 :min;
-        symbol [ format %tmp.260 192 79 85 ];
-        %tmp.260 = getv function %tmp.259 :format;
-        %tmp.261 = "%02d";
-        %tmp.262 = invoke %tmp.259 %tmp.260(%tmp.261);
-        %tmp.263 = dup %tmp.257;
-        %tmp.264 = aputv %tmp.263 1 %tmp.262;
-        %tmp.265 = invoke %tmp.247 %tmp.248(%tmp.249, %tmp.264);
-        lputv %timeStr.10 %tmp.265;
-        symbol [ timeStr %timeStr.10 192 12 19 ];
+        %tmp.218 = lgetv %dc;
+        symbol [ dc %tmp.218 192 8 10 ];
+        symbol [ drawLine %tmp.219 192 11 19 ];
+        %tmp.219 = getv function %tmp.218 :drawLine;
+        %tmp.220 = lgetv %centerX.3;
+        symbol [ centerX %tmp.220 192 20 27 ];
+        %tmp.221 = lgetv %h.2;
+        symbol [ h %tmp.221 192 30 31 ];
+        %tmp.222 = 0.25;
+        %tmp.223 = mul %tmp.221 %tmp.222;
+        symbol [ toNumber %tmp.224 192 40 48 ];
+        %tmp.224 = getv function %tmp.223 :toNumber;
+        %tmp.225 = invoke %tmp.223 %tmp.224();
+        %tmp.226 = lgetv %centerX.3;
+        symbol [ centerX %tmp.226 192 52 59 ];
+        %tmp.227 = lgetv %h.2;
+        symbol [ h %tmp.227 192 62 63 ];
+        %tmp.228 = 0.75;
+        %tmp.229 = mul %tmp.227 %tmp.228;
+        symbol [ toNumber %tmp.230 192 72 80 ];
+        %tmp.230 = getv function %tmp.229 :toNumber;
+        %tmp.231 = invoke %tmp.229 %tmp.230();
+        invoke %tmp.218 %tmp.219(%tmp.220, %tmp.225, %tmp.226, %tmp.231);
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 193 8 ]
-        %tmp.266 = lgetv %dc;
-        symbol [ dc %tmp.266 193 8 10 ];
-        symbol [ drawText %tmp.267 193 11 19 ];
-        %tmp.267 = getv function %tmp.266 :drawText;
-        %tmp.268 = lgetv %centerX.3;
-        symbol [ centerX %tmp.268 193 20 27 ];
-        %tmp.269 = lgetv %h.2;
-        symbol [ h %tmp.269 193 30 31 ];
-        %tmp.270 = 0.10;
-        %tmp.271 = mul %tmp.269 %tmp.270;
-        symbol [ toNumber %tmp.272 193 40 48 ];
-        %tmp.272 = getv function %tmp.271 :toNumber;
-        %tmp.273 = invoke %tmp.271 %tmp.272();
-        symbol [ Graphics %tmp.274 193 52 60 ];
-        %tmp.274 = getm $.Toybox.Graphics;
-        symbol [ FONT_MEDIUM %tmp.275 193 61 72 ];
-        %tmp.275 = getv %tmp.274 :FONT_MEDIUM;
-        %tmp.276 = lgetv %timeStr.10;
-        symbol [ timeStr %tmp.276 193 74 81 ];
-        symbol [ Graphics %tmp.277 193 83 91 ];
-        %tmp.277 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.278 193 92 111 ];
-        %tmp.278 = getv %tmp.277 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.266 %tmp.267(%tmp.268, %tmp.273, %tmp.275, %tmp.276, %tmp.278);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 196 8 ]
-        %tmp.279 = lgetv %dc;
-        symbol [ dc %tmp.279 196 8 10 ];
-        symbol [ setColor %tmp.280 196 11 19 ];
-        %tmp.280 = getv function %tmp.279 :setColor;
-        symbol [ Graphics %tmp.281 196 20 28 ];
-        %tmp.281 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.282 196 29 42 ];
-        %tmp.282 = getv %tmp.281 :COLOR_LT_GRAY;
-        symbol [ Graphics %tmp.283 196 44 52 ];
-        %tmp.283 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.284 196 53 70 ];
-        %tmp.284 = getv %tmp.283 :COLOR_TRANSPARENT;
-        invoke %tmp.279 %tmp.280(%tmp.282, %tmp.284);
+        %tmp.232 = lgetv %dc;
+        symbol [ dc %tmp.232 193 8 10 ];
+        symbol [ drawLine %tmp.233 193 11 19 ];
+        %tmp.233 = getv function %tmp.232 :drawLine;
+        %tmp.234 = lgetv %w.1;
+        symbol [ w %tmp.234 193 21 22 ];
+        %tmp.235 = 0.15;
+        %tmp.236 = mul %tmp.234 %tmp.235;
+        symbol [ toNumber %tmp.237 193 31 39 ];
+        %tmp.237 = getv function %tmp.236 :toNumber;
+        %tmp.238 = invoke %tmp.236 %tmp.237();
+        %tmp.239 = lgetv %centerY.4;
+        symbol [ centerY %tmp.239 193 43 50 ];
+        %tmp.240 = lgetv %w.1;
+        symbol [ w %tmp.240 193 53 54 ];
+        %tmp.241 = 0.85;
+        %tmp.242 = mul %tmp.240 %tmp.241;
+        symbol [ toNumber %tmp.243 193 63 71 ];
+        %tmp.243 = getv function %tmp.242 :toNumber;
+        %tmp.244 = invoke %tmp.242 %tmp.243();
+        %tmp.245 = lgetv %centerY.4;
+        symbol [ centerY %tmp.245 193 75 82 ];
+        invoke %tmp.232 %tmp.233(%tmp.238, %tmp.239, %tmp.244, %tmp.245);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 194 8 ]
+        %tmp.246 = lgetv %dc;
+        symbol [ dc %tmp.246 194 8 10 ];
+        symbol [ setPenWidth %tmp.247 194 11 22 ];
+        %tmp.247 = getv function %tmp.246 :setPenWidth;
+        %tmp.248 = 1;
+        invoke %tmp.246 %tmp.247(%tmp.248);
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 197 8 ]
-        %tmp.285 = lgetv %dc;
-        symbol [ dc %tmp.285 197 8 10 ];
-        symbol [ drawText %tmp.286 197 11 19 ];
-        %tmp.286 = getv function %tmp.285 :drawText;
-        %tmp.287 = lgetv %centerX.3;
-        symbol [ centerX %tmp.287 197 20 27 ];
-        %tmp.288 = 45;
-        %tmp.289 = sub %tmp.287 %tmp.288;
-        %tmp.290 = lgetv %centerY.4;
-        symbol [ centerY %tmp.290 197 34 41 ];
-        %tmp.291 = 55;
-        %tmp.292 = sub %tmp.290 %tmp.291;
-        symbol [ Graphics %tmp.293 197 48 56 ];
-        %tmp.293 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.294 197 57 67 ];
-        %tmp.294 = getv %tmp.293 :FONT_XTINY;
-        %tmp.295 = "ELAPS";
-        symbol [ Graphics %tmp.296 197 78 86 ];
-        %tmp.296 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.297 197 87 106 ];
-        %tmp.297 = getv %tmp.296 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.285 %tmp.286(%tmp.289, %tmp.292, %tmp.294, %tmp.295, %tmp.297);
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_stop" ]
+        %now.10 = local;
+        symbol [ now %now.10 197 12 15 ];
+        symbol [ Gregorian %tmp.249 197 18 27 ];
+        %tmp.249 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.250 197 28 32 ];
+        %tmp.250 = getv function %tmp.249 :info;
+        symbol [ Time %tmp.251 197 33 37 ];
+        %tmp.251 = getm $.Toybox.Time;
+        symbol [ now %tmp.252 197 38 41 ];
+        %tmp.252 = getv function %tmp.251 :now;
+        %tmp.253 = invoke %tmp.251 %tmp.252();
+        symbol [ Time %tmp.254 197 45 49 ];
+        %tmp.254 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.255 197 50 62 ];
+        %tmp.255 = getv %tmp.254 :FORMAT_SHORT;
+        %tmp.256 = invoke %tmp.249 %tmp.250(%tmp.253, %tmp.255);
+        lputv %now.10 %tmp.256;
+        symbol [ now %now.10 197 12 15 ];
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 198 8 ]
-        %tmp.298 = lgetv %dc;
-        symbol [ dc %tmp.298 198 8 10 ];
-        symbol [ setColor %tmp.299 198 11 19 ];
-        %tmp.299 = getv function %tmp.298 :setColor;
-        symbol [ Graphics %tmp.300 198 20 28 ];
-        %tmp.300 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.301 198 29 40 ];
-        %tmp.301 = getv %tmp.300 :COLOR_WHITE;
-        symbol [ Graphics %tmp.302 198 42 50 ];
-        %tmp.302 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.303 198 51 68 ];
-        %tmp.303 = getv %tmp.302 :COLOR_TRANSPARENT;
-        invoke %tmp.298 %tmp.299(%tmp.301, %tmp.303);
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_stop" ]
+        %timeStr.11 = local;
+        symbol [ timeStr %timeStr.11 198 12 19 ];
+        symbol [ Lang %tmp.257 198 22 26 ];
+        %tmp.257 = getm $.Toybox.Lang;
+        symbol [ format %tmp.258 198 27 33 ];
+        %tmp.258 = getv function %tmp.257 :format;
+        %tmp.259 = "$1$:$2$";
+        %tmp.260 = newa 2;
+        %tmp.261 = lgetv %now.10;
+        symbol [ now %tmp.261 198 46 49 ];
+        symbol [ hour %tmp.262 198 50 54 ];
+        %tmp.262 = getv %tmp.261 :hour;
+        symbol [ format %tmp.263 198 55 61 ];
+        %tmp.263 = getv function %tmp.262 :format;
+        %tmp.264 = "%02d";
+        %tmp.265 = invoke %tmp.262 %tmp.263(%tmp.264);
+        %tmp.266 = dup %tmp.260;
+        %tmp.267 = aputv %tmp.266 0 %tmp.265;
+        %tmp.268 = lgetv %now.10;
+        symbol [ now %tmp.268 198 71 74 ];
+        symbol [ min %tmp.269 198 75 78 ];
+        %tmp.269 = getv %tmp.268 :min;
+        symbol [ format %tmp.270 198 79 85 ];
+        %tmp.270 = getv function %tmp.269 :format;
+        %tmp.271 = "%02d";
+        %tmp.272 = invoke %tmp.269 %tmp.270(%tmp.271);
+        %tmp.273 = dup %tmp.267;
+        %tmp.274 = aputv %tmp.273 1 %tmp.272;
+        %tmp.275 = invoke %tmp.257 %tmp.258(%tmp.259, %tmp.274);
+        lputv %timeStr.11 %tmp.275;
+        symbol [ timeStr %timeStr.11 198 12 19 ];
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 199 8 ]
-        %tmp.304 = lgetv %dc;
-        symbol [ dc %tmp.304 199 8 10 ];
-        symbol [ drawText %tmp.305 199 11 19 ];
-        %tmp.305 = getv function %tmp.304 :drawText;
-        %tmp.306 = lgetv %centerX.3;
-        symbol [ centerX %tmp.306 199 20 27 ];
-        %tmp.307 = 45;
-        %tmp.308 = sub %tmp.306 %tmp.307;
-        %tmp.309 = lgetv %centerY.4;
-        symbol [ centerY %tmp.309 199 34 41 ];
-        %tmp.310 = 40;
-        %tmp.311 = sub %tmp.309 %tmp.310;
-        symbol [ Graphics %tmp.312 199 48 56 ];
-        %tmp.312 = getm $.Toybox.Graphics;
-        symbol [ FONT_NUMBER_MEDIUM %tmp.313 199 57 75 ];
-        %tmp.313 = getv %tmp.312 :FONT_NUMBER_MEDIUM;
-        %tmp.314 = self;
-        symbol [ formatTime %tmp.315 199 77 87 ];
-        %tmp.315 = getv function %tmp.314 :formatTime;
-        %tmp.316 = lgetv %elapsedSec.7;
-        symbol [ elapsedSec %tmp.316 199 88 98 ];
-        symbol [ toNumber %tmp.317 199 99 107 ];
-        %tmp.317 = getv function %tmp.316 :toNumber;
-        %tmp.318 = invoke %tmp.316 %tmp.317();
-        %tmp.319 = invoke %tmp.314 %tmp.315(%tmp.318);
-        symbol [ Graphics %tmp.320 199 112 120 ];
-        %tmp.320 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.321 199 121 140 ];
-        %tmp.321 = getv %tmp.320 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.304 %tmp.305(%tmp.308, %tmp.311, %tmp.313, %tmp.319, %tmp.321);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 202 8 ]
-        %tmp.322 = lgetv %dc;
-        symbol [ dc %tmp.322 202 8 10 ];
-        symbol [ setColor %tmp.323 202 11 19 ];
-        %tmp.323 = getv function %tmp.322 :setColor;
-        symbol [ Graphics %tmp.324 202 20 28 ];
-        %tmp.324 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.325 202 29 42 ];
-        %tmp.325 = getv %tmp.324 :COLOR_LT_GRAY;
-        symbol [ Graphics %tmp.326 202 44 52 ];
-        %tmp.326 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.327 202 53 70 ];
-        %tmp.327 = getv %tmp.326 :COLOR_TRANSPARENT;
-        invoke %tmp.322 %tmp.323(%tmp.325, %tmp.327);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 203 8 ]
-        %tmp.328 = lgetv %dc;
-        symbol [ dc %tmp.328 203 8 10 ];
-        symbol [ drawText %tmp.329 203 11 19 ];
-        %tmp.329 = getv function %tmp.328 :drawText;
-        %tmp.330 = lgetv %centerX.3;
-        symbol [ centerX %tmp.330 203 20 27 ];
-        %tmp.331 = 45;
-        %tmp.332 = add %tmp.330 %tmp.331;
-        %tmp.333 = lgetv %centerY.4;
-        symbol [ centerY %tmp.333 203 34 41 ];
-        %tmp.334 = 55;
-        %tmp.335 = sub %tmp.333 %tmp.334;
-        symbol [ Graphics %tmp.336 203 48 56 ];
-        %tmp.336 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.337 203 57 67 ];
-        %tmp.337 = getv %tmp.336 :FONT_XTINY;
-        %tmp.338 = "DIST";
-        symbol [ Graphics %tmp.339 203 77 85 ];
-        %tmp.339 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.340 203 86 105 ];
-        %tmp.340 = getv %tmp.339 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.328 %tmp.329(%tmp.332, %tmp.335, %tmp.337, %tmp.338, %tmp.340);
+        %tmp.276 = lgetv %dc;
+        symbol [ dc %tmp.276 199 8 10 ];
+        symbol [ drawText %tmp.277 199 11 19 ];
+        %tmp.277 = getv function %tmp.276 :drawText;
+        %tmp.278 = lgetv %centerX.3;
+        symbol [ centerX %tmp.278 199 20 27 ];
+        %tmp.279 = lgetv %h.2;
+        symbol [ h %tmp.279 199 30 31 ];
+        %tmp.280 = 0.12;
+        %tmp.281 = mul %tmp.279 %tmp.280;
+        symbol [ toNumber %tmp.282 199 40 48 ];
+        %tmp.282 = getv function %tmp.281 :toNumber;
+        %tmp.283 = invoke %tmp.281 %tmp.282();
+        symbol [ Graphics %tmp.284 199 52 60 ];
+        %tmp.284 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.285 199 61 72 ];
+        %tmp.285 = getv %tmp.284 :FONT_MEDIUM;
+        %tmp.286 = lgetv %timeStr.11;
+        symbol [ timeStr %tmp.286 199 74 81 ];
+        symbol [ Graphics %tmp.287 199 83 91 ];
+        %tmp.287 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.288 199 92 111 ];
+        %tmp.288 = getv %tmp.287 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.276 %tmp.277(%tmp.278, %tmp.283, %tmp.285, %tmp.286, %tmp.288);
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 204 8 ]
-        %tmp.341 = lgetv %dc;
-        symbol [ dc %tmp.341 204 8 10 ];
-        symbol [ setColor %tmp.342 204 11 19 ];
-        %tmp.342 = getv function %tmp.341 :setColor;
-        symbol [ Graphics %tmp.343 204 20 28 ];
-        %tmp.343 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.344 204 29 40 ];
-        %tmp.344 = getv %tmp.343 :COLOR_WHITE;
-        symbol [ Graphics %tmp.345 204 42 50 ];
-        %tmp.345 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.346 204 51 68 ];
-        %tmp.346 = getv %tmp.345 :COLOR_TRANSPARENT;
-        invoke %tmp.341 %tmp.342(%tmp.344, %tmp.346);
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_stop" ]
+        %labelOffset.12 = local;
+        symbol [ labelOffset %labelOffset.12 204 12 23 ];
+        %tmp.289 = 55;
+        lputv %labelOffset.12 %tmp.289;
+        symbol [ labelOffset %labelOffset.12 204 12 23 ];
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 205 8 ]
-        %tmp.347 = lgetv %dc;
-        symbol [ dc %tmp.347 205 8 10 ];
-        symbol [ drawText %tmp.348 205 11 19 ];
-        %tmp.348 = getv function %tmp.347 :drawText;
-        %tmp.349 = lgetv %centerX.3;
-        symbol [ centerX %tmp.349 205 20 27 ];
-        %tmp.350 = 45;
-        %tmp.351 = add %tmp.349 %tmp.350;
-        %tmp.352 = lgetv %centerY.4;
-        symbol [ centerY %tmp.352 205 34 41 ];
-        %tmp.353 = 40;
-        %tmp.354 = sub %tmp.352 %tmp.353;
-        symbol [ Graphics %tmp.355 205 48 56 ];
-        %tmp.355 = getm $.Toybox.Graphics;
-        symbol [ FONT_NUMBER_MEDIUM %tmp.356 205 57 75 ];
-        %tmp.356 = getv %tmp.355 :FONT_NUMBER_MEDIUM;
-        symbol [ _totalDistance %tmp.358 205 77 91 ];
-        %tmp.358 = getv ? :_totalDistance;
-        symbol [ format %tmp.359 205 92 98 ];
-        %tmp.359 = getv function %tmp.358 :format;
-        %tmp.360 = "%.2f";
-        %tmp.361 = invoke %tmp.358 %tmp.359(%tmp.360);
-        symbol [ Graphics %tmp.362 205 108 116 ];
-        %tmp.362 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.363 205 117 136 ];
-        %tmp.363 = getv %tmp.362 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.347 %tmp.348(%tmp.351, %tmp.354, %tmp.356, %tmp.361, %tmp.363);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 208 8 ]
-        %tmp.364 = lgetv %dc;
-        symbol [ dc %tmp.364 208 8 10 ];
-        symbol [ setColor %tmp.365 208 11 19 ];
-        %tmp.365 = getv function %tmp.364 :setColor;
-        symbol [ Graphics %tmp.366 208 20 28 ];
-        %tmp.366 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.367 208 29 42 ];
-        %tmp.367 = getv %tmp.366 :COLOR_LT_GRAY;
-        symbol [ Graphics %tmp.368 208 44 52 ];
-        %tmp.368 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.369 208 53 70 ];
-        %tmp.369 = getv %tmp.368 :COLOR_TRANSPARENT;
-        invoke %tmp.364 %tmp.365(%tmp.367, %tmp.369);
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_stop" ]
+        %valueOffset.13 = local;
+        symbol [ valueOffset %valueOffset.13 205 12 23 ];
+        %tmp.290 = 30;
+        lputv %valueOffset.13 %tmp.290;
+        symbol [ valueOffset %valueOffset.13 205 12 23 ];
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 206 8 ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_stop" ]
+        %sideOffset.14 = local;
+        symbol [ sideOffset %sideOffset.14 206 12 22 ];
+        %tmp.291 = 60;
+        lputv %sideOffset.14 %tmp.291;
+        symbol [ sideOffset %sideOffset.14 206 12 22 ];
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 209 8 ]
-        %tmp.370 = lgetv %dc;
-        symbol [ dc %tmp.370 209 8 10 ];
-        symbol [ drawText %tmp.371 209 11 19 ];
-        %tmp.371 = getv function %tmp.370 :drawText;
-        %tmp.372 = lgetv %centerX.3;
-        symbol [ centerX %tmp.372 209 20 27 ];
-        %tmp.373 = 45;
-        %tmp.374 = sub %tmp.372 %tmp.373;
-        %tmp.375 = lgetv %centerY.4;
-        symbol [ centerY %tmp.375 209 34 41 ];
-        %tmp.376 = 5;
-        %tmp.377 = add %tmp.375 %tmp.376;
-        symbol [ Graphics %tmp.378 209 47 55 ];
-        %tmp.378 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.379 209 56 66 ];
-        %tmp.379 = getv %tmp.378 :FONT_XTINY;
-        %tmp.380 = "MAX SPD";
-        symbol [ Graphics %tmp.381 209 79 87 ];
-        %tmp.381 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.382 209 88 107 ];
-        %tmp.382 = getv %tmp.381 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.370 %tmp.371(%tmp.374, %tmp.377, %tmp.379, %tmp.380, %tmp.382);
+        %tmp.292 = lgetv %dc;
+        symbol [ dc %tmp.292 209 8 10 ];
+        symbol [ setColor %tmp.293 209 11 19 ];
+        %tmp.293 = getv function %tmp.292 :setColor;
+        symbol [ Graphics %tmp.294 209 20 28 ];
+        %tmp.294 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.295 209 29 42 ];
+        %tmp.295 = getv %tmp.294 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.296 209 44 52 ];
+        %tmp.296 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.297 209 53 70 ];
+        %tmp.297 = getv %tmp.296 :COLOR_TRANSPARENT;
+        invoke %tmp.292 %tmp.293(%tmp.295, %tmp.297);
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 210 8 ]
+        %tmp.298 = lgetv %dc;
+        symbol [ dc %tmp.298 210 8 10 ];
+        symbol [ drawText %tmp.299 210 11 19 ];
+        %tmp.299 = getv function %tmp.298 :drawText;
+        %tmp.300 = lgetv %centerX.3;
+        symbol [ centerX %tmp.300 210 20 27 ];
+        %tmp.301 = lgetv %sideOffset.14;
+        symbol [ sideOffset %tmp.301 210 30 40 ];
+        %tmp.302 = sub %tmp.300 %tmp.301;
+        %tmp.303 = lgetv %centerY.4;
+        symbol [ centerY %tmp.303 210 42 49 ];
+        %tmp.304 = lgetv %labelOffset.12;
+        symbol [ labelOffset %tmp.304 210 52 63 ];
+        %tmp.305 = sub %tmp.303 %tmp.304;
+        symbol [ Graphics %tmp.306 210 65 73 ];
+        %tmp.306 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.307 210 74 84 ];
+        %tmp.307 = getv %tmp.306 :FONT_XTINY;
+        %tmp.308 = "ELAPS";
+        symbol [ Graphics %tmp.309 210 95 103 ];
+        %tmp.309 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.310 210 104 123 ];
+        %tmp.310 = getv %tmp.309 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.298 %tmp.299(%tmp.302, %tmp.305, %tmp.307, %tmp.308, %tmp.310);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 211 8 ]
+        %tmp.311 = lgetv %dc;
+        symbol [ dc %tmp.311 211 8 10 ];
+        symbol [ setColor %tmp.312 211 11 19 ];
+        %tmp.312 = getv function %tmp.311 :setColor;
+        symbol [ Graphics %tmp.313 211 20 28 ];
+        %tmp.313 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.314 211 29 40 ];
+        %tmp.314 = getv %tmp.313 :COLOR_WHITE;
+        symbol [ Graphics %tmp.315 211 42 50 ];
+        %tmp.315 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.316 211 51 68 ];
+        %tmp.316 = getv %tmp.315 :COLOR_TRANSPARENT;
+        invoke %tmp.311 %tmp.312(%tmp.314, %tmp.316);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 212 8 ]
+        %tmp.317 = lgetv %dc;
+        symbol [ dc %tmp.317 212 8 10 ];
+        symbol [ drawText %tmp.318 212 11 19 ];
+        %tmp.318 = getv function %tmp.317 :drawText;
+        %tmp.319 = lgetv %centerX.3;
+        symbol [ centerX %tmp.319 212 20 27 ];
+        %tmp.320 = lgetv %sideOffset.14;
+        symbol [ sideOffset %tmp.320 212 30 40 ];
+        %tmp.321 = sub %tmp.319 %tmp.320;
+        %tmp.322 = lgetv %centerY.4;
+        symbol [ centerY %tmp.322 212 42 49 ];
+        %tmp.323 = lgetv %valueOffset.13;
+        symbol [ valueOffset %tmp.323 212 52 63 ];
+        %tmp.324 = sub %tmp.322 %tmp.323;
+        symbol [ Graphics %tmp.325 212 65 73 ];
+        %tmp.325 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_MEDIUM %tmp.326 212 74 92 ];
+        %tmp.326 = getv %tmp.325 :FONT_NUMBER_MEDIUM;
+        %tmp.327 = self;
+        symbol [ formatTime %tmp.328 212 94 104 ];
+        %tmp.328 = getv function %tmp.327 :formatTime;
+        %tmp.329 = lgetv %elapsedSec.8;
+        symbol [ elapsedSec %tmp.329 212 105 115 ];
+        symbol [ toNumber %tmp.330 212 116 124 ];
+        %tmp.330 = getv function %tmp.329 :toNumber;
+        %tmp.331 = invoke %tmp.329 %tmp.330();
+        %tmp.332 = invoke %tmp.327 %tmp.328(%tmp.331);
+        symbol [ Graphics %tmp.333 212 129 137 ];
+        %tmp.333 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.334 212 138 157 ];
+        %tmp.334 = getv %tmp.333 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.335 212 160 168 ];
+        %tmp.335 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.336 212 169 189 ];
+        %tmp.336 = getv %tmp.335 :TEXT_JUSTIFY_VCENTER;
+        %tmp.337 = bitor %tmp.334 %tmp.336;
+        invoke %tmp.317 %tmp.318(%tmp.321, %tmp.324, %tmp.326, %tmp.332, %tmp.337);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 215 8 ]
+        %tmp.338 = lgetv %dc;
+        symbol [ dc %tmp.338 215 8 10 ];
+        symbol [ setColor %tmp.339 215 11 19 ];
+        %tmp.339 = getv function %tmp.338 :setColor;
+        symbol [ Graphics %tmp.340 215 20 28 ];
+        %tmp.340 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.341 215 29 42 ];
+        %tmp.341 = getv %tmp.340 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.342 215 44 52 ];
+        %tmp.342 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.343 215 53 70 ];
+        %tmp.343 = getv %tmp.342 :COLOR_TRANSPARENT;
+        invoke %tmp.338 %tmp.339(%tmp.341, %tmp.343);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 216 8 ]
+        %tmp.344 = lgetv %dc;
+        symbol [ dc %tmp.344 216 8 10 ];
+        symbol [ drawText %tmp.345 216 11 19 ];
+        %tmp.345 = getv function %tmp.344 :drawText;
+        %tmp.346 = lgetv %centerX.3;
+        symbol [ centerX %tmp.346 216 20 27 ];
+        %tmp.347 = lgetv %sideOffset.14;
+        symbol [ sideOffset %tmp.347 216 30 40 ];
+        %tmp.348 = add %tmp.346 %tmp.347;
+        %tmp.349 = lgetv %centerY.4;
+        symbol [ centerY %tmp.349 216 42 49 ];
+        %tmp.350 = lgetv %labelOffset.12;
+        symbol [ labelOffset %tmp.350 216 52 63 ];
+        %tmp.351 = sub %tmp.349 %tmp.350;
+        symbol [ Graphics %tmp.352 216 65 73 ];
+        %tmp.352 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.353 216 74 84 ];
+        %tmp.353 = getv %tmp.352 :FONT_XTINY;
+        %tmp.354 = "DIST";
+        symbol [ Graphics %tmp.355 216 94 102 ];
+        %tmp.355 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.356 216 103 122 ];
+        %tmp.356 = getv %tmp.355 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.344 %tmp.345(%tmp.348, %tmp.351, %tmp.353, %tmp.354, %tmp.356);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 217 8 ]
+        %tmp.357 = lgetv %dc;
+        symbol [ dc %tmp.357 217 8 10 ];
+        symbol [ setColor %tmp.358 217 11 19 ];
+        %tmp.358 = getv function %tmp.357 :setColor;
+        symbol [ Graphics %tmp.359 217 20 28 ];
+        %tmp.359 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.360 217 29 40 ];
+        %tmp.360 = getv %tmp.359 :COLOR_WHITE;
+        symbol [ Graphics %tmp.361 217 42 50 ];
+        %tmp.361 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.362 217 51 68 ];
+        %tmp.362 = getv %tmp.361 :COLOR_TRANSPARENT;
+        invoke %tmp.357 %tmp.358(%tmp.360, %tmp.362);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 218 8 ]
+        %tmp.363 = lgetv %dc;
+        symbol [ dc %tmp.363 218 8 10 ];
+        symbol [ drawText %tmp.364 218 11 19 ];
+        %tmp.364 = getv function %tmp.363 :drawText;
+        %tmp.365 = lgetv %centerX.3;
+        symbol [ centerX %tmp.365 218 20 27 ];
+        %tmp.366 = lgetv %sideOffset.14;
+        symbol [ sideOffset %tmp.366 218 30 40 ];
+        %tmp.367 = add %tmp.365 %tmp.366;
+        %tmp.368 = lgetv %centerY.4;
+        symbol [ centerY %tmp.368 218 42 49 ];
+        %tmp.369 = lgetv %valueOffset.13;
+        symbol [ valueOffset %tmp.369 218 52 63 ];
+        %tmp.370 = sub %tmp.368 %tmp.369;
+        symbol [ Graphics %tmp.371 218 65 73 ];
+        %tmp.371 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_MEDIUM %tmp.372 218 74 92 ];
+        %tmp.372 = getv %tmp.371 :FONT_NUMBER_MEDIUM;
+        symbol [ _totalDistance %tmp.374 218 94 108 ];
+        %tmp.374 = getv ? :_totalDistance;
+        symbol [ format %tmp.375 218 109 115 ];
+        %tmp.375 = getv function %tmp.374 :format;
+        %tmp.376 = "%.2f";
+        %tmp.377 = invoke %tmp.374 %tmp.375(%tmp.376);
+        symbol [ Graphics %tmp.378 218 125 133 ];
+        %tmp.378 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.379 218 134 153 ];
+        %tmp.379 = getv %tmp.378 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.380 218 156 164 ];
+        %tmp.380 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.381 218 165 185 ];
+        %tmp.381 = getv %tmp.380 :TEXT_JUSTIFY_VCENTER;
+        %tmp.382 = bitor %tmp.379 %tmp.381;
+        invoke %tmp.363 %tmp.364(%tmp.367, %tmp.370, %tmp.372, %tmp.377, %tmp.382);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 221 8 ]
         %tmp.383 = lgetv %dc;
-        symbol [ dc %tmp.383 210 8 10 ];
-        symbol [ setColor %tmp.384 210 11 19 ];
+        symbol [ dc %tmp.383 221 8 10 ];
+        symbol [ setColor %tmp.384 221 11 19 ];
         %tmp.384 = getv function %tmp.383 :setColor;
-        symbol [ Graphics %tmp.385 210 20 28 ];
+        symbol [ Graphics %tmp.385 221 20 28 ];
         %tmp.385 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.386 210 29 40 ];
-        %tmp.386 = getv %tmp.385 :COLOR_WHITE;
-        symbol [ Graphics %tmp.387 210 42 50 ];
+        symbol [ COLOR_LT_GRAY %tmp.386 221 29 42 ];
+        %tmp.386 = getv %tmp.385 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.387 221 44 52 ];
         %tmp.387 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.388 210 51 68 ];
+        symbol [ COLOR_TRANSPARENT %tmp.388 221 53 70 ];
         %tmp.388 = getv %tmp.387 :COLOR_TRANSPARENT;
         invoke %tmp.383 %tmp.384(%tmp.386, %tmp.388);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 211 8 ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 222 8 ]
         %tmp.389 = lgetv %dc;
-        symbol [ dc %tmp.389 211 8 10 ];
-        symbol [ drawText %tmp.390 211 11 19 ];
+        symbol [ dc %tmp.389 222 8 10 ];
+        symbol [ drawText %tmp.390 222 11 19 ];
         %tmp.390 = getv function %tmp.389 :drawText;
         %tmp.391 = lgetv %centerX.3;
-        symbol [ centerX %tmp.391 211 20 27 ];
-        %tmp.392 = 45;
+        symbol [ centerX %tmp.391 222 20 27 ];
+        %tmp.392 = lgetv %sideOffset.14;
+        symbol [ sideOffset %tmp.392 222 30 40 ];
         %tmp.393 = sub %tmp.391 %tmp.392;
         %tmp.394 = lgetv %centerY.4;
-        symbol [ centerY %tmp.394 211 34 41 ];
-        %tmp.395 = 20;
+        symbol [ centerY %tmp.394 222 42 49 ];
+        %tmp.395 = lgetv %valueOffset.13;
+        symbol [ valueOffset %tmp.395 222 52 63 ];
         %tmp.396 = add %tmp.394 %tmp.395;
-        symbol [ Graphics %tmp.397 211 48 56 ];
-        %tmp.397 = getm $.Toybox.Graphics;
-        symbol [ FONT_NUMBER_MEDIUM %tmp.398 211 57 75 ];
-        %tmp.398 = getv %tmp.397 :FONT_NUMBER_MEDIUM;
-        symbol [ _topSpeedEver %tmp.400 211 77 90 ];
-        %tmp.400 = getv ? :_topSpeedEver;
-        symbol [ format %tmp.401 211 91 97 ];
-        %tmp.401 = getv function %tmp.400 :format;
-        %tmp.402 = "%.1f";
-        %tmp.403 = invoke %tmp.400 %tmp.401(%tmp.402);
-        symbol [ Graphics %tmp.404 211 107 115 ];
-        %tmp.404 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.405 211 116 135 ];
-        %tmp.405 = getv %tmp.404 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.389 %tmp.390(%tmp.393, %tmp.396, %tmp.398, %tmp.403, %tmp.405);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 214 8 ]
-        %tmp.406 = lgetv %dc;
-        symbol [ dc %tmp.406 214 8 10 ];
-        symbol [ setColor %tmp.407 214 11 19 ];
-        %tmp.407 = getv function %tmp.406 :setColor;
-        symbol [ Graphics %tmp.408 214 20 28 ];
+        %tmp.397 = 5;
+        %tmp.398 = sub %tmp.396 %tmp.397;
+        symbol [ Graphics %tmp.399 222 69 77 ];
+        %tmp.399 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.400 222 78 88 ];
+        %tmp.400 = getv %tmp.399 :FONT_XTINY;
+        %tmp.401 = "CUR MAX";
+        symbol [ Graphics %tmp.402 222 101 109 ];
+        %tmp.402 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.403 222 110 129 ];
+        %tmp.403 = getv %tmp.402 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.389 %tmp.390(%tmp.393, %tmp.398, %tmp.400, %tmp.401, %tmp.403);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 223 8 ]
+        %tmp.404 = lgetv %dc;
+        symbol [ dc %tmp.404 223 8 10 ];
+        symbol [ setColor %tmp.405 223 11 19 ];
+        %tmp.405 = getv function %tmp.404 :setColor;
+        symbol [ Graphics %tmp.406 223 20 28 ];
+        %tmp.406 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.407 223 29 40 ];
+        %tmp.407 = getv %tmp.406 :COLOR_WHITE;
+        symbol [ Graphics %tmp.408 223 42 50 ];
         %tmp.408 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.409 214 29 42 ];
-        %tmp.409 = getv %tmp.408 :COLOR_LT_GRAY;
-        symbol [ Graphics %tmp.410 214 44 52 ];
-        %tmp.410 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.411 214 53 70 ];
-        %tmp.411 = getv %tmp.410 :COLOR_TRANSPARENT;
-        invoke %tmp.406 %tmp.407(%tmp.409, %tmp.411);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 215 8 ]
-        %tmp.412 = lgetv %dc;
-        symbol [ dc %tmp.412 215 8 10 ];
-        symbol [ drawText %tmp.413 215 11 19 ];
-        %tmp.413 = getv function %tmp.412 :drawText;
-        %tmp.414 = lgetv %centerX.3;
-        symbol [ centerX %tmp.414 215 20 27 ];
-        %tmp.415 = 45;
-        %tmp.416 = add %tmp.414 %tmp.415;
-        %tmp.417 = lgetv %centerY.4;
-        symbol [ centerY %tmp.417 215 34 41 ];
-        %tmp.418 = 5;
-        %tmp.419 = add %tmp.417 %tmp.418;
-        symbol [ Graphics %tmp.420 215 47 55 ];
-        %tmp.420 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.421 215 56 66 ];
-        %tmp.421 = getv %tmp.420 :FONT_XTINY;
-        %tmp.422 = "RUNS";
-        symbol [ Graphics %tmp.423 215 76 84 ];
-        %tmp.423 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.424 215 85 104 ];
-        %tmp.424 = getv %tmp.423 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.412 %tmp.413(%tmp.416, %tmp.419, %tmp.421, %tmp.422, %tmp.424);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 216 8 ]
-        %tmp.425 = lgetv %dc;
-        symbol [ dc %tmp.425 216 8 10 ];
-        symbol [ setColor %tmp.426 216 11 19 ];
-        %tmp.426 = getv function %tmp.425 :setColor;
-        symbol [ Graphics %tmp.427 216 20 28 ];
-        %tmp.427 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.428 216 29 40 ];
-        %tmp.428 = getv %tmp.427 :COLOR_WHITE;
-        symbol [ Graphics %tmp.429 216 42 50 ];
-        %tmp.429 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.430 216 51 68 ];
-        %tmp.430 = getv %tmp.429 :COLOR_TRANSPARENT;
-        invoke %tmp.425 %tmp.426(%tmp.428, %tmp.430);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 217 8 ]
-        %tmp.431 = lgetv %dc;
-        symbol [ dc %tmp.431 217 8 10 ];
-        symbol [ drawText %tmp.432 217 11 19 ];
-        %tmp.432 = getv function %tmp.431 :drawText;
-        %tmp.433 = lgetv %centerX.3;
-        symbol [ centerX %tmp.433 217 20 27 ];
-        %tmp.434 = 45;
-        %tmp.435 = add %tmp.433 %tmp.434;
-        %tmp.436 = lgetv %centerY.4;
-        symbol [ centerY %tmp.436 217 34 41 ];
-        %tmp.437 = 20;
-        %tmp.438 = add %tmp.436 %tmp.437;
-        symbol [ Graphics %tmp.439 217 48 56 ];
-        %tmp.439 = getm $.Toybox.Graphics;
-        symbol [ FONT_NUMBER_MEDIUM %tmp.440 217 57 75 ];
-        %tmp.440 = getv %tmp.439 :FONT_NUMBER_MEDIUM;
-        symbol [ _runCount %tmp.442 217 77 86 ];
-        %tmp.442 = getv ? :_runCount;
-        symbol [ toString %tmp.443 217 87 95 ];
-        %tmp.443 = getv function %tmp.442 :toString;
-        %tmp.444 = invoke %tmp.442 %tmp.443();
-        symbol [ Graphics %tmp.445 217 99 107 ];
-        %tmp.445 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.446 217 108 127 ];
-        %tmp.446 = getv %tmp.445 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.431 %tmp.432(%tmp.435, %tmp.438, %tmp.440, %tmp.444, %tmp.446);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 220 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_stop" ]
-        %battery.11 = local;
-        symbol [ battery %battery.11 220 12 19 ];
-        symbol [ System %tmp.447 220 22 28 ];
-        %tmp.447 = getm $.Toybox.System;
-        symbol [ getSystemStats %tmp.448 220 29 43 ];
-        %tmp.448 = getv function %tmp.447 :getSystemStats;
-        %tmp.449 = invoke %tmp.447 %tmp.448();
-        symbol [ battery %tmp.450 220 46 53 ];
-        %tmp.450 = getv %tmp.449 :battery;
-        lputv %battery.11 %tmp.450;
-        symbol [ battery %battery.11 220 12 19 ];
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 221 8 ]
-        %tmp.451 = lgetv %dc;
-        symbol [ dc %tmp.451 221 8 10 ];
-        symbol [ setColor %tmp.452 221 11 19 ];
-        %tmp.452 = getv function %tmp.451 :setColor;
-        symbol [ Graphics %tmp.453 221 20 28 ];
-        %tmp.453 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.454 221 29 42 ];
-        %tmp.454 = getv %tmp.453 :COLOR_LT_GRAY;
-        symbol [ Graphics %tmp.455 221 44 52 ];
-        %tmp.455 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.456 221 53 70 ];
-        %tmp.456 = getv %tmp.455 :COLOR_TRANSPARENT;
-        invoke %tmp.451 %tmp.452(%tmp.454, %tmp.456);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 222 8 ]
-        %tmp.457 = lgetv %dc;
-        symbol [ dc %tmp.457 222 8 10 ];
-        symbol [ drawText %tmp.458 222 11 19 ];
-        %tmp.458 = getv function %tmp.457 :drawText;
-        %tmp.459 = lgetv %centerX.3;
-        symbol [ centerX %tmp.459 222 20 27 ];
-        %tmp.460 = lgetv %h.2;
-        symbol [ h %tmp.460 222 30 31 ];
-        %tmp.461 = 0.85;
-        %tmp.462 = mul %tmp.460 %tmp.461;
-        symbol [ toNumber %tmp.463 222 40 48 ];
-        %tmp.463 = getv function %tmp.462 :toNumber;
-        %tmp.464 = invoke %tmp.462 %tmp.463();
-        symbol [ Graphics %tmp.465 222 52 60 ];
-        %tmp.465 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.466 222 61 71 ];
-        %tmp.466 = getv %tmp.465 :FONT_XTINY;
-        %tmp.467 = lgetv %battery.11;
-        symbol [ battery %tmp.467 222 73 80 ];
-        symbol [ format %tmp.468 222 81 87 ];
-        %tmp.468 = getv function %tmp.467 :format;
-        %tmp.469 = "%d";
-        %tmp.470 = invoke %tmp.467 %tmp.468(%tmp.469);
-        %tmp.471 = "%";
-        %tmp.472 = add %tmp.470 %tmp.471;
-        symbol [ Graphics %tmp.473 222 101 109 ];
-        %tmp.473 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.474 222 110 129 ];
-        %tmp.474 = getv %tmp.473 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.457 %tmp.458(%tmp.459, %tmp.464, %tmp.466, %tmp.472, %tmp.474);
+        symbol [ COLOR_TRANSPARENT %tmp.409 223 51 68 ];
+        %tmp.409 = getv %tmp.408 :COLOR_TRANSPARENT;
+        invoke %tmp.404 %tmp.405(%tmp.407, %tmp.409);
 [ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 224 8 ]
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_224_8_227_8_if_stmt:
-        symbol [ _pauseTimer %tmp.476 224 12 23 ];
-        %tmp.476 = getv ? :_pauseTimer;
-        %tmp.477 = 0;
-        %tmp.478 = gt %tmp.476 %tmp.477;
-        bf %tmp.478 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_224_8_227_8_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_224_8_227_8_if_true:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_224_29_227_8_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 225 12 ]
-        %tmp.479 = self;
-        symbol [ drawOverlayIcon %tmp.480 225 12 27 ];
-        %tmp.480 = getv function %tmp.479 :drawOverlayIcon;
-        %tmp.481 = lgetv %dc;
-        symbol [ dc %tmp.481 225 28 30 ];
-        invoke %tmp.479 %tmp.480(%tmp.481);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 226 12 ]
-        symbol [ _pauseTimer %tmp.484 226 12 23 ];
-        %tmp.484 = getv ? :_pauseTimer;
-        %tmp.485 = sub %tmp.484 1;
-        symbol [ _pauseTimer ? 226 12 23 ];
-        putv self :_pauseTimer dup %tmp.485;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_224_29_227_8_stop:
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_224_8_227_8_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_224_8_227_8_if_end:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_78_228_4_stop:
+        %tmp.410 = lgetv %dc;
+        symbol [ dc %tmp.410 224 8 10 ];
+        symbol [ drawText %tmp.411 224 11 19 ];
+        %tmp.411 = getv function %tmp.410 :drawText;
+        %tmp.412 = lgetv %centerX.3;
+        symbol [ centerX %tmp.412 224 20 27 ];
+        %tmp.413 = lgetv %sideOffset.14;
+        symbol [ sideOffset %tmp.413 224 30 40 ];
+        %tmp.414 = sub %tmp.412 %tmp.413;
+        %tmp.415 = lgetv %centerY.4;
+        symbol [ centerY %tmp.415 224 42 49 ];
+        %tmp.416 = lgetv %labelOffset.12;
+        symbol [ labelOffset %tmp.416 224 52 63 ];
+        %tmp.417 = add %tmp.415 %tmp.416;
+        %tmp.418 = 5;
+        %tmp.419 = sub %tmp.417 %tmp.418;
+        symbol [ Graphics %tmp.420 224 69 77 ];
+        %tmp.420 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_MEDIUM %tmp.421 224 78 96 ];
+        %tmp.421 = getv %tmp.420 :FONT_NUMBER_MEDIUM;
+        symbol [ _maxSpeedCurrentRun %tmp.423 224 98 117 ];
+        %tmp.423 = getv ? :_maxSpeedCurrentRun;
+        symbol [ format %tmp.424 224 118 124 ];
+        %tmp.424 = getv function %tmp.423 :format;
+        %tmp.425 = "%.1f";
+        %tmp.426 = invoke %tmp.423 %tmp.424(%tmp.425);
+        symbol [ Graphics %tmp.427 224 134 142 ];
+        %tmp.427 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.428 224 143 162 ];
+        %tmp.428 = getv %tmp.427 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.429 224 165 173 ];
+        %tmp.429 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.430 224 174 194 ];
+        %tmp.430 = getv %tmp.429 :TEXT_JUSTIFY_VCENTER;
+        %tmp.431 = bitor %tmp.428 %tmp.430;
+        invoke %tmp.410 %tmp.411(%tmp.414, %tmp.419, %tmp.421, %tmp.426, %tmp.431);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 227 8 ]
+        %tmp.432 = lgetv %dc;
+        symbol [ dc %tmp.432 227 8 10 ];
+        symbol [ setColor %tmp.433 227 11 19 ];
+        %tmp.433 = getv function %tmp.432 :setColor;
+        symbol [ Graphics %tmp.434 227 20 28 ];
+        %tmp.434 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.435 227 29 42 ];
+        %tmp.435 = getv %tmp.434 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.436 227 44 52 ];
+        %tmp.436 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.437 227 53 70 ];
+        %tmp.437 = getv %tmp.436 :COLOR_TRANSPARENT;
+        invoke %tmp.432 %tmp.433(%tmp.435, %tmp.437);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 228 8 ]
+        %tmp.438 = lgetv %dc;
+        symbol [ dc %tmp.438 228 8 10 ];
+        symbol [ drawText %tmp.439 228 11 19 ];
+        %tmp.439 = getv function %tmp.438 :drawText;
+        %tmp.440 = lgetv %centerX.3;
+        symbol [ centerX %tmp.440 228 20 27 ];
+        %tmp.441 = lgetv %sideOffset.14;
+        symbol [ sideOffset %tmp.441 228 30 40 ];
+        %tmp.442 = add %tmp.440 %tmp.441;
+        %tmp.443 = lgetv %centerY.4;
+        symbol [ centerY %tmp.443 228 42 49 ];
+        %tmp.444 = lgetv %valueOffset.13;
+        symbol [ valueOffset %tmp.444 228 52 63 ];
+        %tmp.445 = add %tmp.443 %tmp.444;
+        %tmp.446 = 5;
+        %tmp.447 = sub %tmp.445 %tmp.446;
+        symbol [ Graphics %tmp.448 228 69 77 ];
+        %tmp.448 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.449 228 78 88 ];
+        %tmp.449 = getv %tmp.448 :FONT_XTINY;
+        %tmp.450 = "RUNS";
+        symbol [ Graphics %tmp.451 228 98 106 ];
+        %tmp.451 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.452 228 107 126 ];
+        %tmp.452 = getv %tmp.451 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.438 %tmp.439(%tmp.442, %tmp.447, %tmp.449, %tmp.450, %tmp.452);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 229 8 ]
+        %tmp.453 = lgetv %dc;
+        symbol [ dc %tmp.453 229 8 10 ];
+        symbol [ setColor %tmp.454 229 11 19 ];
+        %tmp.454 = getv function %tmp.453 :setColor;
+        symbol [ Graphics %tmp.455 229 20 28 ];
+        %tmp.455 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.456 229 29 40 ];
+        %tmp.456 = getv %tmp.455 :COLOR_WHITE;
+        symbol [ Graphics %tmp.457 229 42 50 ];
+        %tmp.457 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.458 229 51 68 ];
+        %tmp.458 = getv %tmp.457 :COLOR_TRANSPARENT;
+        invoke %tmp.453 %tmp.454(%tmp.456, %tmp.458);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 230 8 ]
+        %tmp.459 = lgetv %dc;
+        symbol [ dc %tmp.459 230 8 10 ];
+        symbol [ drawText %tmp.460 230 11 19 ];
+        %tmp.460 = getv function %tmp.459 :drawText;
+        %tmp.461 = lgetv %centerX.3;
+        symbol [ centerX %tmp.461 230 20 27 ];
+        %tmp.462 = lgetv %sideOffset.14;
+        symbol [ sideOffset %tmp.462 230 30 40 ];
+        %tmp.463 = add %tmp.461 %tmp.462;
+        %tmp.464 = lgetv %centerY.4;
+        symbol [ centerY %tmp.464 230 42 49 ];
+        %tmp.465 = lgetv %labelOffset.12;
+        symbol [ labelOffset %tmp.465 230 52 63 ];
+        %tmp.466 = add %tmp.464 %tmp.465;
+        %tmp.467 = 5;
+        %tmp.468 = sub %tmp.466 %tmp.467;
+        symbol [ Graphics %tmp.469 230 69 77 ];
+        %tmp.469 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_MEDIUM %tmp.470 230 78 96 ];
+        %tmp.470 = getv %tmp.469 :FONT_NUMBER_MEDIUM;
+        symbol [ _runCount %tmp.472 230 98 107 ];
+        %tmp.472 = getv ? :_runCount;
+        symbol [ toString %tmp.473 230 108 116 ];
+        %tmp.473 = getv function %tmp.472 :toString;
+        %tmp.474 = invoke %tmp.472 %tmp.473();
+        symbol [ Graphics %tmp.475 230 120 128 ];
+        %tmp.475 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.476 230 129 148 ];
+        %tmp.476 = getv %tmp.475 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.477 230 151 159 ];
+        %tmp.477 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.478 230 160 180 ];
+        %tmp.478 = getv %tmp.477 :TEXT_JUSTIFY_VCENTER;
+        %tmp.479 = bitor %tmp.476 %tmp.478;
+        invoke %tmp.459 %tmp.460(%tmp.463, %tmp.468, %tmp.470, %tmp.474, %tmp.479);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 233 8 ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_stop" ]
+        %battery.15 = local;
+        symbol [ battery %battery.15 233 12 19 ];
+        symbol [ System %tmp.480 233 22 28 ];
+        %tmp.480 = getm $.Toybox.System;
+        symbol [ getSystemStats %tmp.481 233 29 43 ];
+        %tmp.481 = getv function %tmp.480 :getSystemStats;
+        %tmp.482 = invoke %tmp.480 %tmp.481();
+        symbol [ battery %tmp.483 233 46 53 ];
+        %tmp.483 = getv %tmp.482 :battery;
+        lputv %battery.15 %tmp.483;
+        symbol [ battery %battery.15 233 12 19 ];
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 234 8 ]
+        %tmp.484 = lgetv %dc;
+        symbol [ dc %tmp.484 234 8 10 ];
+        symbol [ setColor %tmp.485 234 11 19 ];
+        %tmp.485 = getv function %tmp.484 :setColor;
+        symbol [ Graphics %tmp.486 234 20 28 ];
+        %tmp.486 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.487 234 29 42 ];
+        %tmp.487 = getv %tmp.486 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.488 234 44 52 ];
+        %tmp.488 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.489 234 53 70 ];
+        %tmp.489 = getv %tmp.488 :COLOR_TRANSPARENT;
+        invoke %tmp.484 %tmp.485(%tmp.487, %tmp.489);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 235 8 ]
+        %tmp.490 = lgetv %dc;
+        symbol [ dc %tmp.490 235 8 10 ];
+        symbol [ drawText %tmp.491 235 11 19 ];
+        %tmp.491 = getv function %tmp.490 :drawText;
+        %tmp.492 = lgetv %centerX.3;
+        symbol [ centerX %tmp.492 235 20 27 ];
+        %tmp.493 = lgetv %h.2;
+        symbol [ h %tmp.493 235 30 31 ];
+        %tmp.494 = 0.88;
+        %tmp.495 = mul %tmp.493 %tmp.494;
+        symbol [ toNumber %tmp.496 235 40 48 ];
+        %tmp.496 = getv function %tmp.495 :toNumber;
+        %tmp.497 = invoke %tmp.495 %tmp.496();
+        symbol [ Graphics %tmp.498 235 52 60 ];
+        %tmp.498 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.499 235 61 71 ];
+        %tmp.499 = getv %tmp.498 :FONT_XTINY;
+        %tmp.500 = lgetv %battery.15;
+        symbol [ battery %tmp.500 235 73 80 ];
+        symbol [ format %tmp.501 235 81 87 ];
+        %tmp.501 = getv function %tmp.500 :format;
+        %tmp.502 = "%d";
+        %tmp.503 = invoke %tmp.500 %tmp.501(%tmp.502);
+        %tmp.504 = "% | v1.0";
+        %tmp.505 = add %tmp.503 %tmp.504;
+        symbol [ Graphics %tmp.506 235 108 116 ];
+        %tmp.506 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.507 235 117 136 ];
+        %tmp.507 = getv %tmp.506 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.490 %tmp.491(%tmp.492, %tmp.497, %tmp.499, %tmp.505, %tmp.507);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 237 8 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_237_8_240_8_if_stmt:
+        symbol [ _pauseTimer %tmp.509 237 12 23 ];
+        %tmp.509 = getv ? :_pauseTimer;
+        %tmp.510 = 0;
+        %tmp.511 = gt %tmp.509 %tmp.510;
+        bf %tmp.511 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_237_8_240_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_237_8_240_8_if_true:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_237_29_240_8_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 238 12 ]
+        %tmp.512 = self;
+        symbol [ drawOverlayIcon %tmp.513 238 12 27 ];
+        %tmp.513 = getv function %tmp.512 :drawOverlayIcon;
+        %tmp.514 = lgetv %dc;
+        symbol [ dc %tmp.514 238 28 30 ];
+        invoke %tmp.512 %tmp.513(%tmp.514);
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 239 12 ]
+        symbol [ _pauseTimer %tmp.517 239 12 23 ];
+        %tmp.517 = getv ? :_pauseTimer;
+        %tmp.518 = sub %tmp.517 1;
+        symbol [ _pauseTimer ? 239 12 23 ];
+        putv self :_pauseTimer dup %tmp.518;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_237_29_240_8_stop:
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_237_8_240_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_237_8_240_8_if_end:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_141_54_241_4_stop:
     }
-    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc"; @line = 230; @symbol_functiondef = [formatTime,230,21,31]; @symbol_param<0> = [seconds,230,32,39]; @symbol_param<0>_type<0> = [Number,230,43,49]; @symbol_return<0> = [String,230,54,60]; ]
+    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc"; @line = 243; @symbol_functiondef = [formatTime,243,21,31]; @symbol_param<0> = [seconds,243,32,39]; @symbol_param<0>_type<0> = [Number,243,43,49]; @symbol_return<0> = [String,243,54,60]; ]
     private
     function formatTime(seconds as Number) as String {
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_230_61_234_4_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 231 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_230_61_234_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_230_61_234_4_stop" ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_243_61_247_4_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 244 8 ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_243_61_247_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_243_61_247_4_stop" ]
         %mm.1 = local;
-        symbol [ mm %mm.1 231 12 14 ];
+        symbol [ mm %mm.1 244 12 14 ];
         %tmp.1 = lgetv %seconds;
-        symbol [ seconds %tmp.1 231 18 25 ];
+        symbol [ seconds %tmp.1 244 18 25 ];
         %tmp.2 = 3600;
         %tmp.3 = mod %tmp.1 %tmp.2;
         %tmp.4 = 60;
         %tmp.5 = div %tmp.3 %tmp.4;
         lputv %mm.1 %tmp.5;
-        symbol [ mm %mm.1 231 12 14 ];
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 232 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_230_61_234_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_230_61_234_4_stop" ]
+        symbol [ mm %mm.1 244 12 14 ];
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 245 8 ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_243_61_247_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_243_61_247_4_stop" ]
         %ss.2 = local;
-        symbol [ ss %ss.2 232 12 14 ];
+        symbol [ ss %ss.2 245 12 14 ];
         %tmp.6 = lgetv %seconds;
-        symbol [ seconds %tmp.6 232 17 24 ];
+        symbol [ seconds %tmp.6 245 17 24 ];
         %tmp.7 = 60;
         %tmp.8 = mod %tmp.6 %tmp.7;
         lputv %ss.2 %tmp.8;
-        symbol [ ss %ss.2 232 12 14 ];
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 233 8 ]
+        symbol [ ss %ss.2 245 12 14 ];
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 246 8 ]
         %tmp.9 = lgetv %mm.1;
-        symbol [ mm %tmp.9 233 15 17 ];
-        symbol [ format %tmp.10 233 18 24 ];
+        symbol [ mm %tmp.9 246 15 17 ];
+        symbol [ format %tmp.10 246 18 24 ];
         %tmp.10 = getv function %tmp.9 :format;
         %tmp.11 = "%d";
         %tmp.12 = invoke %tmp.9 %tmp.10(%tmp.11);
         %tmp.13 = ":";
         %tmp.14 = add %tmp.12 %tmp.13;
         %tmp.15 = lgetv %ss.2;
-        symbol [ ss %tmp.15 233 39 41 ];
-        symbol [ format %tmp.16 233 42 48 ];
+        symbol [ ss %tmp.15 246 39 41 ];
+        symbol [ format %tmp.16 246 42 48 ];
         %tmp.16 = getv function %tmp.15 :format;
         %tmp.17 = "%02d";
         %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
         %tmp.19 = add %tmp.14 %tmp.18;
         ret %tmp.19;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_230_61_234_4_stop:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_243_61_247_4_stop:
     }
-    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc"; @line = 236; @symbol_functiondef = [drawOverlayIcon,236,21,36]; @symbol_param<0> = [dc,236,37,39]; @symbol_param<0>_type<0> = [Dc,236,43,45]; ]
+    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc"; @line = 249; @symbol_functiondef = [drawOverlayIcon,249,21,36]; @symbol_param<0> = [dc,249,37,39]; @symbol_param<0>_type<0> = [Dc,249,43,45]; ]
     private
     function drawOverlayIcon(dc as Dc) as Void {
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_236_55_248_4_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 237 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_236_55_248_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_236_55_248_4_stop" ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_249_55_261_4_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 250 8 ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_249_55_261_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_249_55_261_4_stop" ]
         %cx.1 = local;
-        symbol [ cx %cx.1 237 12 14 ];
+        symbol [ cx %cx.1 250 12 14 ];
         %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 237 17 19 ];
-        symbol [ getWidth %tmp.2 237 20 28 ];
+        symbol [ dc %tmp.1 250 17 19 ];
+        symbol [ getWidth %tmp.2 250 20 28 ];
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         %tmp.4 = 2;
         %tmp.5 = div %tmp.3 %tmp.4;
         lputv %cx.1 %tmp.5;
-        symbol [ cx %cx.1 237 12 14 ];
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 238 8 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_236_55_248_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_236_55_248_4_stop" ]
+        symbol [ cx %cx.1 250 12 14 ];
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 251 8 ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_249_55_261_4_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_249_55_261_4_stop" ]
         %cy.2 = local;
-        symbol [ cy %cy.2 238 12 14 ];
+        symbol [ cy %cy.2 251 12 14 ];
         %tmp.6 = lgetv %dc;
-        symbol [ dc %tmp.6 238 17 19 ];
-        symbol [ getHeight %tmp.7 238 20 29 ];
+        symbol [ dc %tmp.6 251 17 19 ];
+        symbol [ getHeight %tmp.7 251 20 29 ];
         %tmp.7 = getv function %tmp.6 :getHeight;
         %tmp.8 = invoke %tmp.6 %tmp.7();
         %tmp.9 = 2;
         %tmp.10 = div %tmp.8 %tmp.9;
         lputv %cy.2 %tmp.10;
-        symbol [ cy %cy.2 238 12 14 ];
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 239 8 ]
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_239_8_247_8_if_stmt:
-        symbol [ _isPaused %tmp.12 239 12 21 ];
+        symbol [ cy %cy.2 251 12 14 ];
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 252 8 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_252_8_260_8_if_stmt:
+        symbol [ _isPaused %tmp.12 252 12 21 ];
         %tmp.12 = getv ? :_isPaused;
-        bf %tmp.12 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_239_8_247_8_if_else_false;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_239_8_247_8_if_true:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_239_23_243_8_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 240 12 ]
+        bf %tmp.12 @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_252_8_260_8_if_else_false;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_252_8_260_8_if_true:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_252_23_256_8_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 253 12 ]
         %tmp.13 = lgetv %dc;
-        symbol [ dc %tmp.13 240 12 14 ];
-        symbol [ setColor %tmp.14 240 15 23 ];
+        symbol [ dc %tmp.13 253 12 14 ];
+        symbol [ setColor %tmp.14 253 15 23 ];
         %tmp.14 = getv function %tmp.13 :setColor;
-        symbol [ Graphics %tmp.15 240 24 32 ];
+        symbol [ Graphics %tmp.15 253 24 32 ];
         %tmp.15 = getm $.Toybox.Graphics;
-        symbol [ COLOR_RED %tmp.16 240 33 42 ];
+        symbol [ COLOR_RED %tmp.16 253 33 42 ];
         %tmp.16 = getv %tmp.15 :COLOR_RED;
-        symbol [ Graphics %tmp.17 240 44 52 ];
+        symbol [ Graphics %tmp.17 253 44 52 ];
         %tmp.17 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.18 240 53 64 ];
+        symbol [ COLOR_BLACK %tmp.18 253 53 64 ];
         %tmp.18 = getv %tmp.17 :COLOR_BLACK;
         invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 241 12 ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 254 12 ]
         %tmp.19 = lgetv %dc;
-        symbol [ dc %tmp.19 241 12 14 ];
-        symbol [ fillRectangle %tmp.20 241 15 28 ];
+        symbol [ dc %tmp.19 254 12 14 ];
+        symbol [ fillRectangle %tmp.20 254 15 28 ];
         %tmp.20 = getv function %tmp.19 :fillRectangle;
         %tmp.21 = lgetv %cx.1;
-        symbol [ cx %tmp.21 241 29 31 ];
+        symbol [ cx %tmp.21 254 29 31 ];
         %tmp.22 = 15;
         %tmp.23 = sub %tmp.21 %tmp.22;
         %tmp.24 = lgetv %cy.2;
-        symbol [ cy %tmp.24 241 38 40 ];
+        symbol [ cy %tmp.24 254 38 40 ];
         %tmp.25 = 20;
         %tmp.26 = sub %tmp.24 %tmp.25;
         %tmp.27 = 10;
         %tmp.28 = 40;
         invoke %tmp.19 %tmp.20(%tmp.23, %tmp.26, %tmp.27, %tmp.28);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 242 12 ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 255 12 ]
         %tmp.29 = lgetv %dc;
-        symbol [ dc %tmp.29 242 12 14 ];
-        symbol [ fillRectangle %tmp.30 242 15 28 ];
+        symbol [ dc %tmp.29 255 12 14 ];
+        symbol [ fillRectangle %tmp.30 255 15 28 ];
         %tmp.30 = getv function %tmp.29 :fillRectangle;
         %tmp.31 = lgetv %cx.1;
-        symbol [ cx %tmp.31 242 29 31 ];
+        symbol [ cx %tmp.31 255 29 31 ];
         %tmp.32 = 5;
         %tmp.33 = add %tmp.31 %tmp.32;
         %tmp.34 = lgetv %cy.2;
-        symbol [ cy %tmp.34 242 37 39 ];
+        symbol [ cy %tmp.34 255 37 39 ];
         %tmp.35 = 20;
         %tmp.36 = sub %tmp.34 %tmp.35;
         %tmp.37 = 10;
         %tmp.38 = 40;
         invoke %tmp.29 %tmp.30(%tmp.33, %tmp.36, %tmp.37, %tmp.38);
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_239_23_243_8_stop:
-        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_239_8_247_8_if_end;
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_239_8_247_8_if_else_false:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_243_15_247_8_start:
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 244 12 ]
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_252_23_256_8_stop:
+        goto @_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_252_8_260_8_if_end;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_252_8_260_8_if_else_false:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_256_15_260_8_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 257 12 ]
         %tmp.39 = lgetv %dc;
-        symbol [ dc %tmp.39 244 12 14 ];
-        symbol [ setColor %tmp.40 244 15 23 ];
+        symbol [ dc %tmp.39 257 12 14 ];
+        symbol [ setColor %tmp.40 257 15 23 ];
         %tmp.40 = getv function %tmp.39 :setColor;
-        symbol [ Graphics %tmp.41 244 24 32 ];
+        symbol [ Graphics %tmp.41 257 24 32 ];
         %tmp.41 = getm $.Toybox.Graphics;
-        symbol [ COLOR_GREEN %tmp.42 244 33 44 ];
+        symbol [ COLOR_GREEN %tmp.42 257 33 44 ];
         %tmp.42 = getv %tmp.41 :COLOR_GREEN;
-        symbol [ Graphics %tmp.43 244 46 54 ];
+        symbol [ Graphics %tmp.43 257 46 54 ];
         %tmp.43 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.44 244 55 66 ];
+        symbol [ COLOR_BLACK %tmp.44 257 55 66 ];
         %tmp.44 = getv %tmp.43 :COLOR_BLACK;
         invoke %tmp.39 %tmp.40(%tmp.42, %tmp.44);
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 245 12 ]
-        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_243_15_247_8_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_243_15_247_8_stop" ]
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 258 12 ]
+        [ "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_256_15_260_8_start" "_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_256_15_260_8_stop" ]
         %pts.3 = local;
-        symbol [ pts %pts.3 245 16 19 ];
+        symbol [ pts %pts.3 258 16 19 ];
         %tmp.45 = newa 3;
         %tmp.46 = newa 2;
         %tmp.47 = lgetv %cx.1;
-        symbol [ cx %tmp.47 245 24 26 ];
+        symbol [ cx %tmp.47 258 24 26 ];
         %tmp.48 = 15;
         %tmp.49 = sub %tmp.47 %tmp.48;
         %tmp.50 = dup %tmp.46;
         %tmp.51 = aputv %tmp.50 0 %tmp.49;
         %tmp.52 = lgetv %cy.2;
-        symbol [ cy %tmp.52 245 33 35 ];
+        symbol [ cy %tmp.52 258 33 35 ];
         %tmp.53 = 20;
         %tmp.54 = sub %tmp.52 %tmp.53;
         %tmp.55 = dup %tmp.51;
@@ -2095,13 +2192,13 @@ _Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAp
         %tmp.58 = aputv %tmp.57 0 %tmp.56;
         %tmp.59 = newa 2;
         %tmp.60 = lgetv %cx.1;
-        symbol [ cx %tmp.60 245 44 46 ];
+        symbol [ cx %tmp.60 258 44 46 ];
         %tmp.61 = 15;
         %tmp.62 = sub %tmp.60 %tmp.61;
         %tmp.63 = dup %tmp.59;
         %tmp.64 = aputv %tmp.63 0 %tmp.62;
         %tmp.65 = lgetv %cy.2;
-        symbol [ cy %tmp.65 245 53 55 ];
+        symbol [ cy %tmp.65 258 53 55 ];
         %tmp.66 = 20;
         %tmp.67 = add %tmp.65 %tmp.66;
         %tmp.68 = dup %tmp.64;
@@ -2110,30 +2207,30 @@ _Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAp
         %tmp.71 = aputv %tmp.70 1 %tmp.69;
         %tmp.72 = newa 2;
         %tmp.73 = lgetv %cx.1;
-        symbol [ cx %tmp.73 245 64 66 ];
+        symbol [ cx %tmp.73 258 64 66 ];
         %tmp.74 = 20;
         %tmp.75 = add %tmp.73 %tmp.74;
         %tmp.76 = dup %tmp.72;
         %tmp.77 = aputv %tmp.76 0 %tmp.75;
         %tmp.78 = lgetv %cy.2;
-        symbol [ cy %tmp.78 245 73 75 ];
+        symbol [ cy %tmp.78 258 73 75 ];
         %tmp.79 = dup %tmp.77;
         %tmp.80 = aputv %tmp.79 1 %tmp.78;
         %tmp.81 = dup %tmp.71;
         %tmp.82 = aputv %tmp.81 2 %tmp.80;
         lputv %pts.3 %tmp.82;
-        symbol [ pts %pts.3 245 16 19 ];
-[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 246 12 ]
+        symbol [ pts %pts.3 258 16 19 ];
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc" 259 12 ]
         %tmp.83 = lgetv %dc;
-        symbol [ dc %tmp.83 246 12 14 ];
-        symbol [ fillPolygon %tmp.84 246 15 26 ];
+        symbol [ dc %tmp.83 259 12 14 ];
+        symbol [ fillPolygon %tmp.84 259 15 26 ];
         %tmp.84 = getv function %tmp.83 :fillPolygon;
         %tmp.85 = lgetv %pts.3;
-        symbol [ pts %tmp.85 246 27 30 ];
+        symbol [ pts %tmp.85 259 27 30 ];
         invoke %tmp.83 %tmp.84(%tmp.85);
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_243_15_247_8_stop:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_239_8_247_8_if_end:
-_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_236_55_248_4_stop:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_256_15_260_8_stop:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_252_8_260_8_if_end:
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppView_mc_249_55_261_4_stop:
     }
 }
 [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppView.mc"; @line = 1; ]
