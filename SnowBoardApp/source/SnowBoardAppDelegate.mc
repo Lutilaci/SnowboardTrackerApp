@@ -45,4 +45,7 @@ class SnowBoardAppDelegate extends WatchUi.BehaviorDelegate {
     function onTap(evt) { return true; }
     function onSwipe(evt) { return true; }
     function onHold(evt) { return true; }
-}
+    function onRelease(evt) { return true; }
+    function onDrag(evt) { return true; }
+    function onSelectable(evt) { return true; }
+    }

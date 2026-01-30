@@ -181,6 +181,30 @@ _Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAp
         ret %tmp.1;
 _Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppDelegate_mc_47_25_47_40_stop:
     }
+    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc"; @line = 48; @symbol_functiondef = [onRelease,48,13,22]; @symbol_param<0> = [evt,48,23,26]; ]
+    function onRelease(evt) {
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppDelegate_mc_48_28_48_43_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" 48 30 ]
+        %tmp.1 = true;
+        ret %tmp.1;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppDelegate_mc_48_28_48_43_stop:
+    }
+    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc"; @line = 49; @symbol_functiondef = [onDrag,49,13,19]; @symbol_param<0> = [evt,49,20,23]; ]
+    function onDrag(evt) {
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppDelegate_mc_49_25_49_40_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" 49 27 ]
+        %tmp.1 = true;
+        ret %tmp.1;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppDelegate_mc_49_25_49_40_stop:
+    }
+    [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc"; @line = 50; @symbol_functiondef = [onSelectable,50,13,25]; @symbol_param<0> = [evt,50,26,29]; ]
+    function onSelectable(evt) {
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppDelegate_mc_50_31_50_46_start:
+[ "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc" 50 33 ]
+        %tmp.1 = true;
+        ret %tmp.1;
+_Users_user_Documents_Garmin_SnowboardTrackerApp_SnowBoardApp_source_SnowBoardAppDelegate_mc_50_31_50_46_stop:
+    }
 }
 [ @file = "/Users/user/Documents/Garmin/SnowboardTrackerApp/SnowBoardApp/source/SnowBoardAppDelegate.mc"; @line = 1; ]
 <init> {

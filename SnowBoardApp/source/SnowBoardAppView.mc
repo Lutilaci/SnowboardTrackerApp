@@ -12,16 +12,14 @@ import Toybox.Position;
 
 class SnowBoardAppView extends WatchUi.View {
 
-    // --- OSZTÁLYVÁLTOZÓK ---
     private var _backgroundImage as BitmapResource?;
     private var _session as Session? = null;
     private var _isTracking as Boolean = false;
     private var _isPaused as Boolean = false;
     private var _gpsAccuracy as Number = 0;
-    private var _gpsVibrated as Boolean = false; 
+    private var _gpsVibrated as Boolean = false;
     private var _pauseTimer as Number = 0;
-
-    // Statisztikai adatok
+    
     private var _runCount as Number = 0;
     private var _liftCount as Number = 0;
     private var _maxSpeedCurrentRun as Float = 0.0;
@@ -40,27 +38,20 @@ class SnowBoardAppView extends WatchUi.View {
         if (savedTopSpeed != null) {
             _topSpeedEver = savedTopSpeed.toFloat();
         }
-
-        // GPS Aktiválása
         Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:onPosition));
     }
 
     function onPosition(info as Position.Info) as Void {
         _gpsAccuracy = info.accuracy;
-        
-        // Rezgés, ha megvan a jel
         if (!_gpsVibrated && _gpsAccuracy >= 3) {
-            vibrate(2); 
+            vibrate(2);
             _gpsVibrated = true;
         } else if (_gpsAccuracy < 3) {
-            _gpsVibrated = false; 
+            _gpsVibrated = false;
         }
         WatchUi.requestUpdate();
     }
 
-    function onLayout(dc as Dc) as Void {}
-
-    // --- HIÁNYTALAN GETTEREK ---
     function isTracking() as Boolean { return _isTracking; }
     function hasActiveSession() as Boolean { return _session != null; }
     function getRunCount() as Number { return _runCount; }
@@ -69,7 +60,6 @@ class SnowBoardAppView extends WatchUi.View {
     function getTotalDescend() as Float { return _totalDescend; }
     function getTotalDistance() as Float { return _totalDistance; }
 
-    // --- RÖGZÍTÉS VEZÉRLÉS ---
     function startTracking() as Void {
         if (Toybox has :ActivityRecording && _session == null) {
             _session = ActivityRecording.createSession({
@@ -147,7 +137,7 @@ class SnowBoardAppView extends WatchUi.View {
     private function drawStartScreen(dc as Dc, info as Activity.Info?) as Void {
         if (_backgroundImage != null) { dc.drawBitmap(0, 0, _backgroundImage); }
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(dc.getWidth()/2, (dc.getHeight() * 0.88).toNumber(), Graphics.FONT_XTINY, "v1.0", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(dc.getWidth()/2, (dc.getHeight() * 0.88).toNumber(), Graphics.FONT_XTINY, "v1.2", Graphics.TEXT_JUSTIFY_CENTER);
         
         var ringColor = (_gpsAccuracy >= 3) ? Graphics.COLOR_GREEN : Graphics.COLOR_RED;
         dc.setPenWidth(10); 
@@ -171,50 +161,67 @@ class SnowBoardAppView extends WatchUi.View {
         _totalDistance = (info != null && info.elapsedDistance != null) ? info.elapsedDistance / 1000.0 : 0.0;
         _totalDescend = (info != null && info.totalDescent != null) ? info.totalDescent.toFloat() : 0.0;
 
-        // Snowboard Logika
         if (_lastAltitude != null) {
             var diff = altitude - _lastAltitude;
-            if (!_isDescending && diff < -1.5 && speed > 7.0) { 
-                _isDescending = true; _runCount++; _maxSpeedCurrentRun = 0.0; vibrate(1); 
-            } else if (_isDescending && diff > 2.5) { 
-                _isDescending = false; _liftCount++; vibrate(2); 
+            if (!_isDescending) {
+                if (diff < -2.5 && speed > 9.0) { 
+                    _isDescending = true;
+                    _runCount++; 
+                    _maxSpeedCurrentRun = 0.0; 
+                    vibrate(1);
+                }
+            } else {
+                if (diff > 3.5) { 
+                    _isDescending = false;
+                    _liftCount++; 
+                    vibrate(2);
+                }
             }
         }
         _lastAltitude = altitude.toFloat();
-        if (_isDescending && speed > _maxSpeedCurrentRun) { _maxSpeedCurrentRun = speed.toFloat(); }
-        if (speed > _topSpeedEver) { _topSpeedEver = speed.toFloat(); Storage.setValue("topSpeedEver", _topSpeedEver); }
 
-        if (_session != null) {
-            if (!_isPaused && speed < 1.5 && _session.isRecording()) { _session.stop(); _isPaused = true; _pauseTimer = 2; vibrate(1); }
-            else if (_isPaused && speed > 4.0 && !_session.isRecording()) { _session.start(); _isPaused = false; _pauseTimer = 2; vibrate(1); }
+        if (_isDescending && speed > _maxSpeedCurrentRun) { _maxSpeedCurrentRun = speed.toFloat(); }
+        if (speed > _topSpeedEver) { 
+            _topSpeedEver = speed.toFloat(); 
+            Storage.setValue("topSpeedEver", _topSpeedEver);
         }
 
-        // --- RÁCS ---
+        if (_session != null) {
+            if (!_isPaused && speed < 1.0 && _session.isRecording()) { 
+                _session.stop();
+                _isPaused = true; _pauseTimer = 2; vibrate(1);
+            } else if (_isPaused && speed > 5.0 && !_session.isRecording()) { 
+                _session.start();
+                _isPaused = false; _pauseTimer = 2; vibrate(1);
+            }
+        }
+
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(2);
-        dc.drawLine(cx, (h * 0.16).toNumber(), cx, (h * 0.88).toNumber()); 
-        dc.drawLine((w * 0.05).toNumber(), cy, (w * 0.95).toNumber(), cy); 
+        dc.drawLine(cx, (h * 0.16).toNumber(), cx, (h * 0.88).toNumber());
+        dc.drawLine((w * 0.05).toNumber(), cy, (w * 0.95).toNumber(), cy);
 
         var ringColor = (_gpsAccuracy >= 3) ? Graphics.COLOR_GREEN : Graphics.COLOR_RED;
-        if (_isPaused) { ringColor = Graphics.COLOR_RED; } 
+        if (_isPaused) { ringColor = Graphics.COLOR_RED; }
         
         dc.setPenWidth(10);
         dc.setColor(ringColor, Graphics.COLOR_TRANSPARENT);
         dc.drawCircle(cx, cy, cx - 6);
 
-        // Óra és Akku
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         var now = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         dc.drawText(cx, (h * 0.06).toNumber(), Graphics.FONT_MEDIUM, Lang.format("$1$:$2$", [now.hour.format("%02d"), now.min.format("%02d")]), Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawText(cx, (h * 0.92).toNumber(), Graphics.FONT_TINY, System.getSystemStats().battery.format("%d") + "%", Graphics.TEXT_JUSTIFY_CENTER);
 
-        // --- ADATMEZŐK (390x390 - Drasztikus széttolás) ---
-        var sideX = (w * 0.22).toNumber(); 
-        var topLabelY = (h * 0.18).toNumber(); // Még feljebb tolva
-        var topValueY = (h * 0.38).toNumber(); 
-        var botLabelY = (h * 0.55).toNumber();
-        var botValueY = (h * 0.80).toNumber(); // Még lejjebb tolva
+        // --- POZÍCIONÁLÁS ÉS IGAZÍTÁS ---
+        var sideX = (w * 0.22).toNumber();
+        var leftValueX = cx - 20; // A bal oldali értékek jobb széle ide lesz igazítva
+        
+        var topLabelY = (h * 0.18).toNumber();
+        var topValueY = (h * 0.38).toNumber();
+        var botLabelY = (h * 0.53).toNumber(); // Feljebb hozva (0.55-ről)
+        var botValueY = (h * 0.73).toNumber(); // Feljebb hozva (0.80-ról)
         
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawText(cx - sideX, topLabelY, Graphics.FONT_XTINY, "ELAPS", Graphics.TEXT_JUSTIFY_CENTER);
@@ -223,12 +230,23 @@ class SnowBoardAppView extends WatchUi.View {
         dc.drawText(cx + sideX, botLabelY, Graphics.FONT_XTINY, "RUNS", Graphics.TEXT_JUSTIFY_CENTER);
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cx - sideX, topValueY, Graphics.FONT_NUMBER_MILD, formatTime(elapsedSec.toNumber()), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(cx + sideX + 15, topValueY, Graphics.FONT_NUMBER_MILD, _totalDistance.format("%.2f"), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(cx - sideX, botValueY, Graphics.FONT_NUMBER_MILD, _maxSpeedCurrentRun.format("%.1f"), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        
+        // ELAPS - Jobbra igazítva a középvonaltól
+        dc.drawText(leftValueX, topValueY, Graphics.FONT_NUMBER_MILD, formatTime(elapsedSec.toNumber()), Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+        
+        // DIST - Marad középen a jobb kvadránsban
+        dc.drawText(cx + sideX + 10, topValueY, Graphics.FONT_NUMBER_MILD, _totalDistance.format("%.2f"), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        
+        // CUR MAX - Jobbra igazítva ugyanoda, ahol az ELAPS véget ér
+        dc.drawText(leftValueX, botValueY, Graphics.FONT_NUMBER_MILD, _maxSpeedCurrentRun.format("%.1f"), Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+        
+        // RUNS - Marad középen a jobb kvadránsban
         dc.drawText(cx + sideX, botValueY, Graphics.FONT_NUMBER_MILD, _runCount.toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
-        if (_pauseTimer > 0) { drawOverlayIcon(dc); _pauseTimer--; }
+        if (_pauseTimer > 0) { 
+            drawOverlayIcon(dc); 
+            _pauseTimer--; 
+        }
     }
 
     private function formatTime(seconds as Number) as String {
@@ -238,10 +256,12 @@ class SnowBoardAppView extends WatchUi.View {
     }
 
     private function drawOverlayIcon(dc as Dc) as Void {
-        var x = dc.getWidth() / 2; var y = dc.getHeight() / 2;
+        var x = dc.getWidth() / 2;
+        var y = dc.getHeight() / 2;
         if (_isPaused) {
             dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
-            dc.fillRectangle(x - 15, y - 20, 10, 40); dc.fillRectangle(x + 5, y - 20, 10, 40);
+            dc.fillRectangle(x - 15, y - 20, 10, 40); 
+            dc.fillRectangle(x + 5, y - 20, 10, 40);
         } else {
             dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
             dc.fillPolygon([[x - 15, y - 20], [x - 15, y + 20], [x + 20, y]]);
