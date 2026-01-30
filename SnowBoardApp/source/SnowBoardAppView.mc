@@ -8,6 +8,7 @@ import Toybox.System;
 import Toybox.Lang;
 import Toybox.Time;
 import Toybox.Time.Gregorian;
+import Toybox.Position;
 
 class SnowBoardAppView extends WatchUi.View {
 
@@ -17,8 +18,10 @@ class SnowBoardAppView extends WatchUi.View {
     private var _isTracking as Boolean = false;
     private var _isPaused as Boolean = false;
     private var _gpsAccuracy as Number = 0;
+    private var _gpsVibrated as Boolean = false; 
     private var _pauseTimer as Number = 0;
 
+    // Statisztikai adatok
     private var _runCount as Number = 0;
     private var _liftCount as Number = 0;
     private var _maxSpeedCurrentRun as Float = 0.0;
@@ -37,10 +40,27 @@ class SnowBoardAppView extends WatchUi.View {
         if (savedTopSpeed != null) {
             _topSpeedEver = savedTopSpeed.toFloat();
         }
+
+        // GPS Aktiválása
+        Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:onPosition));
+    }
+
+    function onPosition(info as Position.Info) as Void {
+        _gpsAccuracy = info.accuracy;
+        
+        // Rezgés, ha megvan a jel
+        if (!_gpsVibrated && _gpsAccuracy >= 3) {
+            vibrate(2); 
+            _gpsVibrated = true;
+        } else if (_gpsAccuracy < 3) {
+            _gpsVibrated = false; 
+        }
+        WatchUi.requestUpdate();
     }
 
     function onLayout(dc as Dc) as Void {}
 
+    // --- HIÁNYTALAN GETTEREK ---
     function isTracking() as Boolean { return _isTracking; }
     function hasActiveSession() as Boolean { return _session != null; }
     function getRunCount() as Number { return _runCount; }
@@ -49,6 +69,7 @@ class SnowBoardAppView extends WatchUi.View {
     function getTotalDescend() as Float { return _totalDescend; }
     function getTotalDistance() as Float { return _totalDistance; }
 
+    // --- RÖGZÍTÉS VEZÉRLÉS ---
     function startTracking() as Void {
         if (Toybox has :ActivityRecording && _session == null) {
             _session = ActivityRecording.createSession({
@@ -111,6 +132,11 @@ class SnowBoardAppView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
         var info = Activity.getActivityInfo();
+        
+        if (info != null && info.currentLocationAccuracy != null) {
+            _gpsAccuracy = info.currentLocationAccuracy;
+        }
+
         if (!_isTracking) {
             drawStartScreen(dc, info);
         } else {
@@ -122,11 +148,12 @@ class SnowBoardAppView extends WatchUi.View {
         if (_backgroundImage != null) { dc.drawBitmap(0, 0, _backgroundImage); }
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawText(dc.getWidth()/2, (dc.getHeight() * 0.88).toNumber(), Graphics.FONT_XTINY, "v1.0", Graphics.TEXT_JUSTIFY_CENTER);
-        _gpsAccuracy = (info != null && info.currentLocationAccuracy != null) ? info.currentLocationAccuracy : 0;
+        
         var ringColor = (_gpsAccuracy >= 3) ? Graphics.COLOR_GREEN : Graphics.COLOR_RED;
-        dc.setPenWidth(8);
+        dc.setPenWidth(10); 
         dc.setColor(ringColor, Graphics.COLOR_TRANSPARENT);
-        dc.drawCircle(dc.getWidth()/2, dc.getHeight()/2, (dc.getWidth()/2) - 4);
+        dc.drawCircle(dc.getWidth()/2, dc.getHeight()/2, (dc.getWidth()/2) - 6);
+        
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         var statusText = (_gpsAccuracy >= 3) ? "START-ra kész!" : "GPS keresése...";
         dc.drawText(dc.getWidth()/2, (dc.getHeight() * 0.72).toNumber(), Graphics.FONT_XTINY, statusText, Graphics.TEXT_JUSTIFY_CENTER);
@@ -162,56 +189,44 @@ class SnowBoardAppView extends WatchUi.View {
             else if (_isPaused && speed > 4.0 && !_session.isRecording()) { _session.start(); _isPaused = false; _pauseTimer = 2; vibrate(1); }
         }
 
-        // --- RÁCS ÉS ÓRA ---
+        // --- RÁCS ---
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(2);
+        dc.drawLine(cx, (h * 0.16).toNumber(), cx, (h * 0.88).toNumber()); 
+        dc.drawLine((w * 0.05).toNumber(), cy, (w * 0.95).toNumber(), cy); 
+
+        var ringColor = (_gpsAccuracy >= 3) ? Graphics.COLOR_GREEN : Graphics.COLOR_RED;
+        if (_isPaused) { ringColor = Graphics.COLOR_RED; } 
         
-        // Függőleges vonal lerövidítve felül (az óra alatt indul: Y=65)
-        dc.drawLine(cx, 65, cx, h - 45); 
-        // Vízszintes vonal
-        dc.drawLine(20, cy, w - 20, cy); 
+        dc.setPenWidth(10);
+        dc.setColor(ringColor, Graphics.COLOR_TRANSPARENT);
+        dc.drawCircle(cx, cy, cx - 6);
 
-        if (_isPaused) {
-            dc.setPenWidth(10);
-            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
-            dc.drawCircle(cx, cy, cx - 5);
-        }
-
-        // Pontos idő és Akku
+        // Óra és Akku
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         var now = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        dc.drawText(cx, 25, Graphics.FONT_MEDIUM, Lang.format("$1$:$2$", [now.hour.format("%02d"), now.min.format("%02d")]), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(cx, (h * 0.06).toNumber(), Graphics.FONT_MEDIUM, Lang.format("$1$:$2$", [now.hour.format("%02d"), now.min.format("%02d")]), Graphics.TEXT_JUSTIFY_CENTER);
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cx, h - 35, Graphics.FONT_TINY, System.getSystemStats().battery.format("%d") + "%", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(cx, (h * 0.92).toNumber(), Graphics.FONT_TINY, System.getSystemStats().battery.format("%d") + "%", Graphics.TEXT_JUSTIFY_CENTER);
 
-        // --- ADATMEZŐK ELRENDEZÉSE (Szimmetrikus pozíciók) ---
-        var sideX = 78;
-        var offsetValue = 28; // Távolság a felirat és az érték között
-        
-        // FELSŐ SOR (ELAPS, DIST feljebb, hogy ne érjen a rácshoz)
-        var topLabelY = cy - 50; 
-        var topValueY = topLabelY + offsetValue; 
+        // --- ADATMEZŐK (390x390 - Drasztikus széttolás) ---
+        var sideX = (w * 0.22).toNumber(); 
+        var topLabelY = (h * 0.18).toNumber(); // Még feljebb tolva
+        var topValueY = (h * 0.38).toNumber(); 
+        var botLabelY = (h * 0.55).toNumber();
+        var botValueY = (h * 0.80).toNumber(); // Még lejjebb tolva
         
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawText(cx - sideX, topLabelY, Graphics.FONT_XTINY, "ELAPS", Graphics.TEXT_JUSTIFY_CENTER);
         dc.drawText(cx + sideX, topLabelY, Graphics.FONT_XTINY, "DIST", Graphics.TEXT_JUSTIFY_CENTER);
-        
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cx - sideX, topValueY, Graphics.FONT_NUMBER_MILD, formatTime(elapsedSec.toNumber()), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        // DIST jobbra tolva (+14) a vonaltól
-        dc.drawText(cx + sideX + 14, topValueY, Graphics.FONT_NUMBER_MILD, _totalDistance.format("%.2f"), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-
-        // ALSÓ SOR (CUR MAX, RUNS szimmetrikusan)
-        var botLabelY = cy + 12;
-        var botValueY = botLabelY + offsetValue; 
-        
-        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawText(cx - sideX, botLabelY, Graphics.FONT_XTINY, "CUR MAX", Graphics.TEXT_JUSTIFY_CENTER);
         dc.drawText(cx + sideX, botLabelY, Graphics.FONT_XTINY, "RUNS", Graphics.TEXT_JUSTIFY_CENTER);
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx - sideX, topValueY, Graphics.FONT_NUMBER_MILD, formatTime(elapsedSec.toNumber()), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(cx + sideX + 15, topValueY, Graphics.FONT_NUMBER_MILD, _totalDistance.format("%.2f"), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.drawText(cx - sideX, botValueY, Graphics.FONT_NUMBER_MILD, _maxSpeedCurrentRun.format("%.1f"), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(cx + sideX, botValueY, Graphics.FONT_NUMBER_MILD, _runCount.toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER| Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(cx + sideX, botValueY, Graphics.FONT_NUMBER_MILD, _runCount.toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
         if (_pauseTimer > 0) { drawOverlayIcon(dc); _pauseTimer--; }
     }
