@@ -19,7 +19,7 @@ class SnowBoardAppView extends WatchUi.View {
     private var _gpsAccuracy as Number = 0;
     private var _gpsVibrated as Boolean = false;
     private var _pauseTimer as Number = 0;
-    
+    private var _currentScreen as Number = 1;
     private var _runCount as Number = 0;
     private var _liftCount as Number = 0;
     private var _maxSpeedCurrentRun as Float = 0.0;
@@ -118,20 +118,89 @@ class SnowBoardAppView extends WatchUi.View {
         }
     }
 
+    // Függvény a képernyő váltásához (a Delegate fogja hívni)
+    function nextScreen() as Void {
+        _currentScreen++;
+        if (_currentScreen > 3) { _currentScreen = 1; }
+        vibrate(1);
+        WatchUi.requestUpdate();
+    }
+
+    function prevScreen() as Void {
+        _currentScreen--;
+        if (_currentScreen < 1) { _currentScreen = 3; }
+        vibrate(1);
+        WatchUi.requestUpdate();
+    }
+
     function onUpdate(dc as Dc) as Void {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
         var info = Activity.getActivityInfo();
         
-        if (info != null && info.currentLocationAccuracy != null) {
-            _gpsAccuracy = info.currentLocationAccuracy;
-        }
-
         if (!_isTracking) {
             drawStartScreen(dc, info);
-        } else {
-            drawMainScreen(dc, info);
+            return;
         }
+
+        // Képernyő választó logika
+        if (_currentScreen == 1) {
+            drawMainScreen(dc, info);
+        } else if (_currentScreen == 2) {
+            drawElevationScreen(dc, info);
+        } else if (_currentScreen == 3) {
+            drawHealthScreen(dc, info);
+        }
+    }
+
+    // --- 2. KÉPERNYŐ: ELEVATION & LIFTS ---
+    private function drawElevationScreen(dc as Dc, info as Activity.Info?) as Void {
+        var cx = dc.getWidth() / 2;
+        var h = dc.getHeight();
+        var totalAscent = (info != null && info.totalAscent != null) ? info.totalAscent : 0;
+        
+        drawCommonHeader(dc);
+        
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx, h * 0.30, Graphics.FONT_XTINY, "TOTAL ASCENT", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx, h * 0.45, Graphics.FONT_NUMBER_MEDIUM, totalAscent.toString() + " m", Graphics.TEXT_JUSTIFY_CENTER);
+        
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx, h * 0.65, Graphics.FONT_XTINY, "LIFTS", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx, h * 0.75, Graphics.FONT_NUMBER_MILD, _liftCount.toString(), Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    // --- 3. KÉPERNYŐ: HR & CALORIES ---
+    private function drawHealthScreen(dc as Dc, info as Activity.Info?) as Void {
+        var cx = dc.getWidth() / 2;
+        var h = dc.getHeight();
+        var hr = (info != null && info.currentHeartRate != null) ? info.currentHeartRate : "--";
+        var calories = (info != null && info.calories != null) ? info.calories : 0;
+
+        drawCommonHeader(dc);
+
+        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx, h * 0.30, Graphics.FONT_XTINY, "HEART RATE", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx, h * 0.45, Graphics.FONT_NUMBER_MEDIUM, hr.toString(), Graphics.TEXT_JUSTIFY_CENTER);
+        
+        dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx, h * 0.65, Graphics.FONT_XTINY, "CALORIES", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx, h * 0.75, Graphics.FONT_NUMBER_MILD, calories.toString(), Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    // Segédfüggvény az óra és akksi rajzolásához minden oldalon
+    private function drawCommonHeader(dc as Dc) as Void {
+        var cx = dc.getWidth() / 2;
+        var h = dc.getHeight();
+        var now = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx, (h * 0.06).toNumber(), Graphics.FONT_MEDIUM, Lang.format("$1$:$2$", [now.hour.format("%02d"), now.min.format("%02d")]), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx, (h * 0.92).toNumber(), Graphics.FONT_TINY, System.getSystemStats().battery.format("%d") + "%", Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private function drawStartScreen(dc as Dc, info as Activity.Info?) as Void {

@@ -8,44 +8,51 @@ class SnowBoardAppDelegate extends WatchUi.BehaviorDelegate {
         _view = view;
     }
 
-    // A fizikai START/SELECT gomb kezelése
+    // LE gomb (következő oldal)
+    function onNextPage() {
+        if (_view.isTracking()) {
+            _view.nextScreen();
+            return true;
+        }
+        return false;
+    }
+
+    // FEL gomb (előző oldal)
+    function onPreviousPage() {
+        if (_view.isTracking()) {
+            _view.prevScreen();
+            return true;
+        }
+        return false;
+    }
+
+    // START gomb kezelése
     function onSelect() {
         if (!_view.isTracking()) {
-            // Első gombnyomás: Indítás
             _view.startTracking();
         } else {
-            // Ha már fut a session, a Start gomb megnyitja a befejező menüt
             var menu = new WatchUi.Menu();
             menu.setTitle("Session vége?");
             menu.addItem("Mentés", :save);
             menu.addItem("Folytatás", :resume);
-            menu.addItem("Elvetés (Törlés)", :discard);
-            
+            menu.addItem("Elvetés", :discard);
             WatchUi.pushView(menu, new SnowBoardAppMenuDelegate(_view), WatchUi.SLIDE_UP);
         }
-        WatchUi.requestUpdate();
         return true;
     }
 
-    // A BACK gomb kezelése
     function onBack() {
         if (_view.isTracking()) {
-            // Ha fut a rögzítés, a Back gomb ne lépjen ki, 
-            // hanem kényszerítsen szünetet vagy ne csináljon semmit
             _view.toggleManualPause();
             return true; 
         }
-        return false; // Ha nem rögzít, engedélyezi a kilépést
+        return false;
     }
 
-    // --- ÉRINTŐKÉPERNYŐ TILTÁSA ---
-    // Az alábbi függvények felülbírálásával és 'true' (elkapva) visszatéréssel 
-    // gyakorlatilag "lenyeljük" az érintéseket, így az óra nem reagál rájuk.
-
+    // Érintés tiltása továbbra is aktív
     function onTap(evt) { return true; }
     function onSwipe(evt) { return true; }
+    function onDrag(evt) { return true; }
     function onHold(evt) { return true; }
     function onRelease(evt) { return true; }
-    function onDrag(evt) { return true; }
-    function onSelectable(evt) { return true; }
-    }
+}
